@@ -1,0 +1,15 @@
+{
+  "record_id": "gen-equip-primary-care-genetics-education-gen-equip-genetics-education-tutorials",
+  "locale": "en",
+  "title": "Gen-Equip genetics education tutorials",
+  "summary": "Genetics-wide; suitable as background learning rather than a complete ErCLG course",
+  "description": "Named as an additional educational source by EBMG. The tutorials do not replace the formal duration, assessment or practice requirements of the ErCLG route.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

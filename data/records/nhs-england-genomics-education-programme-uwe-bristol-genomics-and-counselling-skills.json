@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "nhs-england-genomics-education-programme-uwe-bristol-genomics-and-counselling-skills",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "NHS England Genomics Education Programme / UWE Bristol",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.genomicseducation.hee.nhs.uk/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Genomics and Counselling Skills",
+    "summary_original": "Clinical genomics and counselling; relevant to rare-disease services",
+    "description_original": "For eligible clinical healthcare professionals working permanently in England. The application window had closed by the verification date; the linked page remains the definitive course page."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "online",
+      "hybrid"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Clinical genomics and counselling",
+      "relevant to rare-disease services"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "accreditation",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-09-11",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.genomicseducation.hee.nhs.uk/education/taught-courses/genomics-and-counselling-skills/",
+    "official_url": "https://www.genomicseducation.hee.nhs.uk/education/taught-courses/genomics-and-counselling-skills/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.genomicseducation.hee.nhs.uk/education/taught-courses/genomics-and-counselling-skills/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 11 September 2026–February 2027 | Course upcoming; applications closed | For eligible clinical healthcare professionals working permanently in England. The application window had closed by the verification date; the linked page remains the definitive course page.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-09-11",
+      "dates": "11 September 2026–February 2027",
+      "delivery": "Blended online learning with recorded lectures and live tutorials",
+      "duration": "25 weeks; about 150 hours (6–8 hours/week)",
+      "cost": "Funded places for eligible NHS staff in England",
+      "certificate_or_recognition": "15-credit accredited module; may be taken as a standalone module",
+      "rare_disease_scope": "Clinical genomics and counselling; relevant to rare-disease services",
+      "source_collection_url": "https://www.genomicseducation.hee.nhs.uk/education/taught-courses/genomics-and-counselling-skills/",
+      "url_type": "direct official HTML page",
+      "notes": "For eligible clinical healthcare professionals working permanently in England. The application window had closed by the verification date; the linked page remains the definitive course page.",
+      "tags": [
+        "genetic counselling",
+        "clinical genomics",
+        "NHS"
+      ],
+      "source_status_note": "Course upcoming; applications closed",
+      "original_record_type": "Accredited taught module",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

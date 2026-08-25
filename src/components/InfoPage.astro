@@ -1,0 +1,66 @@
+---
+import type { Locale } from '../i18n/config';
+import type { RouteKey } from '../i18n/routes';
+import { t } from '../i18n/translate';
+import { withBase } from '../lib/site/url';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+interface Props {
+  locale: Locale;
+  pageKey: Exclude<RouteKey, 'home'>;
+  messageKey:
+    'methodology' | 'policy' | 'accessibility' | 'data' | 'corrections' | 'changes' | 'privacy';
+}
+const { locale, pageKey, messageKey } = Astro.props;
+---
+
+<BaseLayout
+  locale={locale}
+  pageKey={pageKey}
+  title={`${t(locale, `page.${messageKey}.title`)} · ${t(locale, 'site.title')}`}
+  description={t(locale, `page.${messageKey}.body`)}
+>
+  <article class="info-page shell narrow">
+    <p class="eyebrow">{t(locale, 'site.title')}</p>
+    <h1>{t(locale, `page.${messageKey}.title`)}</h1>
+    <p class="lead">{t(locale, `page.${messageKey}.body`)}</p>
+    {
+      messageKey === 'accessibility' && (
+        <div class="prose-panel">
+          <>
+            <p>{t(locale, 'page.accessibility.review')}</p>
+            <p>{t(locale, 'page.accessibility.limitations')}</p>
+          </>
+        </div>
+      )
+    }
+    {
+      messageKey === 'data' && (
+        <div class="download-grid">
+          <a class="download-card" href={withBase('/rare_disease_education_catalog.json')} download>
+            <>
+              <strong>JSON</strong>
+              <span>{t(locale, 'downloads.json')}</span>
+            </>
+          </a>
+          <a class="download-card" href={withBase('/rare_disease_education_catalog.csv')} download>
+            <>
+              <strong>CSV</strong>
+              <span>{t(locale, 'downloads.csv')}</span>
+            </>
+          </a>
+          <a
+            class="download-card"
+            href={withBase('/rare_disease_education_catalog.en.csv')}
+            download
+          >
+            <>
+              <strong>EN CSV</strong>
+              <span>{t(locale, 'downloads.enCsv')}</span>
+            </>
+          </a>
+        </div>
+      )
+    }
+  </article>
+</BaseLayout>

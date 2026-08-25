@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "embl-ebi-training-data-collection-analysis-and-interpretation-for-genomic-medici",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EMBL-EBI Training",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ebi.ac.uk/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Data Collection, Analysis and Interpretation for Genomic Medicine",
+    "summary_original": "Genomic medicine, including diagnostic pipeline implementation",
+    "description_original": "The linked page documents the 2020 workshop. It remains useful as a curriculum reference for GA4GH standards, cloud pipelines, VEP, PanelApp and IGV, but it is not a current enrolment page. Check the EMBL-EBI training catalogue for newer editions."
+  },
+  "classification": {
+    "resource_type": "workshop",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Genomic medicine",
+      "including diagnostic pipeline implementation"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2020-06-23",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ebi.ac.uk/training/events/data-collection-analysis-and-interpretation-genomic-medicine/",
+    "official_url": "https://www.ebi.ac.uk/training/events/data-collection-analysis-and-interpretation-genomic-medicine/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ebi.ac.uk/training/events/data-collection-analysis-and-interpretation-genomic-medicine/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 23–25 June 2020 | Archived 2020 virtual workshop; page and programme remain available | The linked page documents the 2020 workshop. It remains useful as a curriculum reference for GA4GH standards, cloud pipelines, VEP, PanelApp and IGV, but it is not a current enrolment page. Check the EMBL-EBI training catalogue for newer editions.",
+    "legacy": {
+      "type_group": "workshop",
+      "type_label_bg": "Практическо обучение / работилница",
+      "type_label_en": "Practical training / workshop",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "2020-06-23",
+      "dates": "23–25 June 2020",
+      "delivery": "Virtual workshop (historic edition)",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Genomic medicine, including diagnostic pipeline implementation",
+      "source_collection_url": "https://www.ebi.ac.uk/training/events/data-collection-analysis-and-interpretation-genomic-medicine/",
+      "url_type": "direct course page",
+      "notes": "The linked page documents the 2020 workshop. It remains useful as a curriculum reference for GA4GH standards, cloud pipelines, VEP, PanelApp and IGV, but it is not a current enrolment page. Check the EMBL-EBI training catalogue for newer editions.",
+      "tags": [
+        "VEP",
+        "PanelApp",
+        "IGV",
+        "GA4GH"
+      ],
+      "source_status_note": "Archived 2020 virtual workshop; page and programme remain available",
+      "original_record_type": "Practical course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

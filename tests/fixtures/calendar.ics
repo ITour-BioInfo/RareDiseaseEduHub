@@ -1,0 +1,10 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+BEGIN:VEVENT
+UID:rare-2026@example.org
+DTSTART;TZID=Europe/Sofia:20260920T090000
+DTEND;TZID=Europe/Sofia:20260920T170000
+SUMMARY:Rare disease workshop
+URL:https://official.example/events/workshop
+END:VEVENT
+END:VCALENDAR

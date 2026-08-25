@@ -1,0 +1,102 @@
+---
+import type { Locale } from '../i18n/config';
+import { t } from '../i18n/translate';
+import type { CatalogRecord } from '../lib/catalog/schema';
+import { STATUS_CODES } from '../lib/catalog/status';
+interface Props {
+  locale: Locale;
+  records: CatalogRecord[];
+}
+const { locale, records } = Astro.props;
+const providers = [...new Set(records.map((record) => record.provider.name))].sort((a, b) =>
+  a.localeCompare(b),
+);
+const types = [...new Set(records.map((record) => record.classification.resource_type))].sort();
+const option = (key: string, value: string) => ({ value, label: t(locale, key) });
+---
+
+<form class="filters" data-catalogue-filters aria-labelledby="filters-heading">
+  <div class="filters-title-row">
+    <h3 id="filters-heading">{t(locale, 'filters.heading')}</h3><button
+      class="clear-button"
+      type="reset">{t(locale, 'filters.clear')}</button
+    >
+  </div>
+  <div class="filter-grid">
+    <label class="search-field"
+      ><span>{t(locale, 'filters.search')}</span><input
+        type="search"
+        name="q"
+        placeholder={t(locale, 'filters.searchPlaceholder')}
+        autocomplete="off"
+      /></label
+    >
+    <label
+      ><span>{t(locale, 'filters.resourceType')}</span><select name="type"
+        ><option value="">{t(locale, 'filters.all')}</option>{
+          types.map((value) => <option value={value}>{t(locale, `type.${value}`)}</option>)
+        }</select
+      ></label
+    >
+    <label
+      ><span>{t(locale, 'filters.status')}</span><select name="status"
+        ><option value="">{t(locale, 'filters.all')}</option>{
+          STATUS_CODES.map((value) => <option value={value}>{t(locale, `status.${value}`)}</option>)
+        }</select
+      ></label
+    >
+    <label
+      ><span>{t(locale, 'filters.provider')}</span><select name="provider"
+        ><option value="">{t(locale, 'filters.all')}</option>{
+          providers.map((value) => <option value={value}>{value}</option>)
+        }</select
+      ></label
+    >
+    <label
+      ><span>{t(locale, 'filters.delivery')}</span><select name="delivery"
+        ><option value="">{t(locale, 'filters.all')}</option>{
+          ['online', 'in-person', 'hybrid', 'self-paced'].map((value) => (
+            <option value={value}>{t(locale, `delivery.${value}`)}</option>
+          ))
+        }</select
+      ></label
+    >
+    <label
+      ><span>{t(locale, 'filters.language')}</span><select name="language"
+        ><option value="">{t(locale, 'filters.all')}</option><option value="en">English</option
+        ><option value="bg">Български</option></select
+      ></label
+    >
+    <label
+      ><span>{t(locale, 'filters.cost')}</span><select name="cost"
+        ><option value="">{t(locale, 'filters.all')}</option>{
+          ['free', 'paid', 'mixed', 'unknown'].map((value) => (
+            <option value={value}>{t(locale, `cost.${value}`)}</option>
+          ))
+        }</select
+      ></label
+    >
+    <label
+      ><span>{t(locale, 'filters.certificate')}</span><select name="certificate"
+        ><option value="">{t(locale, 'filters.all')}</option>{
+          ['none', 'certificate', 'accreditation', 'recognition', 'unknown'].map((value) => (
+            <option value={value}>{t(locale, `certificate.${value}`)}</option>
+          ))
+        }</select
+      ></label
+    >
+    <label
+      ><span>{t(locale, 'filters.sort')}</span><select name="sort"
+        >{
+          [
+            option('sort.recommended', 'recommended'),
+            option('sort.title', 'title'),
+            option('sort.provider', 'provider'),
+            option('sort.nextAction', 'next'),
+          ].map(({ value, label }) => <option value={value}>{label}</option>)
+        }</select
+      ></label
+    >
+  </div>
+  <div class="active-filters" data-active-filters aria-label={t(locale, 'filters.active')}></div>
+</form>

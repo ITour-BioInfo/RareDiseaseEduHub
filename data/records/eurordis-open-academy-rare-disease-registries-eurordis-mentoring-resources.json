@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eurordis-open-academy-rare-disease-registries-eurordis-mentoring-resources",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EURORDIS Open Academy",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://openacademy.eurordis.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Rare Disease Registries — EURORDIS mentoring resources",
+    "summary_original": "Rare-disease specific",
+    "description_original": null
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://openacademy.eurordis.org/courses/mentoring-programme-resources-group-5-rare-disease-registries/",
+    "official_url": "https://openacademy.eurordis.org/courses/mentoring-programme-resources-group-5-rare-disease-registries/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://openacademy.eurordis.org/courses/mentoring-programme-resources-group-5-rare-disease-registries/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Online resources available",
+    "legacy": {
+      "type_group": "mentoring",
+      "type_label_bg": "Менторство / обмен",
+      "type_label_en": "Mentoring / exchange",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "Online resources",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://openacademy.eurordis.org/courses/mentoring-programme-resources-group-5-rare-disease-registries/",
+      "url_type": "direct course page",
+      "notes": "",
+      "tags": [
+        "registries",
+        "patient organisations",
+        "governance"
+      ],
+      "source_status_note": "Online resources available",
+      "original_record_type": "Mentoring resource collection",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

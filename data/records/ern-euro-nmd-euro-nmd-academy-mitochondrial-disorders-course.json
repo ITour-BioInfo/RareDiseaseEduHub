@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ern-euro-nmd-euro-nmd-academy-mitochondrial-disorders-course",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ERN EURO-NMD",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://ern-euro-nmd.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "EURO-NMD Academy — Mitochondrial Disorders Course",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Target audience includes nurses, clinicians, geneticists and rehabilitation professionals. This is disease-area CPD, not a general European rare-disease nursing credential."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "self-paced",
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "accreditation",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://ern-euro-nmd.eu/euro-nmd-academy-moodle/",
+    "official_url": "https://ern-euro-nmd.eu/euro-nmd-academy-moodle/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://ern-euro-nmd.eu/euro-nmd-academy-moodle/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Enrolment/course page available | Target audience includes nurses, clinicians, geneticists and rehabilitation professionals. This is disease-area CPD, not a general European rare-disease nursing credential.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "Self-paced online via Moodle",
+      "duration": "11 modules; approximately 20 hours",
+      "cost": "",
+      "certificate_or_recognition": "Assessment, certificate and EACCME accreditation described",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://ern-euro-nmd.eu/euro-nmd-academy-moodle/",
+      "url_type": "direct course page",
+      "notes": "Target audience includes nurses, clinicians, geneticists and rehabilitation professionals. This is disease-area CPD, not a general European rare-disease nursing credential.",
+      "tags": [
+        "mitochondrial disorders",
+        "EACCME",
+        "nursing"
+      ],
+      "source_status_note": "Enrolment/course page available",
+      "original_record_type": "Self-paced accredited course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

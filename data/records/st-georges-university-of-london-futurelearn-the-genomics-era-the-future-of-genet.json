@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "st-georges-university-of-london-futurelearn-the-genomics-era-the-future-of-genet",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "St George’s, University of London / FutureLearn",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.futurelearn.com/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "The Genomics Era: the Future of Genetics in Medicine",
+    "summary_original": "General genomic medicine foundation; relevant to rare disease",
+    "description_original": "FutureLearn states that this course retired on 24 August 2026 and that its content is no longer actively updated."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "General genomic medicine foundation",
+      "relevant to rare disease"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-08-24",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.futurelearn.com/courses/the-genomics-era",
+    "official_url": "https://www.futurelearn.com/courses/the-genomics-era",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.futurelearn.com/courses/the-genomics-era",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Retired from FutureLearn on 24 August 2026 | Retired from FutureLearn on 24 August 2026 | FutureLearn states that this course retired on 24 August 2026 and that its content is no longer actively updated.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "2026-08-24",
+      "dates": "Retired from FutureLearn on 24 August 2026",
+      "delivery": "Online",
+      "duration": "5 weeks; 2 hours/week described",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "General genomic medicine foundation; relevant to rare disease",
+      "source_collection_url": "https://www.futurelearn.com/courses/the-genomics-era",
+      "url_type": "direct course page",
+      "notes": "FutureLearn states that this course retired on 24 August 2026 and that its content is no longer actively updated.",
+      "tags": [
+        "genomics foundation",
+        "healthcare professionals"
+      ],
+      "source_status_note": "Retired from FutureLearn on 24 August 2026",
+      "original_record_type": "MOOC",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

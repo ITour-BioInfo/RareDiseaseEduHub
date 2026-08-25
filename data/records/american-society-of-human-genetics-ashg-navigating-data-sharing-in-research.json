@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "american-society-of-human-genetics-ashg-navigating-data-sharing-in-research",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "American Society of Human Genetics (ASHG)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://learning.ashg.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Navigating Data Sharing in Research",
+    "summary_original": "Human genetics and research data sharing; enabling relevance to rare-disease research",
+    "description_original": "Discussion of practical and ethical questions around data sharing in human genetics research."
+  },
+  "classification": {
+    "resource_type": "webinar",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Human genetics and research data sharing",
+      "enabling relevance to rare-disease research"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-09-09",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "official_url": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 9 September 2026, 12:00 EDT | Scheduled and open in the ASHG learning catalogue | Discussion of practical and ethical questions around data sharing in human genetics research.",
+    "legacy": {
+      "type_group": "webinar",
+      "type_label_bg": "Уебинар / семинар",
+      "type_label_en": "Webinar / seminar",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-09-09",
+      "dates": "9 September 2026, 12:00 EDT",
+      "delivery": "Online journal-club webinar",
+      "duration": "One webinar",
+      "cost": "Free",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Human genetics and research data sharing; enabling relevance to rare-disease research",
+      "source_collection_url": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+      "url_type": "direct official HTML page",
+      "notes": "Discussion of practical and ethical questions around data sharing in human genetics research.",
+      "tags": [
+        "data sharing",
+        "research ethics",
+        "human genetics"
+      ],
+      "source_status_note": "Scheduled and open in the ASHG learning catalogue",
+      "original_record_type": "Journal-club webinar",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

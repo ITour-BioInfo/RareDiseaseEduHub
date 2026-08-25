@@ -1,0 +1,110 @@
+---
+import type { Locale } from '../i18n/config';
+import { formatDate, formatList } from '../i18n/format';
+import { resourceRoute } from '../i18n/routes';
+import { t } from '../i18n/translate';
+import type { CatalogRecord, CatalogTranslation } from '../lib/catalog/schema';
+import { localizeRecord } from '../lib/catalog/localization';
+import { calculateStatus } from '../lib/catalog/status';
+import { withBase } from '../lib/site/url';
+import StatusBadge from './StatusBadge.astro';
+
+interface Props {
+  locale: Locale;
+  record: CatalogRecord;
+  translation?: CatalogTranslation | undefined;
+}
+const { locale, record, translation } = Astro.props;
+const localized = localizeRecord(record, translation);
+const status = calculateStatus(record);
+const dates = [record.dates.event.start, record.dates.event.end].filter(Boolean) as string[];
+const searchText = [
+  localized.display_title,
+  record.content.title_original,
+  record.provider.name,
+  ...record.classification.topics,
+]
+  .join(' ')
+  .toLocaleLowerCase();
+---
+
+<article
+  class="catalogue-card"
+  data-record-card
+  data-id={record.id}
+  data-search={searchText}
+  data-type={record.classification.resource_type}
+  data-provider={record.provider.name}
+  data-delivery={record.classification.delivery_modes.join('|')}
+  data-language={record.classification.languages.join('|')}
+  data-cost={record.commercial.cost_kind}
+  data-certificate={record.classification.certificate_kind}
+  data-status={status.primary}
+  data-next-action={status.next_action_at || ''}
+>
+  <div class="card-topline">
+    <StatusBadge locale={locale} status={status.primary} />
+    <span class="resource-type">{t(locale, `type.${record.classification.resource_type}`)}</span>
+  </div>
+  <h3>
+    <a href={withBase(resourceRoute(locale, record.id))} lang={localized.display_language}
+      >{localized.display_title}</a
+    >
+  </h3>
+  {
+    localized.has_translation && (
+      <p class="original-title">
+        <span>{t(locale, 'resource.originalTitle')}:</span>{' '}
+        <span lang={record.content.original_language}>{record.content.title_original}</span>
+      </p>
+    )
+  }
+  <p class="provider">{record.provider.name}</p>
+  {
+    localized.display_summary && (
+      <p class="summary" lang={localized.display_language}>
+        {localized.display_summary}
+      </p>
+    )
+  }
+  <dl class="card-facts">
+    <div>
+      <dt>{t(locale, 'resource.delivery')}</dt><dd>
+        {
+          formatList(
+            record.classification.delivery_modes.map((mode) => t(locale, `delivery.${mode}`)),
+            locale,
+          )
+        }
+      </dd>
+    </div>
+    <div>
+      <dt>{t(locale, 'resource.dates')}</dt><dd>
+        {
+          dates.length
+            ? dates
+                .map((date) =>
+                  formatDate(date, locale, record.dates.event.timezone || 'Europe/Sofia'),
+                )
+                .join(' — ')
+            : t(locale, 'resource.unknown')
+        }
+      </dd>
+    </div>
+  </dl>
+  <div class="card-actions">
+    <a class="button secondary" href={withBase(resourceRoute(locale, record.id))}
+      >{t(locale, 'resource.details')}</a
+    >
+    <a
+      class="text-link"
+      href={record.sources.official_url}
+      target="_blank"
+      rel="noopener noreferrer"
+      >{t(locale, 'resource.officialSource')}
+      <span aria-hidden="true">↗</span><span class="sr-only">
+        — {t(locale, 'resource.external')}</span
+      ></a
+    >
+  </div>
+</article>

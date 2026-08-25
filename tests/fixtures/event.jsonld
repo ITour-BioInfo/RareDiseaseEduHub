@@ -1,0 +1,8 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Rare disease workshop",
+  "startDate": "2026-09-20T09:00:00+03:00",
+  "endDate": "2026-09-20T17:00:00+03:00",
+  "url": "https://official.example/events/workshop"
+}

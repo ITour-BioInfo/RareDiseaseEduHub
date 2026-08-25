@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "bbmri-eric-monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategi",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "BBMRI-ERIC",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.bbmri-eric.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Monitoring the Preanalytical Phase in Biobanking: Key Variables and QC Strategies",
+    "summary_original": "Biobanking quality management; enabling relevance to rare-disease research",
+    "description_original": "Covers preanalytical variables, quality-control strategies and their relationship to ISO 20387."
+  },
+  "classification": {
+    "resource_type": "webinar",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Biobanking quality management",
+      "enabling relevance to rare-disease research"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-10-13",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.bbmri-eric.eu/events/monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategies/",
+    "official_url": "https://www.bbmri-eric.eu/events/monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategies/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.bbmri-eric.eu/events/monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategies/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 13 October 2026, 10:00–11:15 CEST | Upcoming on the official BBMRI-ERIC event page | Covers preanalytical variables, quality-control strategies and their relationship to ISO 20387.",
+    "legacy": {
+      "type_group": "webinar",
+      "type_label_bg": "Уебинар / семинар",
+      "type_label_en": "Webinar / seminar",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-10-13",
+      "dates": "13 October 2026, 10:00–11:15 CEST",
+      "delivery": "Online webinar",
+      "duration": "75 minutes",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Biobanking quality management; enabling relevance to rare-disease research",
+      "source_collection_url": "https://www.bbmri-eric.eu/events/monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategies/",
+      "url_type": "direct official HTML page",
+      "notes": "Covers preanalytical variables, quality-control strategies and their relationship to ISO 20387.",
+      "tags": [
+        "biobanking",
+        "quality control",
+        "ISO 20387"
+      ],
+      "source_status_note": "Upcoming on the official BBMRI-ERIC event page",
+      "original_record_type": "Quality-management webinar",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "erdera-rare-diseases-virtual-platform-training-for-resources-joining-the-rare-di",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ERDERA / Rare Diseases Virtual Platform",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://erdera.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Training for resources joining the Rare Diseases Virtual Platform",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Topics include the metadata model, FAIR Data Point Index, Beacon-in-a-Box, FAIR-in-a-Box and metadata validation."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://erdera.org/event/training-for-resources-joining-the-rare-diseases-virtual-platform/",
+    "official_url": "https://erdera.org/event/training-for-resources-joining-the-rare-diseases-virtual-platform/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://erdera.org/event/training-for-resources-joining-the-rare-diseases-virtual-platform/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Historical or inactive; no current date announced | Past onboarding event; resources may be reusable | Topics include the metadata model, FAIR Data Point Index, Beacon-in-a-Box, FAIR-in-a-Box and metadata validation.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "",
+      "dates": "Historical or inactive; no current date announced",
+      "delivery": "Online onboarding",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://erdera.org/event/training-for-resources-joining-the-rare-diseases-virtual-platform/",
+      "url_type": "direct course page",
+      "notes": "Topics include the metadata model, FAIR Data Point Index, Beacon-in-a-Box, FAIR-in-a-Box and metadata validation.",
+      "tags": [
+        "metadata",
+        "Beacon",
+        "FAIR Data Point"
+      ],
+      "source_status_note": "Past onboarding event; resources may be reusable",
+      "original_record_type": "Onboarding training archive",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

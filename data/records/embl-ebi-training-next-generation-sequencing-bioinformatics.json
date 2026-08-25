@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "embl-ebi-training-next-generation-sequencing-bioinformatics",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EMBL-EBI Training",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ebi.ac.uk/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Next Generation Sequencing Bioinformatics",
+    "summary_original": "NGS bioinformatics broadly; applicable to rare-disease pipelines",
+    "description_original": "The linked page documents the 2021 virtual course. It remains useful as a curriculum reference for QC, alignment, variant calling, annotation, pipelines and automation, but it is not a current enrolment page. Check EMBL-EBI's active catalogue for newer editions."
+  },
+  "classification": {
+    "resource_type": "workshop",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "NGS bioinformatics broadly",
+      "applicable to rare-disease pipelines"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2021-02-15",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ebi.ac.uk/training/events/next-generation-sequencing-bioinformatics-virtual-0/",
+    "official_url": "https://www.ebi.ac.uk/training/events/next-generation-sequencing-bioinformatics-virtual-0/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ebi.ac.uk/training/events/next-generation-sequencing-bioinformatics-virtual-0/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 15–19 February 2021 | Archived 2021 virtual course; page and programme remain available | The linked page documents the 2021 virtual course. It remains useful as a curriculum reference for QC, alignment, variant calling, annotation, pipelines and automation, but it is not a current enrolment page. Check EMBL-EBI's active catalogue for newer editions.",
+    "legacy": {
+      "type_group": "workshop",
+      "type_label_bg": "Практическо обучение / работилница",
+      "type_label_en": "Practical training / workshop",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "2021-02-15",
+      "dates": "15–19 February 2021",
+      "delivery": "Virtual course (historic edition)",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "NGS bioinformatics broadly; applicable to rare-disease pipelines",
+      "source_collection_url": "https://www.ebi.ac.uk/training/events/next-generation-sequencing-bioinformatics-virtual-0/",
+      "url_type": "direct course page",
+      "notes": "The linked page documents the 2021 virtual course. It remains useful as a curriculum reference for QC, alignment, variant calling, annotation, pipelines and automation, but it is not a current enrolment page. Check EMBL-EBI's active catalogue for newer editions.",
+      "tags": [
+        "NGS",
+        "pipelines",
+        "automation"
+      ],
+      "source_status_note": "Archived 2021 virtual course; page and programme remain available",
+      "original_record_type": "Practical course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

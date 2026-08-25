@@ -1,0 +1,9 @@
+{
+  "name": "Rare Disease Education Hub",
+  "short_name": "RareDiseaseEdu",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#f4f7f6",
+  "theme_color": "#0a5c55",
+  "lang": "bg"
+}

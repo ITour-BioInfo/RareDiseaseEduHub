@@ -1,0 +1,15 @@
+{
+  "record_id": "university-of-glasgow-futurelearn-genomic-medicine-harnessing-the-power-of-the-h",
+  "locale": "en",
+  "title": "Genomic Medicine: Harnessing the Power of the Human Genome",
+  "summary": "Genomic medicine broadly, with rare-disease applications",
+  "description": "Covers genomic concepts, pathogenic variants and hands-on use of public genomic databases. It is not exclusively focused on rare diseases.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

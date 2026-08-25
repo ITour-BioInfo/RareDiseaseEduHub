@@ -1,0 +1,15 @@
+{
+  "record_id": "erdera-erdera-data-hub-tutorials-and-onboarding",
+  "locale": "en",
+  "title": "ERDERA Data Hub tutorials and onboarding",
+  "summary": "Rare-disease specific",
+  "description": "Includes FAIR-in-a-Box, Beacon v2 and metadata-related onboarding resources. This is a resource hub rather than a single certificate course.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

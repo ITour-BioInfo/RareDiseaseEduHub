@@ -1,0 +1,15 @@
+{
+  "record_id": "embl-ebi-training-data-collection-analysis-and-interpretation-for-genomic-medici",
+  "locale": "en",
+  "title": "Data Collection, Analysis and Interpretation for Genomic Medicine",
+  "summary": "Genomic medicine, including diagnostic pipeline implementation",
+  "description": "The linked page documents the 2020 workshop. It remains useful as a curriculum reference for GA4GH standards, cloud pipelines, VEP, PanelApp and IGV, but it is not a current enrolment page. Check the EMBL-EBI training catalogue for newer editions.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

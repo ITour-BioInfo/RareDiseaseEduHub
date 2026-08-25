@@ -1,0 +1,14 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n/translate';
+import { withBase } from '../lib/site/url';
+---
+
+<BaseLayout locale="bg" title={`${t('bg', '404.title')} · ${t('bg', 'site.title')}`} noindex>
+  <section class="not-found shell narrow">
+    <p class="error-code">404</p><h1>{t('bg', '404.title')}</h1><p>{t('bg', '404.body')}</p><a
+      class="button primary"
+      href={withBase('/')}>{t('bg', '404.home')}</a
+    >
+  </section>
+</BaseLayout>

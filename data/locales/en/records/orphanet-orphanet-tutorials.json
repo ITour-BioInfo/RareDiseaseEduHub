@@ -1,0 +1,15 @@
+{
+  "record_id": "orphanet-orphanet-tutorials",
+  "locale": "en",
+  "title": "Orphanet Tutorials",
+  "summary": "Rare-disease specific",
+  "description": "English-language tutorials on searching for rare diseases and genes and understanding Orphanet nomenclature.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

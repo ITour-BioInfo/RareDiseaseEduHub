@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "university-of-exeter-futurelearn-genomic-medicine-and-research-a-community-appro",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "University of Exeter / FutureLearn",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.futurelearn.com/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Genomic Medicine and Research: A Community Approach",
+    "summary_original": "Rare inherited disease and community genomics",
+    "description_original": "Relevant to translational genomics, whole-genome analysis, differential diagnosis and community engagement. The provider page stated that the course was not running at verification."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare inherited disease and community genomics"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.futurelearn.com/courses/community-genetics",
+    "official_url": "https://www.futurelearn.com/courses/community-genetics",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.futurelearn.com/courses/community-genetics",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Date to be announced | Not currently running; notification available for a future edition | Relevant to translational genomics, whole-genome analysis, differential diagnosis and community engagement. The provider page stated that the course was not running at verification.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "",
+      "dates": "Date to be announced",
+      "delivery": "Online",
+      "duration": "3 weeks; 3 hours/week",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare inherited disease and community genomics",
+      "source_collection_url": "https://www.futurelearn.com/courses/community-genetics",
+      "url_type": "direct course page",
+      "notes": "Relevant to translational genomics, whole-genome analysis, differential diagnosis and community engagement. The provider page stated that the course was not running at verification.",
+      "tags": [
+        "community genetics",
+        "whole genome sequencing",
+        "translational research"
+      ],
+      "source_status_note": "Not currently running; notification available for a future edition",
+      "original_record_type": "MOOC",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

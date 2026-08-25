@@ -1,0 +1,12 @@
+---
+import ResourceDetail from '../../../components/ResourceDetail.astro';
+import { loadRecords, loadTranslations } from '../../../lib/catalog/load';
+export async function getStaticPaths() {
+  const records = await loadRecords();
+  return records.map((record) => ({ params: { id: record.id }, props: { record } }));
+}
+const { record } = Astro.props;
+const translations = await loadTranslations('en');
+---
+
+<ResourceDetail locale="en" record={record} translation={translations.get(record.id)} />

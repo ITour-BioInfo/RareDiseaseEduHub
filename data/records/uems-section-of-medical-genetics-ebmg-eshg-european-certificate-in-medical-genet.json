@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "uems-section-of-medical-genetics-ebmg-eshg-european-certificate-in-medical-genet",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "UEMS Section of Medical Genetics / EBMG / ESHG",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.uems-ecmgg.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "European Certificate in Medical Genetics and Genomics (ECMGG)",
+    "summary_original": "Rare-disease specific",
+    "description_original": "For medically qualified late-stage trainees or trained medical geneticists. It is an examination/credential, not a standalone course."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "certificate",
+    "cost_kind": "paid"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-04-20",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "paid",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.uems-ecmgg.org/Home.html",
+    "official_url": "https://www.uems-ecmgg.org/Home.html",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.uems-ecmgg.org/Apply.html",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 2026: written 20 April; oral stations 5 June. 2027 registration opens 1 October 2026. | 2026 cycle closed; 2027 registration opens 1 October 2026 | For medically qualified late-stage trainees or trained medical geneticists. It is an examination/credential, not a standalone course.",
+    "legacy": {
+      "type_group": "credential",
+      "type_label_bg": "Сертификат / регистрация",
+      "type_label_en": "Credential / registration",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "2026-04-20",
+      "dates": "2026: written 20 April; oral stations 5 June. 2027 registration opens 1 October 2026.",
+      "delivery": "Fully virtual; 110 MCQs plus six structured oral stations in the 2026 cycle",
+      "duration": "",
+      "cost": "€600 for the 2026 cycle",
+      "certificate_or_recognition": "European examination certificate; national recognition depends on local ratification.",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.uems-ecmgg.org/Apply.html",
+      "url_type": "direct course page",
+      "notes": "For medically qualified late-stage trainees or trained medical geneticists. It is an examination/credential, not a standalone course.",
+      "tags": [
+        "medical genetics",
+        "credential",
+        "European examination"
+      ],
+      "source_status_note": "2026 cycle closed; 2027 registration opens 1 October 2026",
+      "original_record_type": "Credential / examination",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

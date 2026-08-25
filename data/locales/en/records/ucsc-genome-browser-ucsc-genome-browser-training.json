@@ -1,0 +1,15 @@
+{
+  "record_id": "ucsc-genome-browser-ucsc-genome-browser-training",
+  "locale": "en",
+  "title": "UCSC Genome Browser training",
+  "summary": "Genomics tool training; not rare-disease specific",
+  "description": "Named as an additional educational source by EBMG. Use as tool competence evidence, not as a substitute for broad clinical laboratory genetics training.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

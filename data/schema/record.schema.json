@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/record.schema.json",
+  "title": "Rare Disease Education Hub record",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "id",
+    "provider",
+    "content",
+    "classification",
+    "dates",
+    "sources",
+    "editorial"
+  ],
+  "properties": {
+    "schema_version": { "const": "1.0.0" },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9-]*$" },
+    "lifecycle": {
+      "enum": ["active", "inactive", "archived", "retired", "cancelled", "postponed"]
+    },
+    "provider": { "type": "object" },
+    "content": { "type": "object" },
+    "classification": { "type": "object" },
+    "dates": { "type": "object" },
+    "sources": { "type": "object" },
+    "editorial": { "type": "object" }
+  },
+  "additionalProperties": false
+}

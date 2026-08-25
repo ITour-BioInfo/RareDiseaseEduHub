@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "wellcome-connecting-science-wellcome-connecting-science-courses-and-conferences",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "Wellcome Connecting Science",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://coursesandconferences.wellcomeconnectingscience.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Wellcome Connecting Science courses and conferences",
+    "summary_original": "Genomics-wide; selected courses relevant to rare disease diagnostics",
+    "description_original": "The provider is named on the EBMG ErCLG examples page. Suitability depends on content and applicant route; the listing does not mean EBMG accreditation."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Genomics-wide",
+      "selected courses relevant to rare disease diagnostics"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://coursesandconferences.wellcomeconnectingscience.org/",
+    "official_url": "https://coursesandconferences.wellcomeconnectingscience.org/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://coursesandconferences.wellcomeconnectingscience.org/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Live catalogue; course-specific dates | The provider is named on the EBMG ErCLG examples page. Suitability depends on content and applicant route; the listing does not mean EBMG accreditation.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Genomics-wide; selected courses relevant to rare disease diagnostics",
+      "source_collection_url": "https://coursesandconferences.wellcomeconnectingscience.org/",
+      "url_type": "direct course page",
+      "notes": "The provider is named on the EBMG ErCLG examples page. Suitability depends on content and applicant route; the listing does not mean EBMG accreditation.",
+      "tags": [
+        "genomics",
+        "bioinformatics",
+        "ErCLG example"
+      ],
+      "source_status_note": "Live catalogue; course-specific dates",
+      "original_record_type": "Course collection",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

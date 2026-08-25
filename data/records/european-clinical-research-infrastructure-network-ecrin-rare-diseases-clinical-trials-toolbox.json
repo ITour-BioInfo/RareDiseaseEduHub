@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-clinical-research-infrastructure-network-ecrin-rare-diseases-clinical-trials-toolbox",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "European Clinical Research Infrastructure Network (ECRIN)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://ecrin.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Rare Diseases Clinical Trials Toolbox",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Five-part practical guide for defining, planning, executing, analysing and closing medicinal-product clinical trials, with special attention to investigator-initiated rare-disease studies."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://ecrin.org/rare-diseases-clinical-trials-toolbox",
+    "official_url": "https://ecrin.org/rare-diseases-clinical-trials-toolbox",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://ecrin.org/rare-diseases-clinical-trials-toolbox",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Continuously available; latest update shown as 2 December 2025 | Active official toolbox | Five-part practical guide for defining, planning, executing, analysing and closing medicinal-product clinical trials, with special attention to investigator-initiated rare-disease studies.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Continuously available; latest update shown as 2 December 2025",
+      "delivery": "Interactive online guidance and resource collection",
+      "duration": "",
+      "cost": "Free",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://ecrin.org/rare-diseases-clinical-trials-toolbox",
+      "url_type": "direct official HTML page",
+      "notes": "Five-part practical guide for defining, planning, executing, analysing and closing medicinal-product clinical trials, with special attention to investigator-initiated rare-disease studies.",
+      "tags": [
+        "clinical trials",
+        "regulation",
+        "investigator-initiated trials"
+      ],
+      "source_status_note": "Active official toolbox",
+      "original_record_type": "Clinical-trial toolbox",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

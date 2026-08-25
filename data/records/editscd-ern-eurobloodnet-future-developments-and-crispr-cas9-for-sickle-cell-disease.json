@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "editscd-ern-eurobloodnet-future-developments-and-crispr-cas9-for-sickle-cell-disease",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EDITSCD / ERN-EuroBloodNet",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://editscd.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Future Developments and CRISPR/Cas9 for Sickle Cell Disease",
+    "summary_original": "Sickle cell disease and gene editing",
+    "description_original": "This is the session actually scheduled for 2 October. The submitted report incorrectly assigned that date to “Regulatory Path to the Clinic,” which the organiser schedules for 12 November."
+  },
+  "classification": {
+    "resource_type": "webinar",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Sickle cell disease and gene editing"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-10-02",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://editscd.eu/category/events/project-meetings/",
+    "official_url": "https://editscd.eu/category/events/project-meetings/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://editscd.eu/category/events/project-meetings/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 2 October 2026, 17:00 CEST | Upcoming session on the official project event page | This is the session actually scheduled for 2 October. The submitted report incorrectly assigned that date to “Regulatory Path to the Clinic,” which the organiser schedules for 12 November.",
+    "legacy": {
+      "type_group": "webinar",
+      "type_label_bg": "Уебинар / семинар",
+      "type_label_en": "Webinar / seminar",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-10-02",
+      "dates": "2 October 2026, 17:00 CEST",
+      "delivery": "Online webinar",
+      "duration": "One session",
+      "cost": "Free registration",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Sickle cell disease and gene editing",
+      "source_collection_url": "https://editscd.eu/category/events/project-meetings/",
+      "url_type": "direct official HTML page",
+      "notes": "This is the session actually scheduled for 2 October. The submitted report incorrectly assigned that date to “Regulatory Path to the Clinic,” which the organiser schedules for 12 November.",
+      "tags": [
+        "CRISPR",
+        "sickle cell disease",
+        "gene editing"
+      ],
+      "source_status_note": "Upcoming session on the official project event page",
+      "original_record_type": "Patient-focused webinar",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

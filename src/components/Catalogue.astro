@@ -1,0 +1,82 @@
+---
+import type { Locale } from '../i18n/config';
+import { t } from '../i18n/translate';
+import { loadRecords, loadTranslations } from '../lib/catalog/load';
+import { sortRecords } from '../lib/catalog/sort';
+import { STATUS_CODES } from '../lib/catalog/status';
+import CatalogueCard from './CatalogueCard.astro';
+import CatalogueFilters from './CatalogueFilters.astro';
+
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+const records = sortRecords(await loadRecords());
+const translations = await loadTranslations(locale);
+const schedules = Object.fromEntries(
+  records.map((record) => [
+    record.id,
+    {
+      lifecycle: record.lifecycle,
+      dates: record.dates,
+      classification: { resource_type: record.classification.resource_type },
+    },
+  ]),
+);
+const clientMessages = {
+  loading: t(locale, 'catalogue.loading'),
+  available: t(locale, 'catalogue.available'),
+  failed: t(locale, 'catalogue.failed'),
+  noResults: t(locale, 'catalogue.noResults'),
+  results: t(locale, 'catalogue.results', { shown: '{shown}', total: '{total}' }),
+  clear: t(locale, 'filters.clear'),
+  statusLabels: Object.fromEntries(STATUS_CODES.map((code) => [code, t(locale, `status.${code}`)])),
+};
+---
+
+<section
+  class="catalogue-section"
+  id="catalogue"
+  data-catalogue
+  data-total={records.length}
+  data-messages={JSON.stringify(clientMessages)}
+>
+  <div class="shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">{t(locale, 'hero.eyebrow')}</p><h2>{t(locale, 'catalogue.heading')}</h2>
+      </div><p>{t(locale, 'catalogue.intro')}</p>
+    </div>
+    <CatalogueFilters locale={locale} records={records} />
+    <div
+      class="catalogue-status"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      data-catalogue-status
+    >
+      {t(locale, 'catalogue.available')}. {t(locale, 'catalogue.total', { total: records.length })}
+    </div>
+    <div class="no-results" data-no-results hidden>{t(locale, 'catalogue.noResults')}</div>
+    <div class="catalogue-grid" data-catalogue-grid>
+      {
+        records.map((record) => (
+          <CatalogueCard
+            locale={locale}
+            record={record}
+            translation={translations.get(record.id)}
+          />
+        ))
+      }
+    </div>
+  </div>
+  <script
+    is:inline
+    id="catalogue-schedules"
+    type="application/json"
+    set:html={JSON.stringify(schedules).replaceAll('<', '\\u003c')}
+  />
+</section>
+<script>
+  import '../scripts/catalogue-client.ts';
+</script>

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "embl-ebi-training-methods-in-genomic-variant-calling",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EMBL-EBI Training",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ebi.ac.uk/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Methods in Genomic Variant Calling",
+    "summary_original": "Variant-calling methods with rare-disease use cases",
+    "description_original": null
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Variant-calling methods with rare-disease use cases"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ebi.ac.uk/training/online/courses/methods-in-bioinformatics/genomic-variants/methods-in-genomic-variant-calling/",
+    "official_url": "https://www.ebi.ac.uk/training/online/courses/methods-in-bioinformatics/genomic-variants/methods-in-genomic-variant-calling/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ebi.ac.uk/training/online/courses/methods-in-bioinformatics/genomic-variants/methods-in-genomic-variant-calling/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Free recording/materials available",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "Online recording and materials",
+      "duration": "",
+      "cost": "Free",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Variant-calling methods with rare-disease use cases",
+      "source_collection_url": "https://www.ebi.ac.uk/training/online/courses/methods-in-bioinformatics/genomic-variants/methods-in-genomic-variant-calling/",
+      "url_type": "direct course page",
+      "notes": "",
+      "tags": [
+        "variant calling",
+        "bioinformatics",
+        "recording"
+      ],
+      "source_status_note": "Free recording/materials available",
+      "original_record_type": "Recorded online course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+:root {
+  --ink: #142521;
+  --muted: #536b65;
+  --paper: #f4f7f6;
+  --surface: #ffffff;
+  --surface-soft: #e9f1ef;
+  --teal-900: #073f3b;
+  --teal-700: #0a5c55;
+  --teal-500: #148579;
+  --mint: #bde9dc;
+  --lime: #d8ef9b;
+  --coral: #f19477;
+  --amber: #e7b64a;
+  --blue: #4a88a8;
+  --border: #cbdad6;
+  --focus: #f2ad2e;
+  --shadow: 0 16px 45px rgb(7 63 59 / 10%);
+  --radius-sm: 0.65rem;
+  --radius-md: 1.1rem;
+  --radius-lg: 1.8rem;
+  --shell: 76rem;
+}

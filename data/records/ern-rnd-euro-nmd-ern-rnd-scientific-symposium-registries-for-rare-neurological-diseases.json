@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ern-rnd-euro-nmd-ern-rnd-scientific-symposium-registries-for-rare-neurological-diseases",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ERN-RND / EURO-NMD",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ern-rnd.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "ERN-RND Scientific Symposium: Registries for Rare Neurological Diseases",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Scientific and practical programme focused on registries for rare neurological diseases."
+  },
+  "classification": {
+    "resource_type": "webinar",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-10-10",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ern-rnd.eu/events/",
+    "official_url": "https://www.ern-rnd.eu/events/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ern-rnd.eu/events/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 10 October 2026 | Upcoming; registration information on the official ERN-RND events page | Scientific and practical programme focused on registries for rare neurological diseases.",
+    "legacy": {
+      "type_group": "webinar",
+      "type_label_bg": "Уебинар / семинар",
+      "type_label_en": "Webinar / seminar",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-10-10",
+      "dates": "10 October 2026",
+      "delivery": "Online scientific symposium",
+      "duration": "One day",
+      "cost": "Free",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.ern-rnd.eu/events/",
+      "url_type": "direct official HTML page",
+      "notes": "Scientific and practical programme focused on registries for rare neurological diseases.",
+      "tags": [
+        "registries",
+        "rare neurological diseases",
+        "ERN-RND"
+      ],
+      "source_status_note": "Upcoming; registration information on the official ERN-RND events page",
+      "original_record_type": "Online scientific symposium",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "erdera-learning-portal-translational-medicine-explained-tmex",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EATRIS",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://eatris.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Translational Medicine Explored (TMex) 2026",
+    "summary_original": "Translational medicine broadly; directly applicable to rare-disease therapy development",
+    "description_original": "EATRIS flagship course for early-career biomedical researchers, covering the multidisciplinary path from scientific discovery to patient benefit. The official 2026 announcement was live at verification; the durable EATRIS education page is used instead of a social-media or temporary registration link."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Translational medicine broadly",
+      "directly applicable to rare-disease therapy development"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-11-30",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://eatris.eu/training/education-training-news/",
+    "official_url": "https://eatris.eu/training/education-training-news/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://eatris.eu/training/education-training-news/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 30 November–3 December 2026 | 2026 edition announced; registration advertised by EATRIS | EATRIS flagship course for early-career biomedical researchers, covering the multidisciplinary path from scientific discovery to patient benefit. The official 2026 announcement was live at verification; the durable EATRIS education page is used instead of a social-media or temporary registration link.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-11-30",
+      "dates": "30 November–3 December 2026",
+      "delivery": "Four-day in-person course, Barcelona, Spain",
+      "duration": "4 days",
+      "cost": "",
+      "certificate_or_recognition": "Course-specific; see provider",
+      "rare_disease_scope": "Translational medicine broadly; directly applicable to rare-disease therapy development",
+      "source_collection_url": "https://eatris.eu/training/education-training-news/",
+      "url_type": "official EATRIS education page",
+      "notes": "EATRIS flagship course for early-career biomedical researchers, covering the multidisciplinary path from scientific discovery to patient benefit. The official 2026 announcement was live at verification; the durable EATRIS education page is used instead of a social-media or temporary registration link.",
+      "tags": [
+        "ERDERA",
+        "rare diseases"
+      ],
+      "source_status_note": "2026 edition announced; registration advertised by EATRIS",
+      "original_record_type": "Intensive translational medicine course",
+      "catalogue_index": "55",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

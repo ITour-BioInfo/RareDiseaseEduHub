@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ejp-rd-erdera-via-futurelearn-diagnosing-rare-diseases-from-the-clinic-to-resear",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EJP RD / ERDERA via FutureLearn",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.futurelearn.com/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Diagnosing Rare Diseases: from the Clinic to Research and Back",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Direct course or provider page independently resolved from the ERDERA catalogue record."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "accreditation",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.futurelearn.com/courses/rare-genetic-disease",
+    "official_url": "https://www.futurelearn.com/courses/rare-genetic-disease",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://erdera.org/erdera-learning-portal/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / available now (no fixed cohort date) | Available now on FutureLearn | Direct course or provider page independently resolved from the ERDERA catalogue record.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / available now (no fixed cohort date)",
+      "delivery": "100% online",
+      "duration": "5 weeks; 3 hours/week",
+      "cost": "Free digital upgrade described by FutureLearn",
+      "certificate_or_recognition": "CPD Certification Service accreditation shown on FutureLearn",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://erdera.org/erdera-learning-portal/",
+      "url_type": "direct course/provider page",
+      "notes": "Direct course or provider page independently resolved from the ERDERA catalogue record.",
+      "tags": [
+        "ERDERA",
+        "rare diseases"
+      ],
+      "source_status_note": "Available now on FutureLearn",
+      "original_record_type": "MOOC",
+      "catalogue_index": "60",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

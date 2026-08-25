@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "erdera-learning-portal-statistical-and-operational-challenges-with-master-protoc",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ERDERA Learning Portal",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://erdera.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Statistical and Operational Challenges with Master Protocols",
+    "summary_original": "Rare-disease specific",
+    "description_original": "A direct detail-page URL was not independently resolved; the button opens the ERDERA Learning Portal, where the exact title should be searched."
+  },
+  "classification": {
+    "resource_type": "webinar",
+    "delivery_modes": [
+      "online",
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://erdera.org/erdera-learning-portal/",
+    "official_url": "https://erdera.org/erdera-learning-portal/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://erdera.org/erdera-learning-portal/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Listed in ERDERA Learning Portal; check current access and dates | A direct detail-page URL was not independently resolved; the button opens the ERDERA Learning Portal, where the exact title should be searched.",
+    "legacy": {
+      "type_group": "webinar",
+      "type_label_bg": "Уебинар / семинар",
+      "type_label_en": "Webinar / seminar",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "Online, in-person or resource-based; see course record",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "Course-specific; see provider",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://erdera.org/erdera-learning-portal/",
+      "url_type": "ERDERA catalogue landing page",
+      "notes": "A direct detail-page URL was not independently resolved; the button opens the ERDERA Learning Portal, where the exact title should be searched.",
+      "tags": [
+        "ERDERA",
+        "rare diseases"
+      ],
+      "source_status_note": "Listed in ERDERA Learning Portal; check current access and dates",
+      "original_record_type": "Webinar",
+      "catalogue_index": "37",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

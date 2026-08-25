@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "editscd-ern-eurobloodnet-eatris-regulatory-path-to-the-clinic",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EDITSCD / ERN-EuroBloodNet / EATRIS",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://eurobloodnet.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Regulatory Path to the Clinic",
+    "summary_original": "Sickle cell disease, gene editing and regulation",
+    "description_original": "Patient-focused session led by an EATRIS senior scientific programme manager. Corrected from the report’s erroneous 2 October date."
+  },
+  "classification": {
+    "resource_type": "webinar",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Sickle cell disease",
+      "gene editing and regulation"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-11-12",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://eurobloodnet.eu/education-2/patients/webinars/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/7/session-7-regulatory-path-to-the-clinic",
+    "official_url": "https://eurobloodnet.eu/education-2/patients/webinars/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/7/session-7-regulatory-path-to-the-clinic",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://eurobloodnet.eu/education-2/patients/webinars/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/7/session-7-regulatory-path-to-the-clinic",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 12 November 2026, 17:00 CET | Upcoming; official registration form available | Patient-focused session led by an EATRIS senior scientific programme manager. Corrected from the report’s erroneous 2 October date.",
+    "legacy": {
+      "type_group": "webinar",
+      "type_label_bg": "Уебинар / семинар",
+      "type_label_en": "Webinar / seminar",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-11-12",
+      "dates": "12 November 2026, 17:00 CET",
+      "delivery": "Online webinar",
+      "duration": "One session",
+      "cost": "Free registration",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Sickle cell disease, gene editing and regulation",
+      "source_collection_url": "https://eurobloodnet.eu/education-2/patients/webinars/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/7/session-7-regulatory-path-to-the-clinic",
+      "url_type": "direct official HTML page",
+      "notes": "Patient-focused session led by an EATRIS senior scientific programme manager. Corrected from the report’s erroneous 2 October date.",
+      "tags": [
+        "regulatory pathway",
+        "sickle cell disease",
+        "ATMP"
+      ],
+      "source_status_note": "Upcoming; official registration form available",
+      "original_record_type": "Patient-focused regulatory webinar",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.astro/
+.env
+playwright-report/
+test-results/
+coverage/
+work/
+outputs/
+*.log
+.DS_Store

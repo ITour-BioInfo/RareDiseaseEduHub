@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "provider-linked-from-ebmg-erclg-examples-page-virtual-prenatal-genetics-short-co",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "Provider linked from EBMG ErCLG examples page",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ebmg.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Virtual Prenatal Genetics Short Course 2025",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Included because EBMG lists the 2025 course as a potentially suitable example. Current availability was not independently confirmed."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ebmg.eu/669.0.html",
+    "official_url": "https://www.ebmg.eu/669.0.html",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ebmg.eu/669.0.html",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Historical or inactive; no current date announced | Historic 2025 example; check for a future edition | Included because EBMG lists the 2025 course as a potentially suitable example. Current availability was not independently confirmed.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "",
+      "dates": "Historical or inactive; no current date announced",
+      "delivery": "",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.ebmg.eu/669.0.html",
+      "url_type": "EBMG examples page",
+      "notes": "Included because EBMG lists the 2025 course as a potentially suitable example. Current availability was not independently confirmed.",
+      "tags": [
+        "prenatal genetics",
+        "ErCLG example"
+      ],
+      "source_status_note": "Historic 2025 example; check for a future edition",
+      "original_record_type": "Archived short course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

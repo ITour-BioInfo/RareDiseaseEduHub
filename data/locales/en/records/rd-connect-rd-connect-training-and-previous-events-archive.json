@@ -1,0 +1,15 @@
+{
+  "record_id": "rd-connect-rd-connect-training-and-previous-events-archive",
+  "locale": "en",
+  "title": "RD-Connect training and previous events archive",
+  "summary": "Rare-disease specific",
+  "description": "Historical rare-disease genomics, data and platform training. Use as supplementary learning and verify whether individual materials remain accessible.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

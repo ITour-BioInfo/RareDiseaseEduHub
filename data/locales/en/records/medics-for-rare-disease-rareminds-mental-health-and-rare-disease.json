@@ -1,0 +1,15 @@
+{
+  "record_id": "medics-for-rare-disease-rareminds-mental-health-and-rare-disease",
+  "locale": "en",
+  "title": "Mental Health and Rare Disease",
+  "summary": "Rare-disease specific",
+  "description": "Rare-disease education focused on mental health and the psychosocial dimension of care.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

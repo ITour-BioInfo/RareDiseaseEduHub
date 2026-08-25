@@ -1,0 +1,15 @@
+{
+  "record_id": "nhs-england-genomics-education-programme-nhs-rare-disease-education-hub",
+  "locale": "en",
+  "title": "NHS Rare Disease Education Hub",
+  "summary": "Rare-disease specific",
+  "description": "Introduces rare disease as a healthcare priority, common challenges, genomic testing and practical learning routes for health professionals.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

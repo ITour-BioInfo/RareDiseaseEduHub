@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eshg-course-programme-portuguese-organizers-9th-course-basics-in-human-genetic-d",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ESHG course programme / Portuguese organizers",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ebmg.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "9th Course: Basics in Human Genetic Diagnostics",
+    "summary_original": "Rare-disease specific",
+    "description_original": "This course is specifically named on the EBMG examples page for ErCLG candidates. The source button opens the HTML course listing rather than the linked announcement PDF."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "accreditation",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-09-07",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ebmg.eu/669.0.html",
+    "official_url": "https://www.ebmg.eu/669.0.html",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ebmg.eu/669.0.html",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 7–11 September 2026 | Upcoming | This course is specifically named on the EBMG examples page for ErCLG candidates. The source button opens the HTML course listing rather than the linked announcement PDF.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-09-07",
+      "dates": "7–11 September 2026",
+      "delivery": "In person, Figueira da Foz, Portugal",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "Potentially relevant to ErCLG portfolio requirements; not described by EBMG as accredited",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.ebmg.eu/669.0.html",
+      "url_type": "EBMG course listing page",
+      "notes": "This course is specifically named on the EBMG examples page for ErCLG candidates. The source button opens the HTML course listing rather than the linked announcement PDF.",
+      "tags": [
+        "diagnostic genetics",
+        "cytogenetics",
+        "molecular genetics",
+        "ErCLG example"
+      ],
+      "source_status_note": "Upcoming",
+      "original_record_type": "Foundational diagnostic genetics course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

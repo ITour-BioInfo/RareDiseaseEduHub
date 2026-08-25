@@ -1,0 +1,8 @@
+dist
+node_modules
+public/rare_disease_education_catalog.json
+public/rare_disease_education_catalog.csv
+public/rare_disease_education_catalog.en.csv
+data/records
+data/locales/*/records
+pnpm-lock.yaml

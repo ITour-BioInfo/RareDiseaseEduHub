@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ern-cranio-international-cleft-palate-foundation-icpf-2026-pre-congress-hands-on-training-for-surgeons-and-anesthesiologists",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ERN CRANIO / International Cleft Palate Foundation",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ern-cranio.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "ICPF 2026 Pre-Congress Hands-On Training for Surgeons and Anesthesiologists",
+    "summary_original": "Rare craniofacial anomalies and cleft care",
+    "description_original": "Hands-on pre-congress training specifically for surgeons and anaesthesiologists; the durable official ERN CRANIO news page is used because the report did not provide a stable dedicated HTML course URL."
+  },
+  "classification": {
+    "resource_type": "workshop",
+    "delivery_modes": [
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare craniofacial anomalies and cleft care"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-09-29",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ern-cranio.eu/news",
+    "official_url": "https://www.ern-cranio.eu/news",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ern-cranio.eu/news",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 29–30 September 2026 | Listed by ERN CRANIO for 2026 | Hands-on pre-congress training specifically for surgeons and anaesthesiologists; the durable official ERN CRANIO news page is used because the report did not provide a stable dedicated HTML course URL.",
+    "legacy": {
+      "type_group": "workshop",
+      "type_label_bg": "Практическо обучение / работилница",
+      "type_label_en": "Practical training / workshop",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-09-29",
+      "dates": "29–30 September 2026",
+      "delivery": "In person, Brno, Czech Republic",
+      "duration": "2 days",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare craniofacial anomalies and cleft care",
+      "source_collection_url": "https://www.ern-cranio.eu/news",
+      "url_type": "direct official HTML page",
+      "notes": "Hands-on pre-congress training specifically for surgeons and anaesthesiologists; the durable official ERN CRANIO news page is used because the report did not provide a stable dedicated HTML course URL.",
+      "tags": [
+        "craniofacial anomalies",
+        "surgery",
+        "anaesthesiology"
+      ],
+      "source_status_note": "Listed by ERN CRANIO for 2026",
+      "original_record_type": "Hands-on clinical training",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

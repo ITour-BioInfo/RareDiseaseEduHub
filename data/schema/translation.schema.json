@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/translation.schema.json",
+  "title": "Resource translation",
+  "type": "object",
+  "required": ["record_id", "locale", "translation"],
+  "properties": {
+    "record_id": { "type": "string" },
+    "locale": { "enum": ["bg", "en"] },
+    "title": { "type": ["string", "null"] },
+    "summary": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] },
+    "translation": {
+      "type": "object",
+      "properties": { "status": { "enum": ["missing", "draft", "reviewed", "official"] } }
+    }
+  }
+}

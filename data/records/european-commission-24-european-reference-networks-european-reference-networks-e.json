@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-commission-24-european-reference-networks-european-reference-networks-e",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "European Commission / 24 European Reference Networks",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://health.ec.europa.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "European Reference Networks — education entry points",
+    "summary_original": "Rare-disease specific",
+    "description_original": "No single pan-European rare-disease nurse certification was identified. This directory provides the official entry point to disease-network education and should be retained as a live collection link."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "online",
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://health.ec.europa.eu/rare-diseases-and-european-reference-networks/european-reference-networks_en",
+    "official_url": "https://health.ec.europa.eu/rare-diseases-and-european-reference-networks/european-reference-networks_en",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://health.ec.europa.eu/rare-diseases-and-european-reference-networks/european-reference-networks_en",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Network-specific courses and webinars change continuously | No single pan-European rare-disease nurse certification was identified. This directory provides the official entry point to disease-network education and should be retained as a live collection link.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "Network-specific online and in-person education",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://health.ec.europa.eu/rare-diseases-and-european-reference-networks/european-reference-networks_en",
+      "url_type": "direct course page",
+      "notes": "No single pan-European rare-disease nurse certification was identified. This directory provides the official entry point to disease-network education and should be retained as a live collection link.",
+      "tags": [
+        "ERN",
+        "multidisciplinary care",
+        "nursing"
+      ],
+      "source_status_note": "Network-specific courses and webinars change continuously",
+      "original_record_type": "Network education directory",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

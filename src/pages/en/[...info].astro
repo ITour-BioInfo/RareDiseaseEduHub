@@ -1,0 +1,26 @@
+---
+import InfoPage from '../../components/InfoPage.astro';
+import type { RouteKey } from '../../i18n/routes';
+export function getStaticPaths() {
+  const entries = [
+    ['methodology', 'methodology', 'methodology'],
+    ['editorial-policy', 'policy', 'policy'],
+    ['accessibility', 'accessibility', 'accessibility'],
+    ['data', 'data', 'data'],
+    ['corrections', 'corrections', 'corrections'],
+    ['changes', 'changes', 'changes'],
+    ['privacy', 'privacy', 'privacy'],
+  ] as const;
+  return entries.map(([info, pageKey, messageKey]) => ({
+    params: { info },
+    props: { pageKey, messageKey },
+  }));
+}
+const { pageKey, messageKey } = Astro.props as {
+  pageKey: Exclude<RouteKey, 'home'>;
+  messageKey:
+    'methodology' | 'policy' | 'accessibility' | 'data' | 'corrections' | 'changes' | 'privacy';
+};
+---
+
+<InfoPage locale="en" pageKey={pageKey} messageKey={messageKey} />

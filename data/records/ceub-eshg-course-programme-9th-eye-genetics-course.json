@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ceub-eshg-course-programme-9th-eye-genetics-course",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "CEUB / ESHG course programme",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ceub.it/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "9th Eye Genetics Course",
+    "summary_original": "Rare-disease specific",
+    "description_original": null
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "paid"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-10-11",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "paid",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ceub.it/events/event/9th-eye-genetics-course/",
+    "official_url": "https://www.ceub.it/events/event/9th-eye-genetics-course/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ceub.it/events/event/9th-eye-genetics-course/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 11–13 October 2026 | Upcoming; course runs 11–13 October 2026",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-10-11",
+      "dates": "11–13 October 2026",
+      "delivery": "In person, Bertinoro, Italy",
+      "duration": "3 days",
+      "cost": "€880 (tuition, course materials, meals, social dinner and scheduled Bologna transfers included)",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.ceub.it/events/event/9th-eye-genetics-course/",
+      "url_type": "direct course page",
+      "notes": "",
+      "tags": [
+        "ophthalmic genetics",
+        "rare eye disease"
+      ],
+      "source_status_note": "Upcoming; course runs 11–13 October 2026",
+      "original_record_type": "Specialist clinical genetics course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ern-rnd-eancampus-ataxia-and-hereditary-spastic-paraplegia-module",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ERN-RND / eanCampus",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ern-rnd.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Postgraduate Curriculum in Rare Neurological Diseases — Ataxia/HSP module",
+    "summary_original": "Rare-disease specific",
+    "description_original": "For medical doctors in or after specialist training in neurology, child neurology, medical genetics or a related specialty. Completion includes online tests, a supervised logbook/portfolio and an oral examination."
+  },
+  "classification": {
+    "resource_type": "programme",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "certificate",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ern-rnd.eu/postgraduate-curriculum-in-rare-neurological-diseases/",
+    "official_url": "https://www.ern-rnd.eu/postgraduate-curriculum-in-rare-neurological-diseases/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ern-rnd.eu/education-training/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Launched in 2026; applications for the first Ataxia/HSP module were open at verification | For medical doctors in or after specialist training in neurology, child neurology, medical genetics or a related specialty. Completion includes online tests, a supervised logbook/portfolio and an oral examination.",
+    "legacy": {
+      "type_group": "programme",
+      "type_label_bg": "Училище / обучителна програма",
+      "type_label_en": "School / training programme",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "Flexible online learning plus a 3–6 month supervised stay at an approved rare-neurology expertise centre",
+      "duration": "Up to 3 years per module; online path within 18 months, followed by the expert-centre stay",
+      "cost": "Free",
+      "certificate_or_recognition": "UEMS-approved pathway towards the European Certificate in Rare Neurological Diseases",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.ern-rnd.eu/education-training/",
+      "url_type": "ERN-RND education collection",
+      "notes": "For medical doctors in or after specialist training in neurology, child neurology, medical genetics or a related specialty. Completion includes online tests, a supervised logbook/portfolio and an oral examination.",
+      "tags": [
+        "ataxia",
+        "HSP",
+        "neurology"
+      ],
+      "source_status_note": "Launched in 2026; applications for the first Ataxia/HSP module were open at verification",
+      "original_record_type": "Postgraduate certificate curriculum module",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

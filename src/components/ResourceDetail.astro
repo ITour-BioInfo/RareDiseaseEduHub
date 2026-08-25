@@ -1,0 +1,162 @@
+---
+import type { Locale } from '../i18n/config';
+import { formatDate, formatList } from '../i18n/format';
+import { resourceRoute, route } from '../i18n/routes';
+import { t } from '../i18n/translate';
+import type { CatalogRecord, CatalogTranslation } from '../lib/catalog/schema';
+import { localizeRecord } from '../lib/catalog/localization';
+import { calculateStatus } from '../lib/catalog/status';
+import { absoluteUrl, withBase } from '../lib/site/url';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import StatusBadge from './StatusBadge.astro';
+
+interface Props {
+  locale: Locale;
+  record: CatalogRecord;
+  translation?: CatalogTranslation | undefined;
+}
+const { locale, record, translation } = Astro.props;
+const localized = localizeRecord(record, translation);
+const status = calculateStatus(record);
+const paths = { bg: resourceRoute('bg', record.id), en: resourceRoute('en', record.id) };
+const eventDates = [record.dates.event.start, record.dates.event.end].filter(Boolean) as string[];
+const structured = {
+  '@context': 'https://schema.org',
+  '@type':
+    record.classification.resource_type === 'webinar' || eventDates.length ? 'Event' : 'Course',
+  name: localized.display_title,
+  inLanguage: localized.display_language,
+  url: absoluteUrl(paths[locale]),
+  organizer: {
+    '@type': 'Organization',
+    name: record.provider.name,
+    url: record.provider.official_url || undefined,
+  },
+  startDate: record.dates.event.start || undefined,
+  endDate: record.dates.event.end || undefined,
+  eventStatus:
+    record.lifecycle === 'cancelled'
+      ? 'https://schema.org/EventCancelled'
+      : record.lifecycle === 'postponed'
+        ? 'https://schema.org/EventPostponed'
+        : undefined,
+};
+---
+
+<BaseLayout
+  locale={locale}
+  title={`${localized.display_title} · ${t(locale, 'site.title')}`}
+  description={localized.display_summary || t(locale, 'site.description')}
+  canonicalPath={paths[locale]}
+  alternatePath={paths}
+>
+  <article class="resource-page shell narrow-wide">
+    <a class="back-link" href={withBase(route(locale, 'home'))}>← {t(locale, 'resource.back')}</a>
+    <div class="resource-heading">
+      <div>
+        <StatusBadge locale={locale} status={status.primary} /><p class="eyebrow">
+          {t(locale, `type.${record.classification.resource_type}`)}
+        </p>
+      </div>
+      <h1 lang={localized.display_language}>{localized.display_title}</h1>
+      {
+        localized.has_translation && (
+          <p class="original-title large">
+            <span>{t(locale, 'resource.originalTitle')}:</span>{' '}
+            <span lang={record.content.original_language}>{record.content.title_original}</span>
+          </p>
+        )
+      }
+      {
+        !localized.has_translation && locale === 'bg' && (
+          <p class="translation-notice">{t(locale, 'resource.fallbackNotice')}</p>
+        )
+      }
+      {
+        localized.display_description && (
+          <p class="lead" lang={localized.display_language}>
+            {localized.display_description}
+          </p>
+        )
+      }
+    </div>
+    <div class="detail-grid">
+      <section class="detail-panel">
+        <h2>{t(locale, 'resource.details')}</h2><dl class="detail-list">
+          <div><dt>{t(locale, 'resource.provider')}</dt><dd>{record.provider.name}</dd></div>
+          <div>
+            <dt>{t(locale, 'resource.delivery')}</dt><dd>
+              {
+                formatList(
+                  record.classification.delivery_modes.map((mode) => t(locale, `delivery.${mode}`)),
+                  locale,
+                )
+              }
+            </dd>
+          </div>
+          <div>
+            <dt>{t(locale, 'resource.languages')}</dt><dd>
+              {formatList(record.classification.languages, locale)}
+            </dd>
+          </div>
+          <div>
+            <dt>{t(locale, 'resource.cost')}</dt><dd>
+              {t(locale, `cost.${record.commercial.cost_kind}`)}
+            </dd>
+          </div>
+          <div>
+            <dt>{t(locale, 'resource.certificate')}</dt><dd>
+              {t(locale, `certificate.${record.classification.certificate_kind}`)}
+            </dd>
+          </div>
+          <div>
+            <dt>{t(locale, 'resource.dates')}</dt><dd>
+              {
+                eventDates.length
+                  ? eventDates
+                      .map((date) =>
+                        formatDate(date, locale, record.dates.event.timezone || 'Europe/Sofia'),
+                      )
+                      .join(' — ')
+                  : t(locale, 'resource.unknown')
+              }
+            </dd>
+          </div>
+          <div>
+            <dt>{t(locale, 'resource.translation')}</dt><dd>
+              {t(locale, `translation.${localized.translation_status}`)}
+            </dd>
+          </div>
+          <div>
+            <dt>{t(locale, 'resource.verified')}</dt><dd>
+              {
+                record.editorial.verified_on
+                  ? formatDate(record.editorial.verified_on, locale)
+                  : t(locale, 'resource.unknown')
+              }
+            </dd>
+          </div>
+        </dl>
+      </section>
+      <aside class="source-panel">
+        <h2>{t(locale, 'resource.sourceEvidence')}</h2><p>
+          {record.editorial.notes || t(locale, 'resource.unknown')}
+        </p><a
+          class="button primary"
+          href={record.sources.official_url}
+          target="_blank"
+          rel="noopener noreferrer"
+          >{t(locale, 'resource.officialSource')}
+          <span aria-hidden="true">↗</span><span class="sr-only">
+            — {t(locale, 'resource.external')}</span
+          ></a
+        >
+      </aside>
+    </div>
+  </article>
+  <script
+    is:inline
+    type="application/ld+json"
+    set:html={JSON.stringify(structured).replaceAll('<', '\\u003c')}
+  />
+</BaseLayout>

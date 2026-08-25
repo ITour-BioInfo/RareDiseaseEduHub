@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "gen-equip-primary-care-genetics-education-gen-equip-genetics-education-tutorials",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "Gen-Equip / primary-care genetics education",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.primarycaregenetics.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Gen-Equip genetics education tutorials",
+    "summary_original": "Genetics-wide; suitable as background learning rather than a complete ErCLG course",
+    "description_original": "Named as an additional educational source by EBMG. The tutorials do not replace the formal duration, assessment or practice requirements of the ErCLG route."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Genetics-wide",
+      "suitable as background learning rather than a complete ErCLG course"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.primarycaregenetics.org/?page_id=109&lang=en",
+    "official_url": "https://www.primarycaregenetics.org/?page_id=109&lang=en",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ebmg.eu/669.0.html",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Materials available; verify platform access | Named as an additional educational source by EBMG. The tutorials do not replace the formal duration, assessment or practice requirements of the ErCLG route.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Genetics-wide; suitable as background learning rather than a complete ErCLG course",
+      "source_collection_url": "https://www.ebmg.eu/669.0.html",
+      "url_type": "direct provider page",
+      "notes": "Named as an additional educational source by EBMG. The tutorials do not replace the formal duration, assessment or practice requirements of the ErCLG route.",
+      "tags": [
+        "tutorials",
+        "primary care genetics",
+        "ErCLG example"
+      ],
+      "source_status_note": "Materials available; verify platform access",
+      "original_record_type": "Online tutorial collection",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

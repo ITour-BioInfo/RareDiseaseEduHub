@@ -1,0 +1,15 @@
+{
+  "record_id": "bbmri-eric-workshop-series-on-biobanking",
+  "locale": "en",
+  "title": "Workshop Series on Biobanking",
+  "summary": "Rare-disease specific",
+  "description": "Includes topics such as federated search and access to samples/data. Availability is cohort-specific.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

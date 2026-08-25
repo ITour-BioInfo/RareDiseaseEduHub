@@ -1,0 +1,12 @@
+schema_version: 1.0.0
+human_approval_required: true
+official_source_priority:
+  - current-official-resource-page
+  - official-programme-or-prospectus
+  - official-registration-or-application-page
+  - official-structured-data
+  - official-calendar-or-feed
+  - official-archive
+automatic_fact_updates: false
+translation_states: [missing, draft, reviewed, official]
+archive_after_single_failure: false

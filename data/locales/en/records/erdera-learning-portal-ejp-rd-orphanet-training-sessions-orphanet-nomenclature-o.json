@@ -1,0 +1,15 @@
+{
+  "record_id": "erdera-learning-portal-ejp-rd-orphanet-training-sessions-orphanet-nomenclature-o",
+  "locale": "en",
+  "title": "EJP-RD Orphanet Training Sessions — Orphanet Nomenclature of Rare Diseases",
+  "summary": "Rare-disease specific",
+  "description": "Direct course or provider page independently resolved from the ERDERA catalogue record.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

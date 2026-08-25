@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "ucsc-genome-browser-ucsc-genome-browser-training",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "UCSC Genome Browser",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://genome.ucsc.edu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "UCSC Genome Browser training",
+    "summary_original": "Genomics tool training; not rare-disease specific",
+    "description_original": "Named as an additional educational source by EBMG. Use as tool competence evidence, not as a substitute for broad clinical laboratory genetics training."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Genomics tool training",
+      "not rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://genome.ucsc.edu/training/",
+    "official_url": "https://genome.ucsc.edu/training/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://genome.ucsc.edu/training/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Open learning resources and training events | Named as an additional educational source by EBMG. Use as tool competence evidence, not as a substitute for broad clinical laboratory genetics training.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Genomics tool training; not rare-disease specific",
+      "source_collection_url": "https://genome.ucsc.edu/training/",
+      "url_type": "direct course page",
+      "notes": "Named as an additional educational source by EBMG. Use as tool competence evidence, not as a substitute for broad clinical laboratory genetics training.",
+      "tags": [
+        "genome browser",
+        "bioinformatics",
+        "ErCLG example"
+      ],
+      "source_status_note": "Open learning resources and training events",
+      "original_record_type": "Training collection",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}
