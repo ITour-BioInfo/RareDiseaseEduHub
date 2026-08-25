@@ -1,0 +1,15 @@
+{
+  "record_id": "erdera-learning-portal-framework-for-patient-engagement-in-clinical-trials",
+  "locale": "en",
+  "title": "Framework for Patient Engagement in Clinical Trials",
+  "summary": "Rare-disease specific",
+  "description": "Direct course or provider page independently resolved from the ERDERA catalogue record.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "record_id": "embl-ebi-training-next-generation-sequencing-bioinformatics",
+  "locale": "en",
+  "title": "Next Generation Sequencing Bioinformatics",
+  "summary": "NGS bioinformatics broadly; applicable to rare-disease pipelines",
+  "description": "The linked page documents the 2021 virtual course. It remains useful as a curriculum reference for QC, alignment, variant calling, annotation, pipelines and automation, but it is not a current enrolment page. Check EMBL-EBI's active catalogue for newer editions.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

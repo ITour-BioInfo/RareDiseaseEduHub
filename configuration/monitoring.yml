@@ -1,0 +1,15 @@
+schema_version: 1.0.0
+timezone: Europe/Sofia
+morning_schedule: '06:17'
+priority_schedule: '18:17'
+priority_window_days: 60
+request_timeout_ms: 15000
+maximum_response_bytes: 2000000
+maximum_redirects: 5
+retry_attempts: 3
+failure_policy:
+  warning_after: 2
+  unavailable_proposal_after: 3
+  archive_requires_confirmed_404_or_410: true
+state_branch: automation-state
+proposal_branch: automation/catalog-updates

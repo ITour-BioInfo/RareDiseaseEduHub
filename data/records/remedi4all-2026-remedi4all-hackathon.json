@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "remedi4all-2026-remedi4all-hackathon",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "REMEDi4ALL",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://remedi4all.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "2026 REMEDi4ALL Hackathon",
+    "summary_original": "Drug repurposing, including rare and underserved conditions",
+    "description_original": "Project-based training for up to 15 early-career researchers, including postdoctoral researchers up to two years after the PhD. Participants work on drug-repurposing challenges with expert mentors."
+  },
+  "classification": {
+    "resource_type": "workshop",
+    "delivery_modes": [
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Drug repurposing",
+      "including rare and underserved conditions"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-09-06",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://remedi4all.org/event/2026-remedi4all-hackathon/",
+    "official_url": "https://remedi4all.org/event/2026-remedi4all-hackathon/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://remedi4all.org/event/2026-remedi4all-hackathon/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 6–11 September 2026 | Applications page open at verification | Project-based training for up to 15 early-career researchers, including postdoctoral researchers up to two years after the PhD. Participants work on drug-repurposing challenges with expert mentors.",
+    "legacy": {
+      "type_group": "workshop",
+      "type_label_bg": "Практическо обучение / работилница",
+      "type_label_en": "Practical training / workshop",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-09-06",
+      "dates": "6–11 September 2026",
+      "delivery": "Residential in-person hackathon near Barcelona, Spain",
+      "duration": "6 days",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Drug repurposing, including rare and underserved conditions",
+      "source_collection_url": "https://remedi4all.org/event/2026-remedi4all-hackathon/",
+      "url_type": "direct official HTML page",
+      "notes": "Project-based training for up to 15 early-career researchers, including postdoctoral researchers up to two years after the PhD. Participants work on drug-repurposing challenges with expert mentors.",
+      "tags": [
+        "drug repurposing",
+        "early-career researchers",
+        "REMEDi4ALL"
+      ],
+      "source_status_note": "Applications page open at verification",
+      "original_record_type": "Residential hackathon",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

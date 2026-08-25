@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "medics-for-rare-disease-rarest-rare-disease-101-australia",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "Medics for Rare Disease / RArEST",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://learn.m4rd.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Rare Disease 101 — Australia",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Australian adaptation covering coordinated care, genomic testing, communication, mental health and advocacy."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "self-paced",
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://learn.m4rd.org/mod/page/view.php?id=440",
+    "official_url": "https://learn.m4rd.org/mod/page/view.php?id=440",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://learn.m4rd.org/mod/page/view.php?id=440",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: On demand | Active self-paced module | Australian adaptation covering coordinated care, genomic testing, communication, mental health and advocacy.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "On demand",
+      "delivery": "Online, self-paced",
+      "duration": "",
+      "cost": "Free",
+      "certificate_or_recognition": "RACGP CPD approved: 2.5 Educational Activities hours and 2 Reviewing Performance hours",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://learn.m4rd.org/mod/page/view.php?id=440",
+      "url_type": "direct official HTML page",
+      "notes": "Australian adaptation covering coordinated care, genomic testing, communication, mental health and advocacy.",
+      "tags": [
+        "Australia",
+        "CPD",
+        "rare disease fundamentals"
+      ],
+      "source_status_note": "Active self-paced module",
+      "original_record_type": "CPD e-learning module",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

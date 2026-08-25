@@ -1,0 +1,32 @@
+---
+import type { Locale } from '../i18n/config';
+import { t } from '../i18n/translate';
+import { withBase } from '../lib/site/url';
+interface Props {
+  locale: Locale;
+}
+const { locale } = Astro.props;
+---
+
+<header class="hero" id="top">
+  <div class="hero-network" aria-hidden="true"></div>
+  <div class="shell hero-copy">
+    <h1>{t(locale, 'hero.title')}</h1>
+    <p class="hero-body">{t(locale, 'hero.body')}</p>
+    <nav class="hero-actions" aria-label="Catalogue actions">
+      <a class="button primary" href="#catalogue">{t(locale, 'hero.browse')}</a>
+      <a class="button ghost" href={withBase('/rare_disease_education_catalog.en.csv')} download
+        >Download CSV</a
+      >
+      <a class="button ghost" href={withBase('/rare_disease_education_catalog.json')} download
+        >Download JSON</a
+      >
+      <a
+        class="button ghost"
+        href="https://erdera.org/international-alignment/national-mirror-groups/"
+        target="_blank"
+        rel="noopener noreferrer">ERDERA National Mirror Groups ↗</a
+      >
+    </nav>
+  </div>
+</header>

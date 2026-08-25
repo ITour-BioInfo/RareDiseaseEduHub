@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "erdera-partner-universities-european-university-diploma-in-rare-disease-research",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ERDERA partner universities",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://erdera.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "European University Diploma in Rare Disease Research — ERDERA pilot",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Programme-level initiative, not yet treated as an open course intake in this catalogue."
+  },
+  "classification": {
+    "resource_type": "programme",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://erdera.org/training-and-education/",
+    "official_url": "https://erdera.org/training-and-education/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://erdera.org/training-and-education/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Planned pilot; admissions date to be announced | Pilot/planned; monitor ERDERA for admissions | Programme-level initiative, not yet treated as an open course intake in this catalogue.",
+    "legacy": {
+      "type_group": "programme",
+      "type_label_bg": "Училище / обучителна програма",
+      "type_label_en": "School / training programme",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "",
+      "dates": "Planned pilot; admissions date to be announced",
+      "delivery": "Twelve core modules; planned delivery across Rome, Dublin and Tübingen",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "Stackable ECTS / university diploma model described by ERDERA",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://erdera.org/training-and-education/",
+      "url_type": "direct course page",
+      "notes": "Programme-level initiative, not yet treated as an open course intake in this catalogue.",
+      "tags": [
+        "university diploma",
+        "ECTS",
+        "pilot"
+      ],
+      "source_status_note": "Pilot/planned; monitor ERDERA for admissions",
+      "original_record_type": "Planned/pilot academic programme",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

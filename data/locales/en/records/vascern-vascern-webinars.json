@@ -1,0 +1,15 @@
+{
+  "record_id": "vascern-vascern-webinars",
+  "locale": "en",
+  "title": "VASCERN Webinars",
+  "summary": "Rare-disease specific",
+  "description": "Open to healthcare professionals, patients and caregivers; recordings remain available after the live sessions.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

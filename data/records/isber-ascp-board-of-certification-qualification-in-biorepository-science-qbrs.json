@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "isber-ascp-board-of-certification-qualification-in-biorepository-science-qbrs",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ISBER / ASCP Board of Certification",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.isber.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Qualification in Biorepository Science (QBRS)",
+    "summary_original": "Biorepository science broadly; enabling relevance to rare-disease research",
+    "description_original": "Applicants must meet one of the published education and work-experience routes. This is a professional qualification, not a degree programme."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Biorepository science broadly",
+      "enabling relevance to rare-disease research"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "paid"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "paid",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.isber.org/page/qualification",
+    "official_url": "https://www.isber.org/page/qualification",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.isber.org/page/qualification",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Applications and online examination available continuously after eligibility approval | Application route open | Applicants must meet one of the published education and work-experience routes. This is a professional qualification, not a degree programme.",
+    "legacy": {
+      "type_group": "credential",
+      "type_label_bg": "Сертификат / регистрация",
+      "type_label_en": "Credential / registration",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Applications and online examination available continuously after eligibility approval",
+      "delivery": "Self-directed preparation and online 50-question examination",
+      "duration": "90-minute examination",
+      "cost": "USD 260 application fee",
+      "certificate_or_recognition": "QBRS professional qualification; revalidation every three years",
+      "rare_disease_scope": "Biorepository science broadly; enabling relevance to rare-disease research",
+      "source_collection_url": "https://www.isber.org/page/qualification",
+      "url_type": "direct official HTML page",
+      "notes": "Applicants must meet one of the published education and work-experience routes. This is a professional qualification, not a degree programme.",
+      "tags": [
+        "biorepository science",
+        "qualification",
+        "ASCP"
+      ],
+      "source_status_note": "Application route open",
+      "original_record_type": "Professional qualification examination",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

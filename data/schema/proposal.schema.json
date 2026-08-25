@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/proposal.schema.json",
+  "title": "Field-level source change proposal",
+  "type": "object",
+  "required": ["proposal_id", "record_id", "checked_at", "source_url", "changes"],
+  "properties": {
+    "proposal_id": { "type": "string" },
+    "record_id": { "type": "string" },
+    "checked_at": { "type": "string", "format": "date-time" },
+    "source_url": { "type": "string", "format": "uri" },
+    "changes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["field", "proposed_value", "evidence", "confidence", "review_required"]
+      }
+    }
+  }
+}

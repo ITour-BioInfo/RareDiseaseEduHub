@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-commission-dg-sante-european-health-data-space-webinar-series",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "European Commission — DG SANTE",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://health.ec.europa.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "European Health Data Space Webinar Series",
+    "summary_original": "Health-data governance and secondary use; enabling relevance to rare-disease research",
+    "description_original": "Covers primary use, secondary use, implementation, governance and responsibilities under the EHDS Regulation."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Health-data governance and secondary use",
+      "enabling relevance to rare-disease research"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds/european-health-data-space-ehds-webinar-series_en",
+    "official_url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds/european-health-data-space-ehds-webinar-series_en",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds/european-health-data-space-ehds-webinar-series_en",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Three recorded webinars from February–March 2025; supporting materials remain available | Recorded series and materials available | Covers primary use, secondary use, implementation, governance and responsibilities under the EHDS Regulation.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Three recorded webinars from February–March 2025; supporting materials remain available",
+      "delivery": "Online recordings and presentation resources",
+      "duration": "",
+      "cost": "Free",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Health-data governance and secondary use; enabling relevance to rare-disease research",
+      "source_collection_url": "https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds/european-health-data-space-ehds-webinar-series_en",
+      "url_type": "direct official HTML page",
+      "notes": "Covers primary use, secondary use, implementation, governance and responsibilities under the EHDS Regulation.",
+      "tags": [
+        "EHDS",
+        "health data",
+        "governance"
+      ],
+      "source_status_note": "Recorded series and materials available",
+      "original_record_type": "Recorded policy webinar series",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vascern-vascern-webinars",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "VASCERN",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://vascern.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "VASCERN Webinars",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Open to healthcare professionals, patients and caregivers; recordings remain available after the live sessions."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://vascern.eu/training-and-education/webinars/",
+    "official_url": "https://vascern.eu/training-and-education/webinars/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://vascern.eu/training-and-education/webinars/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing webinar series and recordings | Ongoing series and recording library | Open to healthcare professionals, patients and caregivers; recordings remain available after the live sessions.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing webinar series and recordings",
+      "delivery": "Online live webinars and recorded replays",
+      "duration": "",
+      "cost": "Free",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://vascern.eu/training-and-education/webinars/",
+      "url_type": "direct official HTML page",
+      "notes": "Open to healthcare professionals, patients and caregivers; recordings remain available after the live sessions.",
+      "tags": [
+        "rare vascular diseases",
+        "webinars",
+        "patients"
+      ],
+      "source_status_note": "Ongoing series and recording library",
+      "original_record_type": "Webinar series and archive",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

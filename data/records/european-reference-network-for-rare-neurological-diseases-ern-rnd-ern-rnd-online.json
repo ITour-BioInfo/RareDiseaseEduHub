@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-reference-network-for-rare-neurological-diseases-ern-rnd-ern-rnd-online",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "European Reference Network for Rare Neurological Diseases (ERN-RND)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ern-rnd.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "ERN-RND Online Medical Education for Rare Neurological Diseases",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Includes a postgraduate curriculum and disease-area modules. Use the collection page as the current source of truth."
+  },
+  "classification": {
+    "resource_type": "webinar",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ern-rnd.eu/education-training/online-medical-education-for-rare-neurological-diseases/",
+    "official_url": "https://www.ern-rnd.eu/education-training/online-medical-education-for-rare-neurological-diseases/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ern-rnd.eu/education-training/online-medical-education-for-rare-neurological-diseases/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing educational programme; individual webinars and modules vary | Free online education and webinars; module availability varies | Includes a postgraduate curriculum and disease-area modules. Use the collection page as the current source of truth.",
+    "legacy": {
+      "type_group": "webinar",
+      "type_label_bg": "Уебинар / семинар",
+      "type_label_en": "Webinar / seminar",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing educational programme; individual webinars and modules vary",
+      "delivery": "Online",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.ern-rnd.eu/education-training/online-medical-education-for-rare-neurological-diseases/",
+      "url_type": "direct course page",
+      "notes": "Includes a postgraduate curriculum and disease-area modules. Use the collection page as the current source of truth.",
+      "tags": [
+        "rare neurological diseases",
+        "ERN",
+        "webinars"
+      ],
+      "source_status_note": "Free online education and webinars; module availability varies",
+      "original_record_type": "Course and webinar collection",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

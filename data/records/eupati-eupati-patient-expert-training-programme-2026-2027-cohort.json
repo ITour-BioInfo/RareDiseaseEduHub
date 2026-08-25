@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eupati-eupati-patient-expert-training-programme-2026-2027-cohort",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EUPATI",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://learning.eupati.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "EUPATI Patient Expert Training Programme — 2026–2027 cohort",
+    "summary_original": "Medicines R&D and patient engagement across disease areas, including rare diseases",
+    "description_original": "Mainly for patients and patient representatives, but open to anyone interested in medicines R&D and patient engagement. Training is in English."
+  },
+  "classification": {
+    "resource_type": "programme",
+    "delivery_modes": [
+      "online",
+      "in-person",
+      "hybrid"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Medicines R&D and patient engagement across disease areas",
+      "including rare diseases"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://learning.eupati.eu/admin/tool/custompage/view.php?id=3",
+    "official_url": "https://learning.eupati.eu/admin/tool/custompage/view.php?id=3",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://learning.eupati.eu/admin/tool/custompage/view.php?id=3",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 2026–2027 cohort; registrations open at verification | Cohort 10 registration open at verification; event dates not yet fully published | Mainly for patients and patient representatives, but open to anyone interested in medicines R&D and patient engagement. Training is in English.",
+    "legacy": {
+      "type_group": "programme",
+      "type_label_bg": "Училище / обучителна програма",
+      "type_label_en": "School / training programme",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "",
+      "dates": "2026–2027 cohort; registrations open at verification",
+      "delivery": "Blended: six online modules, one virtual training event and one in-person event",
+      "duration": "Usually 12–14 months; 28 courses across six modules",
+      "cost": "",
+      "certificate_or_recognition": "Graduates become EUPATI Fellows",
+      "rare_disease_scope": "Medicines R&D and patient engagement across disease areas, including rare diseases",
+      "source_collection_url": "https://learning.eupati.eu/admin/tool/custompage/view.php?id=3",
+      "url_type": "direct official HTML page",
+      "notes": "Mainly for patients and patient representatives, but open to anyone interested in medicines R&D and patient engagement. Training is in English.",
+      "tags": [
+        "patient engagement",
+        "medicines R&D",
+        "EUPATI"
+      ],
+      "source_status_note": "Cohort 10 registration open at verification; event dates not yet fully published",
+      "original_record_type": "Patient-expert certificate programme",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

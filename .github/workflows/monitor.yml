@@ -1,0 +1,122 @@
+name: Catalogue monitor
+
+on:
+  schedule:
+    - cron: '17 6 * * *'
+      timezone: 'Europe/Sofia'
+    - cron: '17 18 * * *'
+      timezone: 'Europe/Sofia'
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: Monitor mode
+        required: true
+        default: dry-run
+        type: choice
+        options: [dry-run, morning, priority, record]
+      record_id:
+        description: Optional record ID
+        required: false
+        type: string
+      open_pr:
+        description: Open or update draft pull request
+        required: true
+        default: false
+        type: boolean
+
+permissions:
+  contents: write
+  pull-requests: write
+  issues: write
+
+concurrency:
+  group: catalogue-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    env:
+      CATALOG_TIMEZONE: Europe/Sofia
+      CATALOG_USER_AGENT: ${{ vars.CATALOG_USER_AGENT || 'RareDiseaseEducationCatalogueBot/1.0' }}
+      CATALOG_CONTACT: ${{ vars.CATALOG_CONTACT }}
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Set up Node.js
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .nvmrc
+      - name: Enable pnpm and install
+        run: corepack enable && corepack prepare pnpm@11.23.0 --activate && pnpm install --frozen-lockfile
+      - name: Select monitor mode
+        id: mode
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "schedule" ]]; then
+            [[ "${{ github.event.schedule }}" == "17 6 * * *" ]] && MODE=morning || MODE=priority
+            LIVE=true
+          else
+            MODE="${{ inputs.mode }}"
+            [[ "$MODE" == "morning" || "$MODE" == "priority" || "$MODE" == "record" ]] && LIVE=true || LIVE=false
+          fi
+          echo "mode=$MODE" >> "$GITHUB_OUTPUT"
+          echo "live=$LIVE" >> "$GITHUB_OUTPUT"
+      - name: Run responsible source monitor
+        env:
+          MONITOR_LIVE: ${{ steps.mode.outputs.live }}
+        run: pnpm exec tsx automation/cli.ts "${{ steps.mode.outputs.mode }}" "${{ inputs.record_id }}"
+      - name: Preserve compact operational state
+        shell: bash
+        run: |
+          STATE_WORKTREE="$(mktemp -d)"
+          if git ls-remote --exit-code --heads origin automation-state >/dev/null 2>&1; then
+            git fetch origin automation-state:refs/remotes/origin/automation-state
+            git worktree add --detach "$STATE_WORKTREE" origin/automation-state
+            git -C "$STATE_WORKTREE" switch -C automation-state
+          else
+            git worktree add --detach "$STATE_WORKTREE" HEAD
+            git -C "$STATE_WORKTREE" switch --orphan automation-state
+          fi
+          cp work/automation-state/state.json "$STATE_WORKTREE/state.json"
+          git -C "$STATE_WORKTREE" add state.json
+          if ! git -C "$STATE_WORKTREE" diff --cached --quiet; then
+            git -C "$STATE_WORKTREE" -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "chore: update compact monitor state"
+            git -C "$STATE_WORKTREE" push origin HEAD:automation-state
+          fi
+      - name: Validate before any pull request
+        run: pnpm catalog:validate && pnpm translations:validate && pnpm test && pnpm build
+      - name: Detect reviewable proposals
+        id: proposals
+        shell: bash
+        run: node -e "const p=require('./reports/proposals.json'); require('fs').appendFileSync(process.env.GITHUB_OUTPUT,'changed='+(p.length?'true':'false')+'\n')"
+      - name: Create or update review branch
+        if: steps.proposals.outputs.changed == 'true' && (github.event_name == 'schedule' || inputs.open_pr == true)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git fetch origin automation/catalog-updates:refs/remotes/origin/automation/catalog-updates || true
+          git switch -C automation/catalog-updates
+          git add reports/latest-monitor.md reports/proposals.json data public CHANGELOG.md
+          git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "chore: propose evidence-backed catalogue updates"
+          git push --force-with-lease origin automation/catalog-updates
+          BODY="Pre-PR validation passed. Review every proposed field and its official-source evidence. This pull request is intentionally a draft and will never be auto-approved, auto-merged, or deployed."
+          gh label create automated-catalog-update --color 0e8a16 --description "Evidence-backed catalogue proposal" --force
+          gh label create editorial-review-required --color b60205 --description "Human editorial decision required" --force
+          if gh pr view automation/catalog-updates >/dev/null 2>&1; then
+            gh pr edit automation/catalog-updates --body "$BODY" --add-label automated-catalog-update --add-label editorial-review-required
+          else
+            gh pr create --draft --base main --head automation/catalog-updates --title "Catalogue source-change proposals" --body "$BODY" --label automated-catalog-update --label editorial-review-required
+          fi
+      - name: Upload monitor evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: catalogue-monitor-report
+          path: |
+            reports/latest-monitor.md
+            reports/proposals.json
+          retention-days: 5

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-board-of-rare-and-undiagnosed-diseases-uems-mjc-rud-european-certificat",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "European Board of Rare and Undiagnosed Diseases / UEMS MJC-RUD",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://mjcrud-uems.pte.hu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "European Certificate in Essentials in Rare and Undiagnosed Diseases (EC RUD)",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Official current abbreviation is EC RUD, not CERUD. This is a credential, not a preparatory course. Eligibility includes a valid medical qualification, documented rare-disease care and training aligned at least 80% with the latest European Training Requirements. The organizer’s PDF contains an internal wording inconsistency about exam parts, so the live organizer page should be rechecked before publication."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "certificate",
+    "cost_kind": "paid"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "paid",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://mjcrud-uems.pte.hu/content/european-board-rare-and-undiagnosed-diseases",
+    "official_url": "https://mjcrud-uems.pte.hu/content/european-board-rare-and-undiagnosed-diseases",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://mjcrud-uems.pte.hu/content/european-board-rare-and-undiagnosed-diseases",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Registration open; public examination date not identified | Official current abbreviation is EC RUD, not CERUD. This is a credential, not a preparatory course. Eligibility includes a valid medical qualification, documented rare-disease care and training aligned at least 80% with the latest European Training Requirements. The organizer’s PDF contains an internal wording inconsistency about exam parts, so the live organizer page should be rechecked before publication.",
+    "legacy": {
+      "type_group": "credential",
+      "type_label_bg": "Сертификат / регистрация",
+      "type_label_en": "Credential / registration",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "Electronic examination; current trial format described as 100 MCQs",
+      "duration": "",
+      "cost": "€150 for 2026",
+      "certificate_or_recognition": "European certificate; valid for life. Licence-to-practise effect depends on formal recognition.",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://mjcrud-uems.pte.hu/content/european-board-rare-and-undiagnosed-diseases",
+      "url_type": "direct course page",
+      "notes": "Official current abbreviation is EC RUD, not CERUD. This is a credential, not a preparatory course. Eligibility includes a valid medical qualification, documented rare-disease care and training aligned at least 80% with the latest European Training Requirements. The organizer’s PDF contains an internal wording inconsistency about exam parts, so the live organizer page should be rechecked before publication.",
+      "tags": [
+        "rare and undiagnosed diseases",
+        "credential",
+        "UEMS"
+      ],
+      "source_status_note": "Registration open; public examination date not identified",
+      "original_record_type": "Credential / examination",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

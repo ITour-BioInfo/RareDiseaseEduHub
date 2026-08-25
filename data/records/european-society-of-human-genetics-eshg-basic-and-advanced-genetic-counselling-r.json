@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-society-of-human-genetics-eshg-basic-and-advanced-genetic-counselling-r",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "European Society of Human Genetics (ESHG)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.eshg.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Basic and Advanced Genetic Counselling — recurring ESHG course series",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Recurring course family; check the ESHG programme for the next announced edition."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.eshg.org/courses",
+    "official_url": "https://www.eshg.org/courses",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.eshg.org/courses",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Recurring — check next edition | Recurring course family; check the ESHG programme for the next announced edition.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.eshg.org/courses",
+      "url_type": "course collection",
+      "notes": "Recurring course family; check the ESHG programme for the next announced edition.",
+      "tags": [
+        "ESHG",
+        "recurring"
+      ],
+      "source_status_note": "Recurring — check next edition",
+      "original_record_type": "Recurring course series",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

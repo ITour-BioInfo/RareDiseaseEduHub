@@ -1,0 +1,15 @@
+{
+  "record_id": "european-reference-network-for-rare-neurological-diseases-ern-rnd-ern-rnd-online",
+  "locale": "en",
+  "title": "ERN-RND Online Medical Education for Rare Neurological Diseases",
+  "summary": "Rare-disease specific",
+  "description": "Includes a postgraduate curriculum and disease-area modules. Use the collection page as the current source of truth.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

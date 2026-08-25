@@ -1,0 +1,1454 @@
+schema_version: 1.0.0
+providers:
+  - name: Ahmedabad workshop organizers (listed by EBMG)
+    approved_domains:
+      - www.ebmg.eu
+    official_collection_pages:
+      - https://www.ebmg.eu/669.0.html
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: American Society of Human Genetics (ASHG)
+    approved_domains:
+      - learning.ashg.org
+    official_collection_pages:
+      - https://learning.ashg.org/catalog?page=62&widget_products_id=23109
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: BBMRI-ERIC
+    approved_domains:
+      - www.bbmri-eric.eu
+    official_collection_pages:
+      - https://www.bbmri-eric.eu/events/how-to-build-a-biobank-learning-by-doing/
+      - https://www.bbmri-eric.eu/events/how-to-operate-a-biobank-advanced/
+      - https://www.bbmri-eric.eu/events/monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategies/
+      - https://www.bbmri-eric.eu/news-events/call-for-applications-workshop-series-on-biobanking/
+      - https://www.bbmri-eric.eu/services/bbmriqm-consultation-hours/
+      - https://www.bbmri-eric.eu/services/bbmriqm-iso-20387-2018/
+      - https://www.bbmri-eric.eu/services/bbmriqm-pre-examination-processes/
+      - https://www.bbmri-eric.eu/services/e-learning/
+      - https://www.bbmri-eric.eu/webinars-archive/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: CEUB / ESHG course programme
+    approved_domains:
+      - www.ceub.it
+    official_collection_pages:
+      - https://www.ceub.it/events/event/9th-eye-genetics-course/
+      - https://www.ceub.it/events/event/tools-for-communication-and-competency-skills-in-genetic-counselling/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Clinical Genome Resource (ClinGen)
+    approved_domains:
+      - www.clinicalgenome.org
+    official_collection_pages:
+      - https://www.clinicalgenome.org/tools/educational-resources/materials/
+      - https://www.clinicalgenome.org/tools/variant-interpretation-discrepancy-resolution-module/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EATRIS
+    approved_domains:
+      - eatris.eu
+    official_collection_pages:
+      - https://eatris.eu/training/education-training-news/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EDITSCD / ERN-EuroBloodNet
+    approved_domains:
+      - editscd.eu
+    official_collection_pages:
+      - https://editscd.eu/category/events/project-meetings/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EDITSCD / ERN-EuroBloodNet / EATRIS
+    approved_domains:
+      - eurobloodnet.eu
+    official_collection_pages:
+      - https://eurobloodnet.eu/education-2/patients/webinars/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/7/session-7-regulatory-path-to-the-clinic
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EJP RD / ERDERA via FutureLearn
+    approved_domains:
+      - www.futurelearn.com
+    official_collection_pages:
+      - https://erdera.org/erdera-learning-portal/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EMBL-EBI Training
+    approved_domains:
+      - www.ebi.ac.uk
+    official_collection_pages:
+      - https://www.ebi.ac.uk/training/events/data-collection-analysis-and-interpretation-genomic-medicine/
+      - https://www.ebi.ac.uk/training/events/next-generation-sequencing-bioinformatics-virtual-0/
+      - https://www.ebi.ac.uk/training/online/courses/methods-in-bioinformatics/genomic-variants/methods-in-genomic-variant-calling/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERDERA
+    approved_domains:
+      - erdera.org
+    official_collection_pages:
+      - https://erdera.org/data-hub/
+      - https://erdera.org/news/fair-training-program-2025-2027-part-1-opens-registration/
+      - https://erdera.org/training-and-education/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERDERA / Rare Diseases Virtual Platform
+    approved_domains:
+      - erdera.org
+    official_collection_pages:
+      - https://erdera.org/event/training-for-resources-joining-the-rare-diseases-virtual-platform/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERDERA Learning Portal
+    approved_domains:
+      - erdera.org
+    official_collection_pages:
+      - https://erdera.org/erdera-learning-portal/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERDERA partner universities
+    approved_domains:
+      - erdera.org
+    official_collection_pages:
+      - https://erdera.org/training-and-education/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERN CRANIO / International Cleft Palate Foundation
+    approved_domains:
+      - www.ern-cranio.eu
+    official_collection_pages:
+      - https://www.ern-cranio.eu/news
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERN EURO-NMD
+    approved_domains:
+      - ern-euro-nmd.eu
+    official_collection_pages:
+      - https://ern-euro-nmd.eu/euro-nmd-academy-moodle/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERN ITHACA / Italian Clinical Genetics Working Group
+    approved_domains:
+      - ern-ithaca.eu
+    official_collection_pages:
+      - https://ern-ithaca.eu/events-news/eurodysmorpho/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERN-EuroBloodNet
+    approved_domains:
+      - eurobloodnet.eu
+    official_collection_pages:
+      - https://eurobloodnet.eu/education/thursdays-webinars/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERN-RND / EURO-NMD
+    approved_domains:
+      - www.ern-rnd.eu
+    official_collection_pages:
+      - https://www.ern-rnd.eu/events/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ERN-RND / eanCampus
+    approved_domains:
+      - www.ern-rnd.eu
+    official_collection_pages:
+      - https://www.ern-rnd.eu/education-training/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ESHG course programme / Portuguese organizers
+    approved_domains:
+      - www.ebmg.eu
+    official_collection_pages:
+      - https://www.ebmg.eu/669.0.html
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ESHG “Other Courses” listing / external organizers
+    approved_domains:
+      - www.gfhev.de
+    official_collection_pages:
+      - https://www.gfhev.de/termine/k230-26-genetic-half-hour-comprehensive-course-in-clinical-genetics
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EUPATI
+    approved_domains:
+      - learning.eupati.eu
+    official_collection_pages:
+      - https://learning.eupati.eu/admin/tool/custompage/view.php?id=3
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EURORDIS Open Academy
+    approved_domains:
+      - openacademy.eurordis.org
+    official_collection_pages:
+      - https://openacademy.eurordis.org/courses/creating-great-mobile-video/
+      - https://openacademy.eurordis.org/courses/establishing-an-international-cooperation/
+      - https://openacademy.eurordis.org/courses/genetic-research-to-clinical-diagnosis-of-rare-diseases/
+      - https://openacademy.eurordis.org/courses/international-advocacy-for-rare-diseases/
+      - https://openacademy.eurordis.org/courses/introduction-to-genetics-and-genomics/
+      - https://openacademy.eurordis.org/courses/introduction-to-the-european-and-international-research-landscape/
+      - https://openacademy.eurordis.org/courses/market-access-and-hta/
+      - https://openacademy.eurordis.org/courses/mentoring-programme-resources-group-5-rare-disease-registries/
+      - https://openacademy.eurordis.org/courses/pre-training-scientific-innovation-and-translational-research/
+      - https://openacademy.eurordis.org/courses/setting-the-landscape/
+      - https://openacademy.eurordis.org/courses/sharing-patient-data/
+      - https://openacademy.eurordis.org/courses/survey-design-rare-disease-patient-organisations/
+      - https://openacademy.eurordis.org/courses/the-trialshome-course-on-decentralised-clinical-trials/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EURORDIS Open Academy / ERDERA
+    approved_domains:
+      - openacademy.eurordis.org
+    official_collection_pages:
+      - https://erdera.org/erdera-learning-portal/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: EURORDIS Rare Diseases Europe
+    approved_domains:
+      - openacademy.eurordis.org
+    official_collection_pages:
+      - https://openacademy.eurordis.org/all-courses/
+      - https://openacademy.eurordis.org/open-academy-schools/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Board of Medical Genetics (EBMG)
+    approved_domains:
+      - www.ebmg.eu
+    official_collection_pages:
+      - https://www.ebmg.eu/669.0.html
+      - https://www.ebmg.eu/880.0.html
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Board of Rare and Undiagnosed Diseases / UEMS MJC-RUD
+    approved_domains:
+      - mjcrud-uems.pte.hu
+    official_collection_pages:
+      - https://mjcrud-uems.pte.hu/content/european-board-rare-and-undiagnosed-diseases
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Clinical Research Infrastructure Network (ECRIN)
+    approved_domains:
+      - ecrin.org
+    official_collection_pages:
+      - https://ecrin.org/rare-diseases-clinical-trials-toolbox
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Commission / 24 European Reference Networks
+    approved_domains:
+      - health.ec.europa.eu
+    official_collection_pages:
+      - https://health.ec.europa.eu/rare-diseases-and-european-reference-networks/european-reference-networks_en
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Commission — DG SANTE
+    approved_domains:
+      - health.ec.europa.eu
+    official_collection_pages:
+      - https://health.ec.europa.eu/ehealth-digital-health-and-care/european-health-data-space-regulation-ehds/european-health-data-space-ehds-webinar-series_en
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Cytogeneticists Association (ECA)
+    approved_domains:
+      - www.ebmg.eu
+    official_collection_pages:
+      - https://www.ebmg.eu/669.0.html
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Cytogeneticists Association / Goldrain Course (listed by ESHG)
+    approved_domains:
+      - www.biologia.uniba.it
+    official_collection_pages:
+      - https://www.biologia.uniba.it/SEC/index.html
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Reference Network for Rare Neurological Diseases (ERN-RND)
+    approved_domains:
+      - www.ern-rnd.eu
+    official_collection_pages:
+      - https://www.ern-rnd.eu/education-training/online-medical-education-for-rare-neurological-diseases/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: European Society of Human Genetics (ESHG)
+    approved_domains:
+      - www.eshg.org
+    official_collection_pages:
+      - https://www.eshg.org/bertinoro0-1
+      - https://www.eshg.org/courses
+      - https://www.eshg.org/courses-archive
+      - https://www.eshg.org/courses/hereditary-cancer-genetics-course
+      - https://www.eshg.org/covering-the-gaps
+      - https://www.eshg.org/education/eshg-mentorship-programme
+      - https://www.eshg.org/education/eshg-observership-programme
+      - https://www.eshg.org/education/webinar-conference-library
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Foundation for Rare Diseases / FutureLearn
+    approved_domains:
+      - www.futurelearn.com
+    official_collection_pages:
+      - https://www.futurelearn.com/courses/from-dna-to-cure-gene-and-gene-modified-cell-therapies-for-rare-diseases
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Gen-Equip / primary-care genetics education
+    approved_domains:
+      - www.primarycaregenetics.org
+    official_collection_pages:
+      - https://www.ebmg.eu/669.0.html
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Georgian Society of Medical Genetics and Epigenetics / ESHG course
+      programme
+    approved_domains:
+      - geneticsgeorgia.org
+    official_collection_pages:
+      - https://geneticsgeorgia.org/language/en/epigenetics-course/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ISBER / ASCP Board of Certification
+    approved_domains:
+      - www.isber.org
+    official_collection_pages:
+      - https://www.isber.org/page/qualification
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: ISBER / Canadian Tissue Repository Network
+    approved_domains:
+      - www.isber.org
+    official_collection_pages:
+      - https://www.isber.org/page/EssentialsBiobanking
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Institut Pasteur / FUN-MOOC (listed by BBMRI-ERIC)
+    approved_domains:
+      - www.bbmri-eric.eu
+    official_collection_pages:
+      - https://www.bbmri-eric.eu/services/e-learning/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: International Society for Biological and Environmental Repositories (ISBER)
+    approved_domains:
+      - www.isber.org
+    official_collection_pages:
+      - https://www.isber.org/page/Biobanking101201
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Leena Peltonen School of Human Genetics (listed by ESHG)
+    approved_domains:
+      - lpshg.com
+    official_collection_pages:
+      - https://lpshg.com/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Manchester Centre for Genomic Medicine / ESHG
+    approved_domains:
+      - www.mrcc.org.uk
+    official_collection_pages:
+      - https://www.mrcc.org.uk/events/eshg-pharmacogenetics-course-2026-in-person-manchester-uk/
+      - https://www.mrcc.org.uk/events/manchester-eshg-syndromology-and-dysmorphology-course-2026/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Medics for Rare Disease (M4RD)
+    approved_domains:
+      - learn.m4rd.org
+    official_collection_pages:
+      - https://learn.m4rd.org/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Medics for Rare Disease / RArEST
+    approved_domains:
+      - learn.m4rd.org
+    official_collection_pages:
+      - https://learn.m4rd.org/mod/page/view.php?id=440
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Medics for Rare Disease / Rareminds
+    approved_domains:
+      - learn.m4rd.org
+    official_collection_pages:
+      - https://learn.m4rd.org/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: NHS England Genomics Education Programme
+    approved_domains:
+      - www.genomicseducation.hee.nhs.uk
+    official_collection_pages:
+      - https://www.genomicseducation.hee.nhs.uk/rare-disease-education-hub/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: NHS England Genomics Education Programme / UWE Bristol
+    approved_domains:
+      - www.genomicseducation.hee.nhs.uk
+    official_collection_pages:
+      - https://www.genomicseducation.hee.nhs.uk/education/taught-courses/genomics-and-counselling-skills/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: NORD / FDA CDER / Critical Path Institute
+    approved_domains:
+      - learn.rarediseases.org
+    official_collection_pages:
+      - https://learn.rarediseases.org/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: National Organization for Rare Disorders (NORD)
+    approved_domains:
+      - learn.rarediseases.org
+      - rarediseases.org
+    official_collection_pages:
+      - https://learn.rarediseases.org/courses/intro-rare-diseases/
+      - https://rarediseases.org/working-together/rarelaunch/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Orphanet
+    approved_domains:
+      - www.orpha.net
+    official_collection_pages:
+      - https://www.orpha.net/en/other-information/orphanet-tutorial
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Provider linked from EBMG ErCLG examples page
+    approved_domains:
+      - www.ebmg.eu
+    official_collection_pages:
+      - https://www.ebmg.eu/669.0.html
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: RD-Connect
+    approved_domains:
+      - rd-connect.eu
+    official_collection_pages:
+      - https://rd-connect.eu/previous-events/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: REMEDi4ALL
+    approved_domains:
+      - remedi4all.org
+    official_collection_pages:
+      - https://remedi4all.org/event/2026-remedi4all-hackathon/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: SYNTHEMA / ERN-EuroBloodNet
+    approved_domains:
+      - eurobloodnet.eu
+    official_collection_pages:
+      - https://eurobloodnet.eu/news/719/new-educational-program-on-artificial-intelligence-and-its-applications-in-hematology
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: St George’s, University of London / FutureLearn
+    approved_domains:
+      - www.futurelearn.com
+    official_collection_pages:
+      - https://www.futurelearn.com/courses/the-genomics-era
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: UCSC Genome Browser
+    approved_domains:
+      - genome.ucsc.edu
+    official_collection_pages:
+      - https://genome.ucsc.edu/training/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: UEMS Section of Medical Genetics / EBMG / ESHG
+    approved_domains:
+      - www.uems-ecmgg.org
+    official_collection_pages:
+      - https://www.uems-ecmgg.org/Apply.html
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: University of Exeter / FutureLearn
+    approved_domains:
+      - www.futurelearn.com
+    official_collection_pages:
+      - https://www.futurelearn.com/courses/community-genetics
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: University of Glasgow / FutureLearn
+    approved_domains:
+      - www.futurelearn.com
+    official_collection_pages:
+      - https://www.futurelearn.com/courses/genes-and-health-how-dna-influences-disease
+      - https://www.futurelearn.com/courses/harnessing-the-power-of-genomics-in-medicine
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: VASCERN
+    approved_domains:
+      - vascern.eu
+    official_collection_pages:
+      - https://vascern.eu/training-and-education/
+      - https://vascern.eu/training-and-education/webinars/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Wellcome Connecting Science
+    approved_domains:
+      - coursesandconferences.wellcomeconnectingscience.org
+    official_collection_pages:
+      - https://coursesandconferences.wellcomeconnectingscience.org/
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.
+  - name: Wellcome Connecting Science / FutureLearn
+    approved_domains:
+      - coursesandconferences.wellcomeconnectingscience.org
+      - www.futurelearn.com
+    official_collection_pages:
+      - https://coursesandconferences.wellcomeconnectingscience.org/event/bioinformatics-for-biologists-analysing-and-interpreting-genomics-datasets-20260406/
+      - https://coursesandconferences.wellcomeconnectingscience.org/our-events/online-courses/
+      - https://www.futurelearn.com/courses/interpreting-genomic-variation-overcoming-challenges-in-diverse-populations
+    sitemaps: []
+    feeds: []
+    check_cadence: weekly
+    priority_window_days: 60
+    request_delay_ms: 1200
+    maximum_concurrency: 1
+    javascript_rendering_required: false
+    current_page_paths: []
+    archive_paths: []
+    selectors:
+      title: null
+      date: null
+      registration: null
+      application: null
+      access: null
+    enabled: true
+    notes: Migrated provider; selectors require editorial verification.

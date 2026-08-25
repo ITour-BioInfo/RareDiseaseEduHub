@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0.0",
+  "id": "erdera-erdera-fair-training-programme-20252027",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "ERDERA",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://erdera.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "ERDERA FAIR Training Programme 2025–2027",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Topics include FAIRification, metadata, semantic models/SPARQL, legal and ethical issues, GDPR and the European Health Data Space. Check the page for the current phase and registration."
+  },
+  "classification": {
+    "resource_type": "programme",
+    "delivery_modes": [
+      "online",
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://erdera.org/news/fair-training-program-2025-2027-part-1-opens-registration/",
+    "official_url": "https://erdera.org/news/fair-training-program-2025-2027-part-1-opens-registration/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://erdera.org/news/fair-training-program-2025-2027-part-1-opens-registration/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 2025–2027 programme; 2026 practical sessions and the 2027 in-person phase are to be confirmed | Multi-year programme; official page confirms the 2025 foundation event and describes later phases without fixed dates | Topics include FAIRification, metadata, semantic models/SPARQL, legal and ethical issues, GDPR and the European Health Data Space. Check the page for the current phase and registration.",
+    "legacy": {
+      "type_group": "programme",
+      "type_label_bg": "Училище / обучителна програма",
+      "type_label_en": "School / training programme",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "2025-09-24",
+      "dates": "2025–2027 programme; 2026 practical sessions and the 2027 in-person phase are to be confirmed",
+      "delivery": "Online foundations and practical training, followed by in-person phase",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://erdera.org/news/fair-training-program-2025-2027-part-1-opens-registration/",
+      "url_type": "direct course page",
+      "notes": "Topics include FAIRification, metadata, semantic models/SPARQL, legal and ethical issues, GDPR and the European Health Data Space. Check the page for the current phase and registration.",
+      "tags": [
+        "FAIR",
+        "metadata",
+        "SPARQL",
+        "GDPR",
+        "EHDS"
+      ],
+      "source_status_note": "Multi-year programme; official page confirms the 2025 foundation event and describes later phases without fixed dates",
+      "original_record_type": "Multi-year training programme",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

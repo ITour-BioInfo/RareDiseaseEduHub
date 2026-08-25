@@ -1,0 +1,15 @@
+{
+  "record_id": "medics-for-rare-disease-m4rd-rare-disease-101",
+  "locale": "en",
+  "title": "Rare Disease 101",
+  "summary": "Rare-disease specific",
+  "description": "Eight-lesson foundation course for medical professionals with little prior rare-disease training. Covers recognition, the diagnostic odyssey, lived experience and practical support.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

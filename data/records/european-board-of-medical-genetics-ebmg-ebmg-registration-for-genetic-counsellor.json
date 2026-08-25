@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-board-of-medical-genetics-ebmg-ebmg-registration-for-genetic-counsellor",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "European Board of Medical Genetics (EBMG)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.ebmg.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "EBMG registration for Genetic Counsellors and Genetic Nurses",
+    "summary_original": "Rare-disease specific",
+    "description_original": "This is a registration route rather than a course. The current public list of assessed Master’s programmes is counselling-focused; no dedicated, currently assessed pan-European MSc in genetic nursing was identified on the EBMG list."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.ebmg.eu/880.0.html",
+    "official_url": "https://www.ebmg.eu/880.0.html",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.ebmg.eu/880.0.html",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Registration routes active; requirements depend on normal or alternative route | This is a registration route rather than a course. The current public list of assessed Master’s programmes is counselling-focused; no dedicated, currently assessed pan-European MSc in genetic nursing was identified on the EBMG list.",
+    "legacy": {
+      "type_group": "credential",
+      "type_label_bg": "Сертификат / регистрация",
+      "type_label_en": "Credential / registration",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "European professional registration, subject to EBMG eligibility and portfolio requirements",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.ebmg.eu/880.0.html",
+      "url_type": "direct course page",
+      "notes": "This is a registration route rather than a course. The current public list of assessed Master’s programmes is counselling-focused; no dedicated, currently assessed pan-European MSc in genetic nursing was identified on the EBMG list.",
+      "tags": [
+        "genetic counselling",
+        "genetic nursing",
+        "registration"
+      ],
+      "source_status_note": "Registration routes active; requirements depend on normal or alternative route",
+      "original_record_type": "Professional registration pathway",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

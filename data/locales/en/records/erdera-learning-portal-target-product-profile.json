@@ -1,0 +1,15 @@
+{
+  "record_id": "erdera-learning-portal-target-product-profile",
+  "locale": "en",
+  "title": "Target Product Profile",
+  "summary": "Rare-disease specific",
+  "description": "A direct detail-page URL was not independently resolved; the button opens the ERDERA Learning Portal, where the exact title should be searched. The portal title contained a spelling error (“profiile”); it is normalized here as “profile”.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

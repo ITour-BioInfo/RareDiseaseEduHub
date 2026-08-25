@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eurordis-rare-diseases-europe-eurordis-open-academy-schools",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EURORDIS Rare Diseases Europe",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://openacademy.eurordis.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "EURORDIS Open Academy Schools",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Includes the Medicines Research & Development School and the Scientific Innovation & Translational Research School, with joint sessions."
+  },
+  "classification": {
+    "resource_type": "programme",
+    "delivery_modes": [
+      "online",
+      "in-person",
+      "hybrid"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://openacademy.eurordis.org/open-academy-schools/",
+    "official_url": "https://openacademy.eurordis.org/open-academy-schools/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://openacademy.eurordis.org/open-academy-schools/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing / no fixed date | Recurring application-based schools; 2027 applications announced to open 1 September 2026 | Includes the Medicines Research & Development School and the Scientific Innovation & Translational Research School, with joint sessions.",
+    "legacy": {
+      "type_group": "programme",
+      "type_label_bg": "Училище / обучителна програма",
+      "type_label_en": "School / training programme",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing / no fixed date",
+      "delivery": "Blended/online and in-person depending on school",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://openacademy.eurordis.org/open-academy-schools/",
+      "url_type": "direct course page",
+      "notes": "Includes the Medicines Research & Development School and the Scientific Innovation & Translational Research School, with joint sessions.",
+      "tags": [
+        "patient advocacy",
+        "medicines R&D",
+        "translational research"
+      ],
+      "source_status_note": "Recurring application-based schools; 2027 applications announced to open 1 September 2026",
+      "original_record_type": "School programme collection",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

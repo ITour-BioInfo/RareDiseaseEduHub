@@ -1,0 +1,21 @@
+name: Source correction
+description: Propose an evidence-backed factual correction.
+title: 'Source correction: '
+labels: [editorial-review-required]
+body:
+  - type: input
+    id: record
+    attributes: { label: Record ID }
+    validations: { required: true }
+  - type: input
+    id: field
+    attributes: { label: Field }
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes: { label: Direct official source URL }
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes: { label: Proposed value and short evidence }
+    validations: { required: true }

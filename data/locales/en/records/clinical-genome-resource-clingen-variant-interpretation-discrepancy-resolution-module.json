@@ -1,0 +1,15 @@
+{
+  "record_id": "clinical-genome-resource-clingen-variant-interpretation-discrepancy-resolution-module",
+  "locale": "en",
+  "title": "Variant Interpretation Discrepancy Resolution Module",
+  "summary": "Clinical variant interpretation",
+  "description": "For clinical laboratory geneticists who submit to ClinVar. Completion requires work on three materially discrepant variants and review by ClinGen.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

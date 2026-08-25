@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "european-society-of-human-genetics-eshg-covering-the-gaps-2026",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "European Society of Human Genetics (ESHG)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.eshg.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Covering the Gaps 2026",
+    "summary_original": "Rare-disease specific",
+    "description_original": null
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "paid"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-11-26",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "paid",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.eshg.org/covering-the-gaps",
+    "official_url": "https://www.eshg.org/covering-the-gaps",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.eshg.org/covering-the-gaps",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 26–27 November 2026 | Upcoming",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-11-26",
+      "dates": "26–27 November 2026",
+      "delivery": "Virtual",
+      "duration": "",
+      "cost": "€149 listed for the 2026 edition",
+      "certificate_or_recognition": "CME status was pending on the course page at verification",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://www.eshg.org/covering-the-gaps",
+      "url_type": "direct course page",
+      "notes": "",
+      "tags": [
+        "multidisciplinary genetics",
+        "virtual"
+      ],
+      "source_status_note": "Upcoming",
+      "original_record_type": "Virtual course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

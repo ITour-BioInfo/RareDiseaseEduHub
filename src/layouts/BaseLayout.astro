@@ -1,0 +1,99 @@
+---
+import { route, routes, type RouteKey } from '../i18n/routes';
+import { t } from '../i18n/translate';
+import type { Locale } from '../i18n/config';
+import { absoluteUrl, withBase } from '../lib/site/url';
+import '../styles/global.css';
+
+interface Props {
+  locale: Locale;
+  title?: string;
+  description?: string;
+  canonicalPath?: string;
+  alternatePath?: { bg: string; en: string };
+  pageKey?: RouteKey;
+  noindex?: boolean;
+}
+const {
+  locale,
+  title = t(locale, 'site.title'),
+  description = t(locale, 'site.description'),
+  canonicalPath,
+  alternatePath,
+  pageKey,
+  noindex = false,
+} = Astro.props;
+const currentAlternates = alternatePath || (pageKey ? routes[pageKey] : routes.home);
+const canonical = absoluteUrl(canonicalPath || currentAlternates[locale]);
+const navItems: [RouteKey, string][] = [
+  ['home', 'nav.catalogue'],
+  ['methodology', 'nav.methodology'],
+  ['policy', 'nav.policy'],
+  ['accessibility', 'nav.accessibility'],
+  ['data', 'nav.data'],
+];
+---
+
+<!doctype html>
+<html lang={locale}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex,follow" />}
+    <link rel="canonical" href={canonical} />
+    <link rel="manifest" href={withBase('/manifest.webmanifest')} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content={locale === 'bg' ? 'bg_BG' : 'en_GB'} />
+    <meta property="og:image" content={absoluteUrl('/og.jpg')} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={absoluteUrl('/og.jpg')} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">{t(locale, 'skip.content')}</a>
+    {
+      pageKey !== 'home' && (
+        <header class="site-header">
+          <div class="shell header-inner">
+            <a class="brand" href={withBase('/')} aria-label={t('en', 'site.title')}>
+              <span class="brand-mark" aria-hidden="true">
+                <>
+                  <span />
+                  <span />
+                  <span />
+                </>
+              </span>
+              <span>{t('en', 'site.title')}</span>
+            </a>
+            <nav aria-label={t('en', 'site.title')}>
+              <ul class="nav-list">
+                {navItems.map(([key, label]) => (
+                  <li>
+                    <a href={withBase(route('en', key))}>{t('en', label)}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </header>
+      )
+    }
+    <main id="main-content" tabindex="-1"><slot /></main>
+    <footer class="site-footer">
+      <div class="shell footer-grid">
+        <p>{t(locale, 'footer.about')}</p>
+        <nav aria-label={t(locale, 'nav.corrections')}>
+          <a href={withBase(route(locale, 'corrections'))}>{t(locale, 'nav.corrections')}</a>
+          <a href={withBase(route(locale, 'privacy'))}>{t(locale, 'nav.privacy')}</a>
+          <a href={withBase(route(locale, 'changes'))}>{t(locale, 'nav.changes')}</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

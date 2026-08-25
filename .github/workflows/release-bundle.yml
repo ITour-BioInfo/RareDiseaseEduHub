@@ -1,0 +1,38 @@
+name: Publication bundle
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bundle:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version-file: .nvmrc
+      - run: corepack enable && corepack prepare pnpm@11.23.0 --activate && pnpm install --frozen-lockfile
+      - run: pnpm catalog:validate && pnpm translations:validate && pnpm test && pnpm build
+      - name: Create publication checklist and checksums
+        shell: bash
+        run: |
+          mkdir -p publication
+          cp reports/latest-monitor.md publication/change-report.md
+          printf '%s\n' '# Publication checklist' '- [ ] Pull request reviewed and merged' '- [ ] Evidence reviewed' '- [ ] Bulgarian fallback reviewed' '- [ ] Bundle deployed manually' '- [ ] Public URL and downloads verified' > publication/checklist.md
+          find dist -type f -print0 | sort -z | xargs -0 sha256sum > publication/SHA256SUMS.txt
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: rare-disease-education-hub-publication-bundle
+          path: |
+            dist/
+            public/rare_disease_education_catalog.json
+            public/rare_disease_education_catalog.csv
+            public/rare_disease_education_catalog.en.csv
+            publication/
+          retention-days: 7

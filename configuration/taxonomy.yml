@@ -1,0 +1,6 @@
+schema_version: 1.0.0
+resource_types: [course, workshop, webinar, programme, exam, guide, recording, series, other]
+delivery_modes: [online, in-person, hybrid, self-paced, unknown]
+cost_kinds: [free, paid, mixed, unknown]
+certificate_kinds: [none, certificate, accreditation, recognition, unknown]
+translation_states: [missing, draft, reviewed, official]

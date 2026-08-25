@@ -1,0 +1,15 @@
+{
+  "record_id": "erdera-learning-portal-gpap-workshop-tier-1-variant-interpretation",
+  "locale": "en",
+  "title": "GPAP Workshop: Tier 1 Variant Interpretation",
+  "summary": "Rare-disease specific",
+  "description": "Direct course or provider page independently resolved from the ERDERA catalogue record.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

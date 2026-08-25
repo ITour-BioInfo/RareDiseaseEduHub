@@ -1,0 +1,15 @@
+{
+  "record_id": "institut-pasteur-fun-mooc-listed-by-bbmri-eric-biobanking-mooc",
+  "locale": "en",
+  "title": "Biobanking MOOC",
+  "summary": "Rare-disease specific",
+  "description": "Included as a documented biobanking MOOC source; current enrolment was not independently confirmed.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

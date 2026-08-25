@@ -1,0 +1,8 @@
+schema_version: 1.0.0
+default_locale: bg
+routes:
+  home: { bg: /, en: /en/ }
+  resources: { bg: /resursi/, en: /en/resources/ }
+  methodology: { bg: /metodologiya/, en: /en/methodology/ }
+compatibility_routes:
+  - /rare_disease_education_hub

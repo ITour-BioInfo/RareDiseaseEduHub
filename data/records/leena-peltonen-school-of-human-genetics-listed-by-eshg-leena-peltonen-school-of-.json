@@ -1,0 +1,115 @@
+{
+  "schema_version": "1.0.0",
+  "id": "leena-peltonen-school-of-human-genetics-listed-by-eshg-leena-peltonen-school-of-",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "Leena Peltonen School of Human Genetics (listed by ESHG)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://lpshg.com/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Leena Peltonen School of Human Genetics",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Included because it appeared in the ESHG 2026 course programme. The 2026 edition had ended by the verification date."
+  },
+  "classification": {
+    "resource_type": "programme",
+    "delivery_modes": [
+      "in-person"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-07-26",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://lpshg.com/",
+    "official_url": "https://lpshg.com/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://lpshg.com/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 26–30 July 2026 | Past 2026 edition; monitor for next edition | Included because it appeared in the ESHG 2026 course programme. The 2026 edition had ended by the verification date.",
+    "legacy": {
+      "type_group": "programme",
+      "type_label_bg": "Училище / обучителна програма",
+      "type_label_en": "School / training programme",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "2026-07-26",
+      "dates": "26–30 July 2026",
+      "delivery": "In person, Hinxton, United Kingdom",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://lpshg.com/",
+      "url_type": "direct course page",
+      "notes": "Included because it appeared in the ESHG 2026 course programme. The 2026 edition had ended by the verification date.",
+      "tags": [
+        "human genetics",
+        "summer school"
+      ],
+      "source_status_note": "Past 2026 edition; monitor for next edition",
+      "original_record_type": "Intensive school",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

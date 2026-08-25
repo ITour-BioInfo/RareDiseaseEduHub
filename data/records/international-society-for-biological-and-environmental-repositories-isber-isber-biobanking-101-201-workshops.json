@@ -1,0 +1,118 @@
+{
+  "schema_version": "1.0.0",
+  "id": "international-society-for-biological-and-environmental-repositories-isber-isber-biobanking-101-201-workshops",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "International Society for Biological and Environmental Repositories (ISBER)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.isber.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "ISBER Biobanking 101/201 Workshops",
+    "summary_original": "Biobanking broadly; enabling relevance to rare-disease research",
+    "description_original": "Foundational and advanced workshops based on ISBER Best Practices. The official page currently offers the 2026 Biobanking 101 recording and asks users to check for upcoming workshops."
+  },
+  "classification": {
+    "resource_type": "workshop",
+    "delivery_modes": [
+      "self-paced",
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Biobanking broadly",
+      "enabling relevance to rare-disease research"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.isber.org/page/Biobanking101201",
+    "official_url": "https://www.isber.org/page/Biobanking101201",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.isber.org/page/Biobanking101201",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Recurring workshops; next live date to be announced; recordings available | Recurring series; recording available, next live date TBA | Foundational and advanced workshops based on ISBER Best Practices. The official page currently offers the 2026 Biobanking 101 recording and asks users to check for upcoming workshops.",
+    "legacy": {
+      "type_group": "workshop",
+      "type_label_bg": "Практическо обучение / работилница",
+      "type_label_en": "Practical training / workshop",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "",
+      "dates": "Recurring workshops; next live date to be announced; recordings available",
+      "delivery": "Online live and on-demand workshops",
+      "duration": "Edition-specific",
+      "cost": "2026 recording listed at USD 40 members / USD 120 non-members",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Biobanking broadly; enabling relevance to rare-disease research",
+      "source_collection_url": "https://www.isber.org/page/Biobanking101201",
+      "url_type": "direct official HTML page",
+      "notes": "Foundational and advanced workshops based on ISBER Best Practices. The official page currently offers the 2026 Biobanking 101 recording and asks users to check for upcoming workshops.",
+      "tags": [
+        "biobanking",
+        "biospecimens",
+        "ISBER"
+      ],
+      "source_status_note": "Recurring series; recording available, next live date TBA",
+      "original_record_type": "Recurring professional workshop series",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

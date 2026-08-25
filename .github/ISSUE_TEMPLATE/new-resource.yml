@@ -1,0 +1,21 @@
+name: New resource
+description: Propose a new official rare-disease education resource.
+title: 'New resource: '
+labels: [new-resource-candidate, editorial-review-required]
+body:
+  - type: input
+    id: title
+    attributes: { label: Official title }
+    validations: { required: true }
+  - type: input
+    id: provider
+    attributes: { label: Official provider }
+    validations: { required: true }
+  - type: input
+    id: source
+    attributes: { label: Direct official source URL }
+    validations: { required: true }
+  - type: textarea
+    id: rationale
+    attributes: { label: Inclusion rationale and short evidence }
+    validations: { required: true }

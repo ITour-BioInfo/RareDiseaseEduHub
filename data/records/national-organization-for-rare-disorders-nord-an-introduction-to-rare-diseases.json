@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "national-organization-for-rare-disorders-nord-an-introduction-to-rare-diseases",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "National Organization for Rare Disorders (NORD)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://learn.rarediseases.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "An Introduction to Rare Diseases",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Designed for students and early learners; covers rare-disease fundamentals, disease examples, social and ethical issues and careers."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "self-paced",
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "certificate",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://learn.rarediseases.org/courses/intro-rare-diseases/",
+    "official_url": "https://learn.rarediseases.org/courses/intro-rare-diseases/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://learn.rarediseases.org/courses/intro-rare-diseases/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Available all year | Open year-round; updated 31 July 2026 | Designed for students and early learners; covers rare-disease fundamentals, disease examples, social and ethical issues and careers.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Available all year",
+      "delivery": "Online, self-paced",
+      "duration": "About 20 hours across 20 lectures",
+      "cost": "Free",
+      "certificate_or_recognition": "NORD Certificate of Completion",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://learn.rarediseases.org/courses/intro-rare-diseases/",
+      "url_type": "direct official HTML page",
+      "notes": "Designed for students and early learners; covers rare-disease fundamentals, disease examples, social and ethical issues and careers.",
+      "tags": [
+        "rare disease fundamentals",
+        "students",
+        "certificate"
+      ],
+      "source_status_note": "Open year-round; updated 31 July 2026",
+      "original_record_type": "Self-paced certificate course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

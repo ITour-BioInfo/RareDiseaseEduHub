@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "id": "eurordis-open-academy-erdera-open-academy-erdera-training-on-data-ethics-and-ai",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "EURORDIS Open Academy / ERDERA",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://openacademy.eurordis.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Open Academy × ERDERA Training on Data, Ethics and AI",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Direct course or provider page independently resolved from the ERDERA catalogue record. Retain for future cohorts; the 2026 application cycle was closed at verification."
+  },
+  "classification": {
+    "resource_type": "programme",
+    "delivery_modes": [
+      "hybrid"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": "2026-09-14",
+      "end": null,
+      "timezone": "Europe/Sofia",
+      "precision": "date"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://openacademy.eurordis.org/navigating-rare-disease-research-data-ethics/",
+    "official_url": "https://openacademy.eurordis.org/navigating-rare-disease-research-data-ethics/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://erdera.org/erdera-learning-portal/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: 14–15 September 2026 in-person component | 2026 applications closed; scheduled in-person component upcoming | Direct course or provider page independently resolved from the ERDERA catalogue record. Retain for future cohorts; the 2026 application cycle was closed at verification.",
+    "legacy": {
+      "type_group": "programme",
+      "type_label_bg": "Училище / обучителна програма",
+      "type_label_en": "School / training programme",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2026-09-14",
+      "dates": "14–15 September 2026 in-person component",
+      "delivery": "Hybrid",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "Course-specific; see provider",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://erdera.org/erdera-learning-portal/",
+      "url_type": "direct course/provider page",
+      "notes": "Direct course or provider page independently resolved from the ERDERA catalogue record. Retain for future cohorts; the 2026 application cycle was closed at verification.",
+      "tags": [
+        "ERDERA",
+        "rare diseases",
+        "FAIR data / ethics / governance",
+        "Patient engagement / PPIE"
+      ],
+      "source_status_note": "2026 applications closed; scheduled in-person component upcoming",
+      "original_record_type": "Hybrid training programme",
+      "catalogue_index": "65",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

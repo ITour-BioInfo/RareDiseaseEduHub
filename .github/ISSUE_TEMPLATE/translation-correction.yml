@@ -1,0 +1,17 @@
+name: Translation correction
+description: Propose a Bulgarian or English translation correction.
+title: 'Translation correction: '
+labels: [translation-review]
+body:
+  - type: input
+    id: record
+    attributes: { label: Record ID }
+    validations: { required: true }
+  - type: dropdown
+    id: locale
+    attributes: { label: Locale, options: [bg, en] }
+    validations: { required: true }
+  - type: textarea
+    id: translation
+    attributes: { label: Proposed translation and reviewer context }
+    validations: { required: true }

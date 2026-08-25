@@ -1,0 +1,15 @@
+{
+  "record_id": "clinical-genome-resource-clingen-clingen-biocurator-educational-materials",
+  "locale": "en",
+  "title": "ClinGen Biocurator Educational Materials",
+  "summary": "Clinical genomics curation; directly applicable to rare genetic disease interpretation",
+  "description": "Structured collection covering gene-disease validity, variant interpretation, curation interfaces and general biocuration topics.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

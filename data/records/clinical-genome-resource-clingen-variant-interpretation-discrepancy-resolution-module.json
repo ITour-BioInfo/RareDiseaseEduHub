@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "clinical-genome-resource-clingen-variant-interpretation-discrepancy-resolution-module",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "Clinical Genome Resource (ClinGen)",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.clinicalgenome.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Variant Interpretation Discrepancy Resolution Module",
+    "summary_original": "Clinical variant interpretation",
+    "description_original": "For clinical laboratory geneticists who submit to ClinVar. Completion requires work on three materially discrepant variants and review by ClinGen."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Clinical variant interpretation"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "unknown",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.clinicalgenome.org/tools/variant-interpretation-discrepancy-resolution-module/",
+    "official_url": "https://www.clinicalgenome.org/tools/variant-interpretation-discrepancy-resolution-module/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.clinicalgenome.org/tools/variant-interpretation-discrepancy-resolution-module/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: On demand | Module and submission process active | For clinical laboratory geneticists who submit to ClinVar. Completion requires work on three materially discrepant variants and review by ClinGen.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "On demand",
+      "delivery": "Practice-improvement module completed through real ClinVar discrepancy cases",
+      "duration": "",
+      "cost": "Free",
+      "certificate_or_recognition": "Eligible for ABMGG Part IV Practice Improvement Credit when requirements are met",
+      "rare_disease_scope": "Clinical variant interpretation",
+      "source_collection_url": "https://www.clinicalgenome.org/tools/variant-interpretation-discrepancy-resolution-module/",
+      "url_type": "direct official HTML page",
+      "notes": "For clinical laboratory geneticists who submit to ClinVar. Completion requires work on three materially discrepant variants and review by ClinGen.",
+      "tags": [
+        "ClinVar",
+        "variant interpretation",
+        "ABMGG"
+      ],
+      "source_status_note": "Module and submission process active",
+      "original_record_type": "Professional practice-improvement module",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "university-of-leeds-futurelearn-understanding-genetic-disorders-how-dna-influenc",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "University of Glasgow / FutureLearn",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://www.futurelearn.com/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "Understanding Genetic Disorders: How DNA Influences Health",
+    "summary_original": "Genetic disorders broadly; foundational rather than rare-disease specific",
+    "description_original": null
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "online"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Genetic disorders broadly",
+      "foundational rather than rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "certificate",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://www.futurelearn.com/courses/genes-and-health-how-dna-influences-disease",
+    "official_url": "https://www.futurelearn.com/courses/genes-and-health-how-dna-influences-disease",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://www.futurelearn.com/courses/genes-and-health-how-dna-influences-disease",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Ongoing ExpertTrack / no fixed cohort date | Active FutureLearn ExpertTrack; subscription terms may vary by location",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Курс / MOOC",
+      "type_label_en": "Course / MOOC",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Ongoing ExpertTrack / no fixed cohort date",
+      "delivery": "Online",
+      "duration": "4 weeks; 4 hours/week",
+      "cost": "CHF 44/month after a 2-day free trial (localized price may vary)",
+      "certificate_or_recognition": "Digital certificate available through the ExpertTrack subscription",
+      "rare_disease_scope": "Genetic disorders broadly; foundational rather than rare-disease specific",
+      "source_collection_url": "https://www.futurelearn.com/courses/genes-and-health-how-dna-influences-disease",
+      "url_type": "direct course page",
+      "notes": "",
+      "tags": [
+        "genetic disorders",
+        "foundation"
+      ],
+      "source_status_note": "Active FutureLearn ExpertTrack; subscription terms may vary by location",
+      "original_record_type": "MOOC",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

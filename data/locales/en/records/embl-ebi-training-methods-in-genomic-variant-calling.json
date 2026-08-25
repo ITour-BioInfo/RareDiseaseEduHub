@@ -1,0 +1,15 @@
+{
+  "record_id": "embl-ebi-training-methods-in-genomic-variant-calling",
+  "locale": "en",
+  "title": "Methods in Genomic Variant Calling",
+  "summary": "Variant-calling methods with rare-disease use cases",
+  "description": null,
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}

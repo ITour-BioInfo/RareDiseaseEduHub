@@ -1,0 +1,116 @@
+{
+  "schema_version": "1.0.0",
+  "id": "rd-connect-rd-connect-training-and-previous-events-archive",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "RD-Connect",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://rd-connect.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "RD-Connect training and previous events archive",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Historical rare-disease genomics, data and platform training. Use as supplementary learning and verify whether individual materials remain accessible."
+  },
+  "classification": {
+    "resource_type": "other",
+    "delivery_modes": [
+      "unknown"
+    ],
+    "audiences": [],
+    "topics": [],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://rd-connect.eu/previous-events/",
+    "official_url": "https://rd-connect.eu/previous-events/",
+    "registration_url": null,
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://rd-connect.eu/previous-events/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-24",
+    "verification_confidence": "unverified",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "needs-review",
+    "notes": "Legacy date text: Historical or inactive; no current date announced | Archive and materials; check links for access | Historical rare-disease genomics, data and platform training. Use as supplementary learning and verify whether individual materials remain accessible.",
+    "legacy": {
+      "type_group": "resource",
+      "type_label_bg": "Ресурс / модул / колекция",
+      "type_label_en": "Resource / module / collection",
+      "date_status": "past",
+      "date_status_bg": "Минал",
+      "sort_date": "",
+      "dates": "Historical or inactive; no current date announced",
+      "delivery": "",
+      "duration": "",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://rd-connect.eu/previous-events/",
+      "url_type": "direct course page",
+      "notes": "Historical rare-disease genomics, data and platform training. Use as supplementary learning and verify whether individual materials remain accessible.",
+      "tags": [
+        "RD-Connect",
+        "genomics",
+        "data sharing"
+      ],
+      "source_status_note": "Archive and materials; check links for access",
+      "original_record_type": "Training archive / event collection",
+      "catalogue_index": "",
+      "verified_on": "2026-08-24"
+    }
+  }
+}

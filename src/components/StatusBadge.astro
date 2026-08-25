@@ -1,0 +1,15 @@
+---
+import { t } from '../i18n/translate';
+import type { Locale } from '../i18n/config';
+import type { StatusCode } from '../lib/catalog/status';
+interface Props {
+  locale: Locale;
+  status: StatusCode;
+  secondary?: boolean;
+}
+const { locale, status, secondary = false } = Astro.props;
+---
+
+<span class:list={['status-badge', `status-${status}`, { secondary }]} data-status-label={status}
+  >{t(locale, `status.${status}`)}</span
+>

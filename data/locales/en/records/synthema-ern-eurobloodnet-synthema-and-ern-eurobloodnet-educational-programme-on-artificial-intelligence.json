@@ -1,0 +1,15 @@
+{
+  "record_id": "synthema-ern-eurobloodnet-synthema-and-ern-eurobloodnet-educational-programme-on-artificial-intelligence",
+  "locale": "en",
+  "title": "SYNTHEMA & ERN-EuroBloodNet Educational Programme on Artificial Intelligence in Hematology",
+  "summary": "Rare haematological diseases, synthetic data and federated learning",
+  "description": "Covers regulation, ethics, privacy, data standardisation, synthetic-data generation, interoperability and clinical use cases in sickle cell anaemia and AML.",
+  "provider_display_name": null,
+  "translation": {
+    "status": "official",
+    "method": null,
+    "reviewed_by": null,
+    "reviewed_at": null,
+    "notes": "Original source-language content."
+  }
+}
