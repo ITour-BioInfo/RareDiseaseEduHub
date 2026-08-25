@@ -10,5 +10,5 @@ export interface MonitorSummary {
   warnings: string[];
 }
 export function markdownReport(summary: MonitorSummary) {
-  return `# Catalogue monitor report\n\n- Run time: ${summary.checkedAt}\n- Mode: ${summary.mode}\n- Official sources checked: ${summary.sourcesChecked}\n- Successful checks: ${summary.successful}\n- Failed checks: ${summary.failed}\n- New candidate links: ${summary.changed}\n- Review proposals: ${summary.proposals}\n- Source conflicts: ${summary.conflicts}\n- Tests required before pull request: validation, translations, unit, crawler fixtures, build, browser and accessibility\n\n## Warnings\n\n${summary.warnings.length ? summary.warnings.map((item) => `- ${item}`).join('\n') : '- None.'}\n`;
+  return `# Catalogue monitor report\n\n- Run time: ${summary.checkedAt}\n- Mode: ${summary.mode}\n- Official sources checked: ${summary.sourcesChecked}\n- Successful checks: ${summary.successful}\n- Failed checks: ${summary.failed}\n- Detected source changes or new candidate links: ${summary.changed}\n- Review proposals: ${summary.proposals}\n- Source conflicts: ${summary.conflicts}\n- Tests required before pull request: validation, translations, unit, crawler fixtures, build, browser and accessibility\n\n## Warnings\n\n${summary.warnings.length ? summary.warnings.map((item) => `- ${item}`).join('\n') : '- None.'}\n`;
 }

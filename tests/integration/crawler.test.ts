@@ -5,7 +5,9 @@ import { extractJsonLd, relevantText } from '../../automation/html-extract';
 import { parseFeed, parseIcs } from '../../automation/feeds';
 import { eventsFromJsonLd } from '../../automation/structured-data';
 import { discoverFromHtml, discoveryProposal } from '../../automation/discovery';
+import { knownRecordChangeProposal } from '../../automation/known-records';
 import { parseRobots, robotsAllows } from '../../automation/robots';
+import { loadRecords } from '../../src/lib/catalog/load';
 
 const fixture = (name: string) =>
   readFile(path.join(process.cwd(), 'tests', 'fixtures', name), 'utf8');
@@ -29,6 +31,24 @@ describe('crawler fixtures', () => {
     expect(
       discoveryProposal(candidates[0]!, '2026-08-25T10:00:00.000Z').changes[0]?.review_required,
     ).toBe(true);
+  });
+  it('turns a known course page change into a field-level review proposal', async () => {
+    const record = (await loadRecords())[0]!;
+    const proposal = knownRecordChangeProposal(
+      record,
+      `<script type="application/ld+json">${JSON.stringify({
+        '@type': 'Course',
+        name: `${record.content.title_original} updated`,
+        startDate: '2027-01-15T10:00:00Z',
+        endDate: '2027-01-15T12:00:00Z',
+      })}</script>`,
+      '2026-08-25T10:00:00.000Z',
+      'old-hash',
+      'new-hash',
+    );
+    expect(proposal.record_id).toBe(record.id);
+    expect(proposal.changes.map((change) => change.field)).toContain('content.title_original');
+    expect(proposal.changes.every((change) => change.review_required)).toBe(true);
   });
   it('parses ICS, RSS and Atom without live network access', async () => {
     expect(parseIcs(await fixture('calendar.ics'))[0]?.title).toBe('Rare disease workshop');

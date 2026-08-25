@@ -65,6 +65,16 @@ jobs:
           fi
           echo "mode=$MODE" >> "$GITHUB_OUTPUT"
           echo "live=$LIVE" >> "$GITHUB_OUTPUT"
+      - name: Restore compact operational state
+        shell: bash
+        run: |
+          mkdir -p work/automation-state
+          if git ls-remote --exit-code --heads origin automation-state >/dev/null 2>&1; then
+            git fetch origin automation-state:refs/remotes/origin/automation-state
+            git show origin/automation-state:state.json > work/automation-state/state.json
+          else
+            printf '{}\n' > work/automation-state/state.json
+          fi
       - name: Run responsible source monitor
         env:
           MONITOR_LIVE: ${{ steps.mode.outputs.live }}
