@@ -31,6 +31,7 @@
     "test:a11y": "playwright test tests/accessibility",
     "test:crawler": "vitest run tests/integration/crawler.test.ts",
     "build": "pnpm catalog:validate && pnpm translations:validate && pnpm catalog:export && cross-env ASTRO_TELEMETRY_DISABLED=1 astro build",
+    "sites:build": "cross-env SITE_URL=https://deployment.invalid pnpm build && tsx scripts/prepare-sites.ts && tsx scripts/test-sites-build.ts",
     "check:exports": "tsx scripts/check-exports.ts",
     "check:links": "tsx scripts/check-links.ts",
     "check:secrets": "tsx scripts/check-secrets.ts",

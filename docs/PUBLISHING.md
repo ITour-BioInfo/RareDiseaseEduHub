@@ -5,8 +5,8 @@ Publication is intentionally manual.
 1. Review and merge the approved pull request.
 2. Wait for CI and the Publication bundle workflow.
 3. Download and verify the named artifact and its `SHA256SUMS.txt`.
-4. Confirm Bulgarian `/`, English `/en/`, compatibility route, resource detail, JSON, both CSV files, sitemap, canonical links, and 404 behaviour in a staging location.
-5. Save a new version in the existing hosting project, review it, and deploy only after approval.
-6. Verify the public URL and downloads; retain the previous version for rollback.
+4. Run `pnpm sites:build` and confirm Bulgarian `/`, English `/en/`, the compatibility route, a resource detail page, JSON, both CSV files, the sitemap, canonical links, and 404 behaviour.
+5. Preserve the project ID in `.openai/hosting.json`, push the exact source state, and save a new version in the existing Sites project.
+6. Review and deploy the approved version, then verify the public URL and downloads. Retain the previous version for rollback.
 
-`SITE_URL` and `BASE_PATH` must describe the chosen host. Never hand-edit `dist` or generated exports.
+The Sites worker replaces the portable build origin with the deployment origin at request time. `BASE_PATH` must still describe the chosen host. Never hand-edit `dist` or generated exports.

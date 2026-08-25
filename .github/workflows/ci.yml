@@ -36,6 +36,8 @@ jobs:
         run: pnpm check:exports && pnpm check:links && pnpm check:secrets
       - name: Run browser and accessibility tests
         run: pnpm test:browser && pnpm test:a11y
+      - name: Validate Sites hosting package
+        run: pnpm sites:build
       - name: Upload failure evidence
         if: failure()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
