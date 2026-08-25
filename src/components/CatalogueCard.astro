@@ -42,31 +42,25 @@ const searchText = [
   data-status={status.primary}
   data-next-action={status.next_action_at || ''}
 >
-  <div class="card-topline">
-    <StatusBadge locale={locale} status={status.primary} />
-    <span class="resource-type">{t(locale, `type.${record.classification.resource_type}`)}</span>
+  <div class="card-main">
+    <div class="card-topline">
+      <StatusBadge locale={locale} status={status.primary} />
+      <span class="resource-type">{t(locale, `type.${record.classification.resource_type}`)}</span>
+    </div>
+    <h3>
+      <a href={withBase(resourceRoute(locale, record.id))} lang={localized.display_language}
+        >{localized.display_title}</a
+      >
+    </h3>
+    <p class="provider">{record.provider.name}</p>
+    {
+      localized.display_summary && (
+        <p class="summary" lang={localized.display_language}>
+          {localized.display_summary}
+        </p>
+      )
+    }
   </div>
-  <h3>
-    <a href={withBase(resourceRoute(locale, record.id))} lang={localized.display_language}
-      >{localized.display_title}</a
-    >
-  </h3>
-  {
-    localized.has_translation && (
-      <p class="original-title">
-        <span>{t(locale, 'resource.originalTitle')}:</span>{' '}
-        <span lang={record.content.original_language}>{record.content.title_original}</span>
-      </p>
-    )
-  }
-  <p class="provider">{record.provider.name}</p>
-  {
-    localized.display_summary && (
-      <p class="summary" lang={localized.display_language}>
-        {localized.display_summary}
-      </p>
-    )
-  }
   <dl class="card-facts">
     <div>
       <dt>{t(locale, 'resource.delivery')}</dt><dd>
@@ -93,11 +87,8 @@ const searchText = [
     </div>
   </dl>
   <div class="card-actions">
-    <a class="button secondary" href={withBase(resourceRoute(locale, record.id))}
-      >{t(locale, 'resource.details')}</a
-    >
     <a
-      class="text-link"
+      class="button secondary"
       href={record.sources.official_url}
       target="_blank"
       rel="noopener noreferrer"

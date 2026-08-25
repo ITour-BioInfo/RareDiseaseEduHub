@@ -25,7 +25,6 @@ const {
 } = Astro.props;
 const currentAlternates = alternatePath || (pageKey ? routes[pageKey] : routes.home);
 const canonical = absoluteUrl(canonicalPath || currentAlternates[locale]);
-const opposite: Locale = locale === 'bg' ? 'en' : 'bg';
 const navItems: [RouteKey, string][] = [
   ['home', 'nav.catalogue'],
   ['methodology', 'nav.methodology'],
@@ -43,9 +42,6 @@ const navItems: [RouteKey, string][] = [
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex,follow" />}
     <link rel="canonical" href={canonical} />
-    <link rel="alternate" hreflang="bg" href={absoluteUrl(currentAlternates.bg)} />
-    <link rel="alternate" hreflang="en" href={absoluteUrl(currentAlternates.en)} />
-    <link rel="alternate" hreflang="x-default" href={absoluteUrl(currentAlternates.bg)} />
     <link rel="manifest" href={withBase('/manifest.webmanifest')} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -61,38 +57,33 @@ const navItems: [RouteKey, string][] = [
   </head>
   <body>
     <a class="skip-link" href="#main-content">{t(locale, 'skip.content')}</a>
-    <header class="site-header">
-      <div class="shell header-inner">
-        <a
-          class="brand"
-          href={withBase(route(locale, 'home'))}
-          aria-label={t(locale, 'site.title')}
-        >
-          <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
-          <span>{t(locale, 'site.title')}</span>
-        </a>
-        <nav aria-label={t(locale, 'site.title')}>
-          <ul class="nav-list">
-            {
-              navItems.map(([key, label]) => (
-                <li>
-                  <a href={withBase(route(locale, key))}>{t(locale, label)}</a>
-                </li>
-              ))
-            }
-          </ul>
-        </nav>
-        <a
-          class="language-link"
-          href={withBase(currentAlternates[opposite])}
-          lang={opposite}
-          hreflang={opposite}
-          aria-label={t(locale, opposite === 'en' ? 'language.switchToEn' : 'language.switchToBg')}
-        >
-          {t(locale, `language.${opposite}`)}
-        </a>
-      </div>
-    </header>
+    {
+      pageKey !== 'home' && (
+        <header class="site-header">
+          <div class="shell header-inner">
+            <a class="brand" href={withBase('/')} aria-label={t('en', 'site.title')}>
+              <span class="brand-mark" aria-hidden="true">
+                <>
+                  <span />
+                  <span />
+                  <span />
+                </>
+              </span>
+              <span>{t('en', 'site.title')}</span>
+            </a>
+            <nav aria-label={t('en', 'site.title')}>
+              <ul class="nav-list">
+                {navItems.map(([key, label]) => (
+                  <li>
+                    <a href={withBase(route('en', key))}>{t('en', label)}</a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
+          </div>
+        </header>
+      )
+    }
     <main id="main-content" tabindex="-1"><slot /></main>
     <footer class="site-footer">
       <div class="shell footer-grid">
@@ -102,7 +93,6 @@ const navItems: [RouteKey, string][] = [
           <a href={withBase(route(locale, 'privacy'))}>{t(locale, 'nav.privacy')}</a>
           <a href={withBase(route(locale, 'changes'))}>{t(locale, 'nav.changes')}</a>
         </nav>
-        <p class="footer-note">{t(locale, 'footer.updated')}</p>
       </div>
     </footer>
   </body>

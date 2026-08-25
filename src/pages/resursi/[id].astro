@@ -6,7 +6,7 @@ export async function getStaticPaths() {
   return records.map((record) => ({ params: { id: record.id }, props: { record } }));
 }
 const { record } = Astro.props;
-const translations = await loadTranslations('bg');
+const translations = await loadTranslations('en');
 ---
 
-<ResourceDetail locale="bg" record={record} translation={translations.get(record.id)} />
+<ResourceDetail locale="en" record={record} translation={translations.get(record.id)} />

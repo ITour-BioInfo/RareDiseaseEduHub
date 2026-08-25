@@ -4,6 +4,7 @@ import path from 'node:path';
 import { extractJsonLd, relevantText } from '../../automation/html-extract';
 import { parseFeed, parseIcs } from '../../automation/feeds';
 import { eventsFromJsonLd } from '../../automation/structured-data';
+import { discoverFromHtml, discoveryProposal } from '../../automation/discovery';
 import { parseRobots, robotsAllows } from '../../automation/robots';
 
 const fixture = (name: string) =>
@@ -16,6 +17,18 @@ describe('crawler fixtures', () => {
       '2026-09-20',
     );
     expect(eventsFromJsonLd([JSON.parse(await fixture('course.jsonld'))])[0]?.type).toBe('Course');
+  });
+  it('turns new official education links into human-review proposals', () => {
+    const candidates = discoverFromHtml(
+      `<main><a href="/courses/new-rare-disease-course">New rare disease course</a><a href="/privacy">Privacy</a></main>`,
+      'https://official.example/education/',
+      'Official provider',
+      ['official.example'],
+    );
+    expect(candidates).toHaveLength(1);
+    expect(
+      discoveryProposal(candidates[0]!, '2026-08-25T10:00:00.000Z').changes[0]?.review_required,
+    ).toBe(true);
   });
   it('parses ICS, RSS and Atom without live network access', async () => {
     expect(parseIcs(await fixture('calendar.ics'))[0]?.title).toBe('Rare disease workshop');

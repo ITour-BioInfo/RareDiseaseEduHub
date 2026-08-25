@@ -68,11 +68,6 @@ const structured = {
         )
       }
       {
-        !localized.has_translation && locale === 'bg' && (
-          <p class="translation-notice">{t(locale, 'resource.fallbackNotice')}</p>
-        )
-      }
-      {
         localized.display_description && (
           <p class="lead" lang={localized.display_language}>
             {localized.display_description}
@@ -120,11 +115,6 @@ const structured = {
                       .join(' — ')
                   : t(locale, 'resource.unknown')
               }
-            </dd>
-          </div>
-          <div>
-            <dt>{t(locale, 'resource.translation')}</dt><dd>
-              {t(locale, `translation.${localized.translation_status}`)}
             </dd>
           </div>
           <div>

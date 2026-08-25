@@ -2,10 +2,10 @@
 import Catalogue from '../components/Catalogue.astro';
 import Hero from '../components/Hero.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
-const locale = 'bg' as const;
+const locale = 'en' as const;
 ---
 
-<BaseLayout locale={locale} pageKey="home">
+<BaseLayout locale={locale} pageKey="home" canonicalPath="/">
   <Hero locale={locale} />
   <Catalogue locale={locale} />
 </BaseLayout>

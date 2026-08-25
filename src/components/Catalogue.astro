@@ -4,6 +4,7 @@ import { t } from '../i18n/translate';
 import { loadRecords, loadTranslations } from '../lib/catalog/load';
 import { sortRecords } from '../lib/catalog/sort';
 import { STATUS_CODES } from '../lib/catalog/status';
+import { calculateStatus } from '../lib/catalog/status';
 import CatalogueCard from './CatalogueCard.astro';
 import CatalogueFilters from './CatalogueFilters.astro';
 
@@ -13,6 +14,26 @@ interface Props {
 const { locale } = Astro.props;
 const records = sortRecords(await loadRecords());
 const translations = await loadTranslations(locale);
+const providerCount = new Set(records.map((record) => record.provider.name)).size;
+const statuses = records.map((record) => calculateStatus(record).primary);
+const upcomingCodes = new Set([
+  'starts-today',
+  'upcoming-event',
+  'applications-open',
+  'applications-closed-event-upcoming',
+  'registration-open',
+  'registration-closed-event-upcoming',
+]);
+const ongoingCodes = new Set([
+  'ongoing-event',
+  'on-demand-access-open',
+  'access-closes-soon',
+  'recurring-series',
+  'next-date-tba',
+  'date-status-unknown',
+]);
+const upcomingCount = statuses.filter((status) => upcomingCodes.has(status)).length;
+const ongoingCount = statuses.filter((status) => ongoingCodes.has(status)).length;
 const schedules = Object.fromEntries(
   records.map((record) => [
     record.id,
@@ -42,20 +63,24 @@ const clientMessages = {
   data-messages={JSON.stringify(clientMessages)}
 >
   <div class="shell">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">{t(locale, 'hero.eyebrow')}</p><h2>{t(locale, 'catalogue.heading')}</h2>
-      </div><p>{t(locale, 'catalogue.intro')}</p>
+    <div class="catalogue-stats" aria-label="Catalogue summary">
+      <div><strong>{records.length}</strong><span>resources</span></div>
+      <div><strong>{providerCount}</strong><span>providers</span></div>
+      <div><strong>{upcomingCount}</strong><span>scheduled</span></div>
+      <div><strong>{ongoingCount}</strong><span>available or ongoing</span></div>
     </div>
     <CatalogueFilters locale={locale} records={records} />
-    <div
-      class="catalogue-status"
-      role="status"
-      aria-live="polite"
-      aria-atomic="true"
-      data-catalogue-status
-    >
-      {t(locale, 'catalogue.available')}. {t(locale, 'catalogue.total', { total: records.length })}
+    <div class="catalogue-heading-row">
+      <h2>{t(locale, 'catalogue.heading')}</h2>
+      <div
+        class="catalogue-status"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        data-catalogue-status
+      >
+        {t(locale, 'catalogue.total', { total: records.length })}
+      </div>
     </div>
     <div class="no-results" data-no-results hidden>{t(locale, 'catalogue.noResults')}</div>
     <div class="catalogue-grid" data-catalogue-grid>

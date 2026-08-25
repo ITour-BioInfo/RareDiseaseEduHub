@@ -40,7 +40,7 @@ async function fetchPath(pathname: string) {
 const root = await fetchPath('/');
 assert.equal(root.status, 200);
 const rootHtml = await root.text();
-assert.match(rootHtml, /<html lang="bg"/u);
+assert.match(rootHtml, /<html lang="en"/u);
 assert.match(rootHtml, /https:\/\/rare-disease-edu-hub\.example/u);
 assert.doesNotMatch(rootHtml, /deployment\.invalid/u);
 
@@ -69,6 +69,4 @@ const sitemap = await fetchPath('/sitemap-index.xml');
 assert.equal(sitemap.status, 200);
 assert.match(await sitemap.text(), /https:\/\/rare-disease-edu-hub\.example/u);
 
-console.log(
-  'Validated Sites routing for Bulgarian, English, details, redirects, 404s, and assets.',
-);
+console.log('Validated Sites routing for English content, details, redirects, 404s, and assets.');

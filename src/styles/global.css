@@ -179,8 +179,8 @@ a {
   position: relative;
   overflow: hidden;
   color: white;
-  background: var(--teal-900);
-  padding: clamp(4rem, 8vw, 7.5rem) 0 clamp(4.5rem, 9vw, 8rem);
+  background: #073b5d;
+  padding: clamp(4.5rem, 9vw, 7rem) 0;
   isolation: isolate;
 }
 .hero::before {
@@ -188,23 +188,49 @@ a {
   position: absolute;
   z-index: -2;
   inset: 0;
-  background:
-    radial-gradient(circle at 78% 35%, rgb(20 133 121 / 35%), transparent 28rem),
-    linear-gradient(135deg, #073f3b 0%, #052e2b 100%);
+  background: linear-gradient(
+    90deg,
+    rgb(4 43 72 / 98%) 0%,
+    rgb(4 43 72 / 88%) 48%,
+    rgb(4 43 72 / 35%) 100%
+  );
 }
 .hero::after {
   content: '';
   position: absolute;
   z-index: -1;
-  width: 42rem;
-  height: 42rem;
-  right: -15rem;
-  top: -17rem;
-  border: 1px solid rgb(189 233 220 / 15%);
-  border-radius: 50%;
-  box-shadow:
-    0 0 0 7rem rgb(189 233 220 / 3%),
-    0 0 0 14rem rgb(189 233 220 / 2%);
+  inset: 0 0 0 42%;
+  background:
+    radial-gradient(circle at 18% 72%, #31a3bf 0 0.35rem, transparent 0.45rem),
+    radial-gradient(circle at 38% 28%, #ee695b 0 0.45rem, transparent 0.55rem),
+    radial-gradient(circle at 52% 60%, #48bed0 0 0.7rem, transparent 0.82rem),
+    radial-gradient(circle at 76% 34%, #1fa1a7 0 0.5rem, transparent 0.62rem),
+    radial-gradient(circle at 88% 70%, #ee695b 0 0.35rem, transparent 0.46rem),
+    radial-gradient(circle at 56% 48%, rgb(21 145 173 / 45%), transparent 14rem);
+}
+.hero-network {
+  position: absolute;
+  z-index: -1;
+  inset: 0 0 0 45%;
+  background:
+    linear-gradient(
+      26deg,
+      transparent 48%,
+      rgb(123 215 225 / 24%) 49%,
+      rgb(123 215 225 / 24%) 50%,
+      transparent 51%
+    ),
+    linear-gradient(
+      145deg,
+      transparent 48%,
+      rgb(123 215 225 / 18%) 49%,
+      rgb(123 215 225 / 18%) 50%,
+      transparent 51%
+    );
+  background-size:
+    10rem 8rem,
+    12rem 9rem;
+  mask-image: linear-gradient(90deg, transparent, black 25%);
 }
 .hero-grid {
   display: grid;
@@ -224,18 +250,18 @@ a {
   color: var(--lime);
 }
 .hero h1 {
-  max-width: 17ch;
+  max-width: 16ch;
   margin: 0;
-  font-size: clamp(2.55rem, 5.7vw, 5.2rem);
-  line-height: 0.99;
-  letter-spacing: -0.055em;
+  font-size: clamp(2.5rem, 5.2vw, 4.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.045em;
   text-wrap: balance;
 }
 .hero-body {
-  max-width: 64ch;
-  margin: 1.6rem 0 0;
-  color: rgb(255 255 255 / 76%);
-  font-size: clamp(1.05rem, 1.6vw, 1.24rem);
+  max-width: 48ch;
+  margin: 1rem 0 0;
+  color: rgb(255 255 255 / 82%);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
 }
 .hero-actions,
 .card-actions {
@@ -243,7 +269,7 @@ a {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.8rem 1.2rem;
-  margin-top: 2rem;
+  margin-top: 1.6rem;
 }
 .button {
   min-height: 2.9rem;
@@ -363,7 +389,46 @@ a {
 }
 
 .catalogue-section {
-  padding: clamp(4rem, 7vw, 7rem) 0;
+  padding: 2rem 0 clamp(4rem, 7vw, 6rem);
+}
+.catalogue-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 0 0 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+}
+.catalogue-stats div {
+  display: grid;
+  gap: 0.1rem;
+  padding: 1rem 1.2rem;
+  border-right: 1px solid var(--border);
+}
+.catalogue-stats div:last-child {
+  border-right: 0;
+}
+.catalogue-stats strong {
+  color: #073b5d;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+.catalogue-stats span {
+  color: var(--muted);
+  font-size: 0.78rem;
+}
+.catalogue-heading-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin: 2rem 0 0.9rem;
+}
+.catalogue-heading-row h2 {
+  margin: 0;
+  font-size: clamp(1.65rem, 3vw, 2.35rem);
+  letter-spacing: -0.035em;
 }
 .section-heading {
   display: grid;
@@ -384,22 +449,21 @@ a {
   color: var(--muted);
 }
 .filters {
-  padding: clamp(1.1rem, 2.5vw, 2rem);
+  padding: 1rem 1.2rem;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
+  border-radius: var(--radius-sm);
 }
 .filters-title-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.75rem;
 }
 .filters h3 {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: 1rem;
 }
 .clear-button {
   min-height: 2.75rem;
@@ -413,8 +477,8 @@ a {
 }
 .filter-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 1rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.8rem;
 }
 .filter-grid label {
   display: grid;
@@ -424,7 +488,7 @@ a {
   font-weight: 760;
 }
 .filter-grid .search-field {
-  grid-column: span 2;
+  grid-column: auto;
 }
 .filter-grid input,
 .filter-grid select {
@@ -462,9 +526,10 @@ a {
   font-weight: 700;
 }
 .catalogue-status {
-  margin: 1.6rem 0 1rem;
+  margin: 0;
   color: var(--muted);
-  font-weight: 700;
+  font-size: 0.88rem;
+  font-weight: 650;
 }
 .no-results {
   margin: 1.5rem 0;
@@ -475,18 +540,20 @@ a {
 }
 .catalogue-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1.1rem;
+  grid-template-columns: 1fr;
+  gap: 0.7rem;
   align-items: stretch;
 }
 .catalogue-card {
   min-width: 0;
-  display: flex;
-  flex-direction: column;
-  padding: 1.45rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(15rem, 0.8fr) auto;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1rem 1.1rem;
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-sm);
   transition:
     transform 180ms ease,
     box-shadow 180ms ease,
@@ -544,8 +611,8 @@ a {
   text-align: right;
 }
 .catalogue-card h3 {
-  margin: 1.15rem 0 0.55rem;
-  font-size: 1.23rem;
+  margin: 0.65rem 0 0.3rem;
+  font-size: 1.08rem;
   line-height: 1.23;
   letter-spacing: -0.025em;
 }
@@ -561,7 +628,7 @@ a {
   font-weight: 750;
 }
 .provider {
-  margin: 0.2rem 0 0.8rem;
+  margin: 0.15rem 0 0.55rem;
   color: var(--teal-700);
   font-size: 0.86rem;
   font-weight: 790;
@@ -569,7 +636,7 @@ a {
 .summary {
   display: -webkit-box;
   overflow: hidden;
-  margin: 0 0 1rem;
+  margin: 0;
   color: var(--muted);
   font-size: 0.91rem;
   -webkit-box-orient: vertical;
@@ -578,9 +645,9 @@ a {
 .card-facts {
   display: grid;
   gap: 0.55rem;
-  margin: auto 0 0;
-  padding-top: 1rem;
-  border-top: 1px solid #e3ebe9;
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 .card-facts div {
   display: grid;
@@ -596,7 +663,7 @@ a {
   margin: 0;
 }
 .card-actions {
-  margin-top: 1.2rem;
+  margin: 0;
 }
 .text-link {
   font-size: 0.83rem;
@@ -798,7 +865,13 @@ a {
     grid-template-columns: repeat(3, 1fr);
   }
   .catalogue-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+  }
+  .catalogue-card {
+    grid-template-columns: minmax(0, 1fr) minmax(14rem, 0.7fr);
+  }
+  .catalogue-card .card-actions {
+    grid-column: 1 / -1;
   }
 }
 
@@ -826,6 +899,21 @@ a {
   .detail-grid,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+  .catalogue-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .catalogue-stats div:nth-child(2) {
+    border-right: 0;
+  }
+  .catalogue-stats div:nth-child(-n + 2) {
+    border-bottom: 1px solid var(--border);
+  }
+  .catalogue-card {
+    grid-template-columns: 1fr;
+  }
+  .catalogue-heading-row {
+    display: grid;
   }
   .filter-grid .search-field {
     grid-column: auto;
