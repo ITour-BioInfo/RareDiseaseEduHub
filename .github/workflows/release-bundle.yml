@@ -17,7 +17,6 @@ jobs:
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version-file: .nvmrc
-          cache: pnpm
       - run: corepack enable && corepack prepare pnpm@11.23.0 --activate && pnpm install --frozen-lockfile
       - run: pnpm catalog:validate && pnpm translations:validate && pnpm test && pnpm build
       - name: Create publication checklist and checksums
