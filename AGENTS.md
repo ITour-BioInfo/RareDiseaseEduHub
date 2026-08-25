@@ -2,7 +2,7 @@
 
 - Canonical records live under `data/records`. Generated JSON and CSV files must never be manually edited.
 - Every factual change requires an official source and field-level evidence.
-- Every user-facing string must use the localization system; Bulgarian UI coverage must remain complete.
+- The public interface is intentionally English-only. Legacy Bulgarian-path compatibility routes must render the same English interface and records; Bulgarian UI coverage is not required.
 - Preserve original official course titles and provider names.
 - Date statuses are calculated from structured dates and are never manually frozen.
 - Do not use the OpenAI API, an OpenAI API key, or a paid search service.

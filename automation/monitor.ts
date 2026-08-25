@@ -10,7 +10,9 @@ import {
   type DiscoveryCandidate,
 } from './discovery';
 import { fetchSource } from './fetch';
+import { knownRecordChangeProposal } from './known-records';
 import { markdownReport, type MonitorSummary } from './report';
+import { loadMonitorState, stateFromFailure, stateFromResult } from './state';
 
 interface ProviderConfiguration {
   providers: Array<{
@@ -48,21 +50,10 @@ function providerSources(provider: ProviderConfiguration['providers'][number]) {
   return [...new Map(sources.map((source) => [source.url, source])).values()];
 }
 
-function sourceState(checkedAt: string, result: Awaited<ReturnType<typeof fetchSource>>) {
-  return {
-    checked_at: checkedAt,
-    status: result.status,
-    final_url: result.finalUrl,
-    redirect_chain: result.redirects,
-    etag: result.etag,
-    last_modified: result.lastModified,
-    content_hash: contentHash(result.body),
-    failure_count: result.status >= 400 ? 1 : 0,
-  };
-}
-
 export async function runMonitor(mode: string, recordId?: string) {
   const root = process.cwd();
+  const statePath = path.join(root, 'work', 'automation-state', 'state.json');
+  const state = await loadMonitorState(statePath);
   const records = await loadRecords();
   const selected = recordId
     ? records.filter((record) => record.id === recordId)
@@ -86,7 +77,6 @@ export async function runMonitor(mode: string, recordId?: string) {
     conflicts: 0,
     warnings: [],
   };
-  const state: Record<string, unknown> = {};
   let proposals: ReturnType<typeof discoveryProposal>[] = [];
 
   if (live && mode === 'morning') {
@@ -98,6 +88,8 @@ export async function runMonitor(mode: string, recordId?: string) {
     for (const provider of configuration.providers.filter((entry) => entry.enabled))
       for (const source of providerSources(provider)) {
         summary.sourcesChecked += 1;
+        const stateKey = `discovery:${provider.name}:${source.url}`;
+        const previous = state[stateKey];
         try {
           const sourceHost = new URL(source.url).hostname;
           const approvedDomains = [...new Set([...provider.approved_domains, sourceHost])];
@@ -107,10 +99,15 @@ export async function runMonitor(mode: string, recordId?: string) {
               ? { userAgent: process.env.CATALOG_USER_AGENT }
               : {}),
             ...(process.env.CATALOG_CONTACT ? { contact: process.env.CATALOG_CONTACT } : {}),
+            ...(previous?.etag ? { etag: previous.etag } : {}),
+            ...(previous?.last_modified ? { lastModified: previous.last_modified } : {}),
           });
-          state[`discovery:${provider.name}:${source.url}`] = sourceState(
+          state[stateKey] = stateFromResult(
+            stateKey,
             summary.checkedAt,
             result,
+            result.status === 304 ? null : contentHash(result.body),
+            previous,
           );
           if (result.status >= 400) {
             summary.failed += 1;
@@ -120,6 +117,7 @@ export async function runMonitor(mode: string, recordId?: string) {
             continue;
           }
           summary.successful += 1;
+          if (result.status === 304) continue;
           discovered.push(
             ...discoverFromSource(
               result.body,
@@ -130,6 +128,7 @@ export async function runMonitor(mode: string, recordId?: string) {
             ).slice(0, 25),
           );
         } catch (error) {
+          state[stateKey] = stateFromFailure(stateKey, summary.checkedAt, previous);
           summary.failed += 1;
           summary.warnings.push(
             `${provider.name}: ${error instanceof Error ? error.message : 'fetch failed'}; no candidate created.`,
@@ -146,26 +145,55 @@ export async function runMonitor(mode: string, recordId?: string) {
       .slice(0, 100)
       .map((candidate) => discoveryProposal(candidate, summary.checkedAt));
     summary.changed = candidates.length;
-    summary.proposals = proposals.length;
   } else if (live) {
     summary.sourcesChecked = selected.length;
     for (const record of selected) {
+      const previous = state[record.id];
       try {
         const domain = new URL(record.sources.official_url).hostname;
         const result = await fetchSource(record.sources.official_url, {
           approvedDomains: [domain],
           ...(process.env.CATALOG_USER_AGENT ? { userAgent: process.env.CATALOG_USER_AGENT } : {}),
           ...(process.env.CATALOG_CONTACT ? { contact: process.env.CATALOG_CONTACT } : {}),
+          ...(previous?.etag ? { etag: previous.etag } : {}),
+          ...(previous?.last_modified ? { lastModified: previous.last_modified } : {}),
         });
-        state[record.id] = sourceState(summary.checkedAt, result);
-        if (result.status < 400) summary.successful += 1;
-        else {
+        const currentHash = result.status === 304 ? null : contentHash(result.body);
+        const nextState = stateFromResult(
+          record.id,
+          summary.checkedAt,
+          result,
+          currentHash,
+          previous,
+        );
+        state[record.id] = nextState;
+        if (result.status < 400) {
+          summary.successful += 1;
+          if (
+            result.status !== 304 &&
+            previous?.content_hash &&
+            currentHash &&
+            previous.content_hash !== currentHash
+          ) {
+            const proposal = knownRecordChangeProposal(
+              record,
+              result.body,
+              summary.checkedAt,
+              previous.content_hash,
+              currentHash,
+            );
+            proposals.push(proposal);
+            summary.changed += 1;
+            nextState.last_proposal_id = proposal.proposal_id;
+          }
+        } else {
           summary.failed += 1;
           summary.warnings.push(
             `${record.id}: HTTP ${result.status}; retained without factual change.`,
           );
         }
       } catch (error) {
+        state[record.id] = stateFromFailure(record.id, summary.checkedAt, previous);
         summary.failed += 1;
         summary.warnings.push(
           `${record.id}: ${error instanceof Error ? error.message : 'fetch failed'}; retained without factual change.`,
@@ -177,12 +205,11 @@ export async function runMonitor(mode: string, recordId?: string) {
       'Fixture/dry-run mode: no live provider pages were requested and no factual changes were applied.',
     );
 
+  summary.proposals = proposals.length;
+
   await mkdir(path.join(root, 'work', 'automation-state'), { recursive: true });
   await mkdir(path.join(root, 'reports'), { recursive: true });
-  await writeFile(
-    path.join(root, 'work', 'automation-state', 'state.json'),
-    `${JSON.stringify(state, null, 2)}\n`,
-  );
+  await writeFile(statePath, `${JSON.stringify(state, null, 2)}\n`);
   await writeFile(path.join(root, 'reports', 'latest-monitor.md'), markdownReport(summary));
   await writeFile(
     path.join(root, 'reports', 'proposals.json'),
