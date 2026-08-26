@@ -4,7 +4,14 @@ import path from 'node:path';
 import { extractJsonLd, relevantText } from '../../automation/html-extract';
 import { parseFeed, parseIcs } from '../../automation/feeds';
 import { eventsFromJsonLd } from '../../automation/structured-data';
-import { discoverFromHtml, discoveryProposal } from '../../automation/discovery';
+import {
+  discoverFromHtml,
+  discoveryProposal,
+  filterNewDiscoveryCandidates,
+  isCollectionListingUrl,
+  validateDiscoveryCandidate,
+  type DiscoveryCandidate,
+} from '../../automation/discovery';
 import { knownRecordChangeProposal } from '../../automation/known-records';
 import { parseRobots, robotsAllows } from '../../automation/robots';
 import { loadRecords } from '../../src/lib/catalog/load';
@@ -31,6 +38,121 @@ describe('crawler fixtures', () => {
     expect(
       discoveryProposal(candidates[0]!, '2026-08-25T10:00:00.000Z').changes[0]?.review_required,
     ).toBe(true);
+  });
+  it('mines collection content while rejecting navigation, templates and generic categories', () => {
+    const candidates = discoverFromHtml(
+      `<nav>
+        <a href="/subjects/creative-arts-and-media-courses/cooking">Cooking</a>
+        <a href="/courses">Courses</a>
+      </nav>
+      <main>
+        <a href="/{{ data.permalink }}">{{ data._highlightResult.post_title.value }}</a>
+        <a href="/courses/new-rare-disease-course">New rare disease course</a>
+      </main>`,
+      'https://official.example/education/',
+      'Official rare-disease provider',
+      ['official.example'],
+    );
+    expect(candidates.map((candidate) => candidate.title)).toEqual(['New rare disease course']);
+  });
+  it('distinguishes collection pages from detail pages and archives', () => {
+    expect(isCollectionListingUrl('https://official.example/courses/')).toBe(true);
+    expect(isCollectionListingUrl('https://official.example/rare-disease-education-hub/')).toBe(
+      true,
+    );
+    expect(isCollectionListingUrl('https://official.example/courses/specific-course/')).toBe(false);
+    expect(isCollectionListingUrl('https://official.example/previous-events/')).toBe(false);
+  });
+  it('requires official-page learning and rare-disease evidence', () => {
+    const candidate: DiscoveryCandidate = {
+      provider: 'American Society of Human Genetics (ASHG)',
+      title: 'AI-Powered Genetic Research Through MARRVEL-MCP',
+      url: 'https://learning.ashg.org/products/marrvel-mcp',
+      evidenceUrl: 'https://learning.ashg.org/catalog',
+      sourceKind: 'official-listing',
+      confidence: 'medium',
+    };
+    const accepted = validateDiscoveryCandidate(
+      candidate,
+      `<html><head><title>AI-Powered Genetic Research Through MARRVEL-MCP</title></head>
+        <body><main><h1>AI-Powered Genetic Research Through MARRVEL-MCP</h1>
+        <p>Register for this webinar about variant interpretation and rare disease diagnosis.</p>
+        </main></body></html>`,
+      candidate.url,
+      Date.parse('2026-08-26T00:00:00Z'),
+    );
+    expect(accepted.accepted).toBe(true);
+
+    const unrelated = validateDiscoveryCandidate(
+      { ...candidate, provider: 'Wellcome Connecting Science', title: 'COG-Train Programme' },
+      `<main><h1>COG-Train Programme</h1><p>Training in SARS-CoV-2 pathogen genomics.</p></main>`,
+      'https://official.example/cog-train',
+      Date.parse('2026-08-26T00:00:00Z'),
+    );
+    expect(unrelated.accepted).toBe(false);
+    expect(unrelated.reasons).toContain('no rare-disease or clinical-genetics relevance');
+
+    const consortiumMeeting = validateDiscoveryCandidate(
+      {
+        ...candidate,
+        provider: 'EDITSCD / ERN-EuroBloodNet',
+        title: 'Annual meeting 2026 in-person',
+      },
+      `<script type="application/ld+json">${JSON.stringify({
+        '@type': 'Event',
+        name: 'Annual meeting 2026 in-person',
+        startDate: '2026-09-08T09:00:00Z',
+      })}</script><main><h1>Annual meeting 2026 in-person</h1><p>The consortium will meet to debrief.</p></main>`,
+      'https://editscd.eu/events/annual-meeting-2026-in-person',
+      Date.parse('2026-08-26T00:00:00Z'),
+    );
+    expect(consortiumMeeting.accepted).toBe(false);
+    expect(consortiumMeeting.reasons).toContain('no course or learning evidence');
+  });
+  it('rejects stale events even when their pages still contain recordings', () => {
+    const candidate: DiscoveryCandidate = {
+      provider: 'BBMRI-ERIC',
+      title: 'Webinar: old ethics event',
+      url: 'https://www.bbmri-eric.eu/events/old-ethics-event',
+      evidenceUrl: 'https://www.bbmri-eric.eu/events',
+      sourceKind: 'official-listing',
+      confidence: 'high',
+    };
+    const validation = validateDiscoveryCandidate(
+      candidate,
+      `<script type="application/ld+json">${JSON.stringify({
+        '@type': 'Event',
+        name: candidate.title,
+        startDate: '2021-09-13T14:00:00Z',
+        url: candidate.url,
+      })}</script><main><h1>${candidate.title}</h1><p>Rare disease webinar recording.</p></main>`,
+      candidate.url,
+      Date.parse('2026-08-26T00:00:00Z'),
+    );
+    expect(validation.accepted).toBe(false);
+    expect(validation.reasons).toContain('event is more than 180 days old');
+  });
+  it('deduplicates alternate URLs using title, provider and event year', async () => {
+    const records = await loadRecords();
+    const existing = records.find(
+      (record) => record.content.title_original === '9th Eye Genetics Course',
+    );
+    expect(existing).toBeTruthy();
+    const result = filterNewDiscoveryCandidates(
+      [
+        {
+          provider: existing!.provider.name,
+          title: existing!.content.title_original,
+          url: `${existing!.sources.official_url}?lang=en`,
+          evidenceUrl: existing!.sources.official_url,
+          sourceKind: 'official-listing',
+          confidence: 'medium',
+        },
+      ],
+      records,
+    );
+    expect(result.candidates).toHaveLength(0);
+    expect(result.duplicates).toBe(1);
   });
   it('turns a known course page change into a field-level review proposal', async () => {
     const record = (await loadRecords())[0]!;

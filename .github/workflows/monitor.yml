@@ -102,7 +102,19 @@ jobs:
       - name: Detect reviewable proposals
         id: proposals
         shell: bash
-        run: node -e "const p=require('./reports/proposals.json'); require('fs').appendFileSync(process.env.GITHUB_OUTPUT,'changed='+(p.length?'true':'false')+'\n')"
+        run: |
+          node - <<'NODE'
+          const proposals = require('./reports/proposals.json')
+          const limit = 20
+          const changed = proposals.length > 0 && proposals.length <= limit
+          const blocked = proposals.length > limit
+          require('fs').appendFileSync(
+            process.env.GITHUB_OUTPUT,
+            `changed=${changed}\nblocked=${blocked}\ncount=${proposals.length}\n`,
+          )
+          if (blocked)
+            console.log(`::warning::Pull-request safety gate blocked ${proposals.length} proposals; limit is ${limit}. Evidence will be uploaded as an artifact.`)
+          NODE
       - name: Create or update review branch
         if: steps.proposals.outputs.changed == 'true' && (github.event_name == 'schedule' || inputs.open_pr == true)
         shell: bash
@@ -123,6 +135,7 @@ jobs:
             gh pr create --draft --base main --head automation/catalog-updates --title "Catalogue source-change proposals" --body "$BODY" --label automated-catalog-update --label editorial-review-required
           fi
       - name: Upload monitor evidence
+        if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
           name: catalogue-monitor-report

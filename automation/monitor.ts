@@ -4,9 +4,12 @@ import YAML from 'yaml';
 import { loadRecords } from '../src/lib/catalog/load';
 import { contentHash } from './compare';
 import {
+  discoveryCandidateScore,
   discoverFromSource,
   discoveryProposal,
-  newDiscoveryCandidates,
+  filterNewDiscoveryCandidates,
+  isCollectionListingUrl,
+  validateDiscoveryCandidate,
   type DiscoveryCandidate,
 } from './discovery';
 import { fetchSource } from './fetch';
@@ -29,6 +32,28 @@ type DiscoverySource = {
   url: string;
   kind: 'official-listing' | 'official-feed' | 'official-calendar' | 'official-sitemap';
 };
+
+const MAX_CANDIDATE_VALIDATIONS = 50;
+const MAX_REVIEW_PROPOSALS = 20;
+
+async function mapWithConcurrency<T, R>(
+  items: T[],
+  concurrency: number,
+  task: (item: T) => Promise<R>,
+) {
+  const results = new Array<R>(items.length);
+  let next = 0;
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length) }, async () => {
+      while (next < items.length) {
+        const index = next;
+        next += 1;
+        results[index] = await task(items[index]!);
+      }
+    }),
+  );
+  return results;
+}
 
 function providerSources(provider: ProviderConfiguration['providers'][number]) {
   const sources: DiscoverySource[] = [
@@ -75,6 +100,14 @@ export async function runMonitor(mode: string, recordId?: string) {
     changed: 0,
     proposals: 0,
     conflicts: 0,
+    rawCandidates: 0,
+    filteredCandidates: 0,
+    validatedCandidates: 0,
+    rejectedCandidates: 0,
+    duplicateCandidates: 0,
+    suppressedCandidates: 0,
+    validationFailures: 0,
+    safetyGateTripped: false,
     warnings: [],
   };
   let proposals: ReturnType<typeof discoveryProposal>[] = [];
@@ -84,6 +117,7 @@ export async function runMonitor(mode: string, recordId?: string) {
       await readFile(path.join(root, 'configuration', 'providers.yml'), 'utf8'),
     ) as ProviderConfiguration;
     const discovered: DiscoveryCandidate[] = [];
+    let skippedDetailSources = 0;
 
     for (const provider of configuration.providers.filter((entry) => entry.enabled))
       for (const source of providerSources(provider)) {
@@ -118,6 +152,10 @@ export async function runMonitor(mode: string, recordId?: string) {
           }
           summary.successful += 1;
           if (result.status === 304) continue;
+          if (source.kind === 'official-listing' && !isCollectionListingUrl(result.finalUrl)) {
+            skippedDetailSources += 1;
+            continue;
+          }
           discovered.push(
             ...discoverFromSource(
               result.body,
@@ -125,7 +163,9 @@ export async function runMonitor(mode: string, recordId?: string) {
               provider.name,
               approvedDomains,
               source.kind,
-            ).slice(0, 25),
+            )
+              .sort((a, b) => discoveryCandidateScore(b) - discoveryCandidateScore(a))
+              .slice(0, 50),
           );
         } catch (error) {
           state[stateKey] = stateFromFailure(stateKey, summary.checkedAt, previous);
@@ -136,15 +176,98 @@ export async function runMonitor(mode: string, recordId?: string) {
         }
       }
 
-    const candidates = newDiscoveryCandidates(discovered, records);
-    if (candidates.length > 100)
+    summary.rawCandidates = discovered.length;
+    const filtered = filterNewDiscoveryCandidates(discovered, records);
+    summary.filteredCandidates = filtered.candidates.length;
+    summary.duplicateCandidates = filtered.duplicates;
+    const candidates = filtered.candidates.slice(0, MAX_CANDIDATE_VALIDATIONS);
+    if (skippedDetailSources)
       summary.warnings.push(
-        `Discovery found ${candidates.length} candidate links; the review list was capped at 100.`,
+        `Skipped link mining on ${skippedDetailSources} individual course or archive pages.`,
       );
-    proposals = candidates
-      .slice(0, 100)
-      .map((candidate) => discoveryProposal(candidate, summary.checkedAt));
-    summary.changed = candidates.length;
+    if (filtered.candidates.length > MAX_CANDIDATE_VALIDATIONS)
+      summary.warnings.push(
+        `Discovery found ${filtered.candidates.length} deduplicated links; official detail-page validation was capped at ${MAX_CANDIDATE_VALIDATIONS}.`,
+      );
+    const rejectionReasons = new Map<string, number>();
+    const validationFailureMessages: string[] = [];
+    const validated = await mapWithConcurrency(candidates, 3, async (candidate) => {
+      const stateKey = `candidate:${candidate.url}`;
+      const previous = state[stateKey];
+      try {
+        const domain = new URL(candidate.url).hostname;
+        const result = await fetchSource(candidate.url, {
+          approvedDomains: [domain],
+          timeoutMs: 10_000,
+          ...(process.env.CATALOG_USER_AGENT ? { userAgent: process.env.CATALOG_USER_AGENT } : {}),
+          ...(process.env.CATALOG_CONTACT ? { contact: process.env.CATALOG_CONTACT } : {}),
+          ...(previous?.etag ? { etag: previous.etag } : {}),
+          ...(previous?.last_modified ? { lastModified: previous.last_modified } : {}),
+        });
+        const currentHash = result.status === 304 ? null : contentHash(result.body);
+        const nextState = stateFromResult(
+          stateKey,
+          summary.checkedAt,
+          result,
+          currentHash,
+          previous,
+        );
+        state[stateKey] = nextState;
+        if (result.status >= 400) {
+          summary.validationFailures += 1;
+          validationFailureMessages.push(
+            `${candidate.provider}: candidate verification HTTP ${result.status} for ${candidate.url}.`,
+          );
+          return null;
+        }
+        if (
+          result.status === 304 ||
+          (currentHash && previous?.content_hash && currentHash === previous.content_hash)
+        ) {
+          summary.suppressedCandidates += 1;
+          return null;
+        }
+        const validation = validateDiscoveryCandidate(candidate, result.body, result.finalUrl);
+        if (!validation.accepted) {
+          summary.rejectedCandidates += 1;
+          for (const reason of validation.reasons)
+            rejectionReasons.set(reason, (rejectionReasons.get(reason) || 0) + 1);
+          return null;
+        }
+        const finalDeduplication = filterNewDiscoveryCandidates([validation.candidate], records);
+        if (!finalDeduplication.candidates.length) {
+          summary.duplicateCandidates += 1;
+          return null;
+        }
+        const proposal = discoveryProposal(validation.candidate, summary.checkedAt);
+        nextState.last_proposal_id = proposal.proposal_id;
+        return proposal;
+      } catch (error) {
+        state[stateKey] = stateFromFailure(stateKey, summary.checkedAt, previous);
+        summary.validationFailures += 1;
+        validationFailureMessages.push(
+          `${candidate.provider}: candidate verification ${error instanceof Error ? error.message : 'fetch failed'} for ${candidate.url}.`,
+        );
+        return null;
+      }
+    });
+    proposals = validated.filter(
+      (proposal): proposal is NonNullable<typeof proposal> => !!proposal,
+    );
+    summary.validatedCandidates = proposals.length;
+    summary.changed = proposals.length;
+    for (const [reason, count] of [...rejectionReasons.entries()].sort((a, b) => b[1] - a[1]))
+      summary.warnings.push(`Candidate filter: ${count} rejected for ${reason}.`);
+    summary.warnings.push(...validationFailureMessages.slice(0, 10));
+    if (validationFailureMessages.length > 10)
+      summary.warnings.push(
+        `${validationFailureMessages.length - 10} additional candidate verification failures were omitted from this summary.`,
+      );
+    summary.safetyGateTripped = proposals.length > MAX_REVIEW_PROPOSALS;
+    if (summary.safetyGateTripped)
+      summary.warnings.push(
+        `Safety gate blocked pull-request creation because ${proposals.length} proposals exceeded the limit of ${MAX_REVIEW_PROPOSALS}.`,
+      );
   } else if (live) {
     summary.sourcesChecked = selected.length;
     for (const record of selected) {
@@ -206,6 +329,13 @@ export async function runMonitor(mode: string, recordId?: string) {
     );
 
   summary.proposals = proposals.length;
+  if (proposals.length > MAX_REVIEW_PROPOSALS) {
+    summary.safetyGateTripped = true;
+    if (!summary.warnings.some((warning) => warning.startsWith('Safety gate blocked')))
+      summary.warnings.push(
+        `Safety gate blocked pull-request creation because ${proposals.length} proposals exceeded the limit of ${MAX_REVIEW_PROPOSALS}.`,
+      );
+  }
 
   await mkdir(path.join(root, 'work', 'automation-state'), { recursive: true });
   await mkdir(path.join(root, 'reports'), { recursive: true });
