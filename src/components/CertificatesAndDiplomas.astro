@@ -81,9 +81,11 @@ const credentials = (await loadRecords())
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Official requirements <span aria-hidden="true">↗</span><span class="sr-only">
-                  (external link)</span
-                >
+                Official requirements{' '}
+                <>
+                  <span aria-hidden="true">↗</span>
+                  <span class="sr-only">(external link)</span>
+                </>
               </a>
               <a class="text-link" href={withBase(resourceRoute(locale, record.id))}>
                 Full record
@@ -95,9 +97,9 @@ const credentials = (await loadRecords())
     </div>
 
     <aside class="credentials-note" aria-label="Credentials information note">
-      <strong>Check before applying:</strong> eligibility, fees, examination dates and professional
-      recognition can change. Confirm the current requirements and recognition status with the
-      official organisation.
+      <strong>Check before applying:</strong> eligibility, fees, examination dates and professional recognition
+      can change. Confirm the current requirements and recognition status with the official organisation.
     </aside>
   </div>
 </section>
+
