@@ -27,6 +27,7 @@ const currentAlternates = alternatePath || (pageKey ? routes[pageKey] : routes.h
 const canonical = absoluteUrl(canonicalPath || currentAlternates[locale]);
 const navItems: [RouteKey, string][] = [
   ['home', 'nav.catalogue'],
+  ['credentials', 'nav.credentials'],
   ['methodology', 'nav.methodology'],
   ['policy', 'nav.policy'],
   ['accessibility', 'nav.accessibility'],
