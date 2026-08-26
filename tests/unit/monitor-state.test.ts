@@ -2,6 +2,7 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
+import { isRetryableDetailError, isRetryableDetailStatus } from '../../automation/monitor';
 import {
   loadMonitorState,
   stateFromFailure,
@@ -100,5 +101,17 @@ describe('monitor state persistence', () => {
     expect(state.listing.etag).toBe('old-etag');
     restoreStateForRetry(state, 'listing');
     expect(state).not.toHaveProperty('listing');
+  });
+
+  it('retries only transient detail-page failures', () => {
+    expect(isRetryableDetailStatus(408)).toBe(true);
+    expect(isRetryableDetailStatus(429)).toBe(true);
+    expect(isRetryableDetailStatus(503)).toBe(true);
+    expect(isRetryableDetailStatus(404)).toBe(false);
+    expect(isRetryableDetailStatus(410)).toBe(false);
+    expect(isRetryableDetailError(new DOMException('timed out', 'AbortError'))).toBe(true);
+    expect(isRetryableDetailError(new Error('Response exceeds maximum configured size.'))).toBe(
+      false,
+    );
   });
 });

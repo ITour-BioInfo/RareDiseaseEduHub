@@ -41,6 +41,24 @@ type DiscoverySource = {
 
 const MAX_CANDIDATE_VALIDATIONS = 50;
 const MAX_REVIEW_PROPOSALS = 20;
+const MAX_TRANSIENT_CANDIDATE_FAILURES = 3;
+
+export function isRetryableDetailStatus(status: number) {
+  return [408, 425, 429].includes(status) || (status >= 500 && status <= 599);
+}
+
+export function isRetryableDetailError(error: unknown) {
+  if (!(error instanceof Error)) return false;
+  const cause = error.cause instanceof Error ? (error.cause as NodeJS.ErrnoException) : null;
+  const code = (error as NodeJS.ErrnoException).code || cause?.code || '';
+  return (
+    ['AbortError', 'TimeoutError'].includes(error.name) ||
+    ['EAI_AGAIN', 'ECONNREFUSED', 'ECONNRESET', 'ENETUNREACH', 'ENOTFOUND', 'ETIMEDOUT'].includes(
+      code,
+    ) ||
+    /fetch failed|network|socket|terminated|timed?\s*out/i.test(error.message)
+  );
+}
 
 async function mapWithConcurrency<T, R>(
   items: T[],
@@ -139,7 +157,8 @@ export async function runMonitor(mode: string, recordId?: string) {
         checkpoints.push({ stateKey, ...(previous ? { previous } : {}) });
       candidateSourceCheckpoints.set(candidate.url, checkpoints);
     };
-    const retryCandidateSource = (candidate: DiscoveryCandidate) => {
+    const retryCandidateSource = (candidate: DiscoveryCandidate, previous?: MonitorSourceState) => {
+      if ((previous?.failure_count ?? 0) >= MAX_TRANSIENT_CANDIDATE_FAILURES) return;
       for (const checkpoint of candidateSourceCheckpoints.get(candidate.url) || [])
         restoreStateForRetry(state, checkpoint.stateKey, checkpoint.previous);
     };
@@ -242,7 +261,7 @@ export async function runMonitor(mode: string, recordId?: string) {
         );
         state[stateKey] = nextState;
         if (result.status >= 400) {
-          retryCandidateSource(candidate);
+          if (isRetryableDetailStatus(result.status)) retryCandidateSource(candidate, previous);
           summary.validationFailures += 1;
           validationFailureMessages.push(
             `${candidate.provider}: candidate verification HTTP ${result.status} for ${candidate.url}.`,
@@ -273,7 +292,7 @@ export async function runMonitor(mode: string, recordId?: string) {
         return proposal;
       } catch (error) {
         state[stateKey] = stateFromFailure(stateKey, summary.checkedAt, previous);
-        retryCandidateSource(candidate);
+        if (isRetryableDetailError(error)) retryCandidateSource(candidate, previous);
         summary.validationFailures += 1;
         validationFailureMessages.push(
           `${candidate.provider}: candidate verification ${error instanceof Error ? error.message : 'fetch failed'} for ${candidate.url}.`,
