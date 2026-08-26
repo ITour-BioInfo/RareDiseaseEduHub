@@ -1,0 +1,16 @@
+---
+import CertificatesAndDiplomas from '../components/CertificatesAndDiplomas.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const locale = 'en' as const;
+---
+
+<BaseLayout
+  locale={locale}
+  pageKey="credentials"
+  canonicalPath="/certificates-and-diplomas/"
+  title="Certificates and Diplomas | Rare Disease Education Hub"
+  description="Professional certificates, registration pathways and qualifications in rare diseases, clinical genetics and genomic medicine."
+>
+  <CertificatesAndDiplomas locale={locale} />
+</BaseLayout>
