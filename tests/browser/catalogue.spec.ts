@@ -23,7 +23,7 @@ test('Certificates and Diplomas is a separate directory', async ({ page }) => {
   const directoryLink = page.getByRole('link', { name: 'Certificates and Diplomas' });
   await expect(directoryLink).toBeVisible();
   await directoryLink.click();
-  await expect(page.getByRole('heading', { level: 1, name: 'Certificates and Diplomas' })).toBeVisible();
+  await expect(\n    page.getByRole('heading', { level: 1, name: 'Certificates and Diplomas' }),\n  ).toBeVisible();
   await expect(page.locator('.credential-card')).toHaveCount(5);
   await expect(page.locator('[data-record-card]')).toHaveCount(0);
 });
