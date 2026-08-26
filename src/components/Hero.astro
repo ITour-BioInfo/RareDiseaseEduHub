@@ -15,6 +15,9 @@ const { locale } = Astro.props;
     <p class="hero-body">{t(locale, 'hero.body')}</p>
     <nav class="hero-actions" aria-label="Catalogue actions">
       <a class="button primary" href="#catalogue">{t(locale, 'hero.browse')}</a>
+      <a class="button ghost" href={withBase('/certificates-and-diplomas/')}>
+        Certificates and Diplomas
+      </a>
       <a class="button ghost" href={withBase('/rare_disease_education_catalog.en.csv')} download
         >Download CSV</a
       >

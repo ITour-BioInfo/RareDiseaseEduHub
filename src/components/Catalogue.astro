@@ -12,7 +12,9 @@ interface Props {
   locale: Locale;
 }
 const { locale } = Astro.props;
-const records = sortRecords(await loadRecords());
+const records = sortRecords(
+  (await loadRecords()).filter((record) => record.editorial.legacy?.type_group !== 'credential'),
+);
 const translations = await loadTranslations(locale);
 const providerCount = new Set(records.map((record) => record.provider.name)).size;
 const statuses = records.map((record) => calculateStatus(record).primary);

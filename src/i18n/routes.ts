@@ -2,6 +2,10 @@ import type { Locale } from './config';
 
 export const routes = {
   home: { bg: '/', en: '/en/' },
+  credentials: {
+    bg: '/certificates-and-diplomas/',
+    en: '/en/certificates-and-diplomas/',
+  },
   methodology: { bg: '/metodologiya/', en: '/en/methodology/' },
   policy: { bg: '/redakcionna-politika/', en: '/en/editorial-policy/' },
   accessibility: { bg: '/dostapnost/', en: '/en/accessibility/' },

@@ -4,18 +4,30 @@ test('English default and compatibility routes render records', async ({ page, b
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await expect(page.locator('[data-record-card]')).toHaveCount(180);
+  await expect(page.locator('[data-record-card]')).toHaveCount(175);
   await page.goto('/en/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await expect(page.locator('[data-record-card]')).toHaveCount(180);
+  await expect(page.locator('[data-record-card]')).toHaveCount(175);
   await page.goto('/rare_disease_education_hub/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await expect(page.locator('[data-record-card]')).toHaveCount(180);
+  await expect(page.locator('[data-record-card]')).toHaveCount(175);
   const noJs = await browser.newContext({ javaScriptEnabled: false });
   const noJsPage = await noJs.newPage();
   await noJsPage.goto('/');
-  await expect(noJsPage.locator('[data-record-card]')).toHaveCount(180);
+  await expect(noJsPage.locator('[data-record-card]')).toHaveCount(175);
   await noJs.close();
+});
+
+test('Certificates and Diplomas is a separate directory', async ({ page }) => {
+  await page.goto('/');
+  const directoryLink = page.getByRole('link', { name: 'Certificates and Diplomas' });
+  await expect(directoryLink).toBeVisible();
+  await directoryLink.click();
+  await expect(
+    page.getByRole('heading', { level: 1, name: 'Certificates and Diplomas' }),
+  ).toBeVisible();
+  await expect(page.locator('.credential-card')).toHaveCount(5);
+  await expect(page.locator('[data-record-card]')).toHaveCount(0);
 });
 
 test('search, filters, clear, counts and URL state work', async ({ page }) => {
