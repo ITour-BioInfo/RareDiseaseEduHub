@@ -1,0 +1,103 @@
+---
+import type { Locale } from '../i18n/config';
+import { resourceRoute } from '../i18n/routes';
+import { loadRecords } from '../lib/catalog/load';
+import type { CatalogRecord } from '../lib/catalog/schema';
+import { withBase } from '../lib/site/url';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const priority = [
+  'european-board-of-medical-genetics-ebmg-european-registered-clinical-laboratory-',
+  'uems-section-of-medical-genetics-ebmg-eshg-european-certificate-in-medical-genet',
+  'european-board-of-rare-and-undiagnosed-diseases-uems-mjc-rud-european-certificat',
+  'european-board-of-medical-genetics-ebmg-ebmg-registration-for-genetic-counsellor',
+  'isber-ascp-board-of-certification-qualification-in-biorepository-science-qbrs',
+];
+
+function isCredential(record: CatalogRecord) {
+  return record.editorial.legacy?.type_group === 'credential';
+}
+
+function priorityIndex(record: CatalogRecord) {
+  const index = priority.indexOf(record.id);
+  return index === -1 ? priority.length : index;
+}
+
+const credentials = (await loadRecords())
+  .filter(isCredential)
+  .sort(
+    (a, b) =>
+      priorityIndex(a) - priorityIndex(b) ||
+      a.content.title_original.localeCompare(b.content.title_original),
+  );
+---
+
+<header class="credentials-hero">
+  <div class="shell credentials-hero-inner">
+    <p class="eyebrow">Professional pathways</p>
+    <h1>Certificates and Diplomas</h1>
+    <p>
+      Explore professional credentials in rare diseases, clinical genetics and genomic medicine.
+    </p>
+  </div>
+</header>
+
+<section class="credentials-directory" aria-labelledby="credentials-directory-title">
+  <div class="shell">
+    <div class="credentials-intro">
+      <div>
+        <p class="eyebrow">Current directory</p>
+        <h2 id="credentials-directory-title">Recognised pathways and qualifications</h2>
+      </div>
+      <p>
+        This area is separate from the education catalogue. It covers professional registration,
+        examinations and qualifications rather than ordinary course-completion certificates.
+      </p>
+    </div>
+
+    <div class="credential-grid">
+      {
+        credentials.map((record) => (
+          <article class="credential-card">
+            <div class="credential-card-topline">
+              <span class="credential-badge">Professional credential</span>
+              <span>{record.classification.resource_type}</span>
+            </div>
+            <h3>{record.content.title_original}</h3>
+            <p class="provider">{record.provider.name}</p>
+            {record.classification.rare_disease_scope.length > 0 && (
+              <p class="credential-scope">
+                <strong>Scope:</strong> {record.classification.rare_disease_scope.join(', ')}
+              </p>
+            )}
+            <div class="credential-actions">
+              <a
+                class="button secondary"
+                href={record.sources.official_url}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Official requirements <span aria-hidden="true">↗</span><span class="sr-only">
+                  (external link)</span
+                >
+              </a>
+              <a class="text-link" href={withBase(resourceRoute(locale, record.id))}>
+                Full record
+              </a>
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    <aside class="credentials-note" aria-label="Credentials information note">
+      <strong>Check before applying:</strong> eligibility, fees, examination dates and professional
+      recognition can change. Confirm the current requirements and recognition status with the
+      official organisation.
+    </aside>
+  </div>
+</section>
