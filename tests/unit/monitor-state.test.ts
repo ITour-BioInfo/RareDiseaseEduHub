@@ -2,10 +2,12 @@ import { mkdtemp, rm, writeFile } from 'node:fs/promises';
 import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { afterEach, describe, expect, it } from 'vitest';
+import { isRetryableDetailError, isRetryableDetailStatus } from '../../automation/monitor';
 import {
   loadMonitorState,
   stateFromFailure,
   stateFromResult,
+  restoreStateForRetry,
   type MonitorSourceState,
 } from '../../automation/state';
 
@@ -75,6 +77,41 @@ describe('monitor state persistence', () => {
     expect(unchanged.failure_count).toBe(0);
     expect(stateFromFailure('course-a', '2026-08-25T11:00:00.000Z', previous).failure_count).toBe(
       3,
+    );
+  });
+
+  it('restores or removes a collection checkpoint so failed candidates are rediscovered', () => {
+    const state = {
+      listing: stateFromResult(
+        'listing',
+        '2026-08-25T10:00:00.000Z',
+        {
+          status: 200,
+          body: '<a href="/new-course">New course</a>',
+          finalUrl: 'https://official.example/courses',
+          redirects: [],
+          etag: 'new-etag',
+          lastModified: null,
+        },
+        'new-hash',
+      ),
+    };
+
+    restoreStateForRetry(state, 'listing', previous);
+    expect(state.listing.etag).toBe('old-etag');
+    restoreStateForRetry(state, 'listing');
+    expect(state).not.toHaveProperty('listing');
+  });
+
+  it('retries only transient detail-page failures', () => {
+    expect(isRetryableDetailStatus(408)).toBe(true);
+    expect(isRetryableDetailStatus(429)).toBe(true);
+    expect(isRetryableDetailStatus(503)).toBe(true);
+    expect(isRetryableDetailStatus(404)).toBe(false);
+    expect(isRetryableDetailStatus(410)).toBe(false);
+    expect(isRetryableDetailError(new DOMException('timed out', 'AbortError'))).toBe(true);
+    expect(isRetryableDetailError(new Error('Response exceeds maximum configured size.'))).toBe(
+      false,
     );
   });
 });

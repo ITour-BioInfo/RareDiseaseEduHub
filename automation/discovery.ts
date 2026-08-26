@@ -64,16 +64,26 @@ const genericTitles = new Set(
 );
 
 function decode(value: string) {
+  const numericEntity = (match: string, code: string, radix: number) => {
+    const codePoint = Number.parseInt(code, radix);
+    if (
+      !Number.isInteger(codePoint) ||
+      codePoint < 0 ||
+      codePoint > 0x10ffff ||
+      (codePoint >= 0xd800 && codePoint <= 0xdfff)
+    )
+      return match;
+    return String.fromCodePoint(codePoint);
+  };
+
   return value
     .replaceAll('&amp;', '&')
     .replaceAll('&quot;', '"')
     .replaceAll('&#39;', "'")
     .replaceAll('&lt;', '<')
     .replaceAll('&gt;', '>')
-    .replace(/&#(\d+);/g, (_, code: string) => String.fromCodePoint(Number(code)))
-    .replace(/&#x([\da-f]+);/gi, (_, code: string) =>
-      String.fromCodePoint(Number.parseInt(code, 16)),
-    )
+    .replace(/&#(\d+);/g, (match, code: string) => numericEntity(match, code, 10))
+    .replace(/&#x([\da-f]+);/gi, (match, code: string) => numericEntity(match, code, 16))
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -210,7 +220,7 @@ export function isCollectionListingUrl(value: string) {
   if (archivePath.test(url.pathname)) return false;
   const path = url.pathname.replace(/\/+$/, '') || '/';
   if (path === '/') return true;
-  return /\/(?:catalog|courses|education|education-training|education-training-news|events|learning-portal|materials|online-courses|rare-disease-courses|rare-disease-education-hub|schools|training|training-and-education|webinars)$/i.test(
+  return /\/(?:all-courses|catalog|courses|education|education-training|education-training-news|events|learning-portal|materials|online-courses|open-academy-schools|rare-disease-courses|rare-disease-education-hub|schools|training|training-and-education|webinars)$/i.test(
     path,
   );
 }

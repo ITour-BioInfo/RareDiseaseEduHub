@@ -15,7 +15,13 @@ import {
 import { fetchSource } from './fetch';
 import { knownRecordChangeProposal } from './known-records';
 import { markdownReport, type MonitorSummary } from './report';
-import { loadMonitorState, stateFromFailure, stateFromResult } from './state';
+import {
+  loadMonitorState,
+  restoreStateForRetry,
+  stateFromFailure,
+  stateFromResult,
+  type MonitorSourceState,
+} from './state';
 
 interface ProviderConfiguration {
   providers: Array<{
@@ -35,6 +41,24 @@ type DiscoverySource = {
 
 const MAX_CANDIDATE_VALIDATIONS = 50;
 const MAX_REVIEW_PROPOSALS = 20;
+const MAX_TRANSIENT_CANDIDATE_FAILURES = 3;
+
+export function isRetryableDetailStatus(status: number) {
+  return [408, 425, 429].includes(status) || (status >= 500 && status <= 599);
+}
+
+export function isRetryableDetailError(error: unknown) {
+  if (!(error instanceof Error)) return false;
+  const cause = error.cause instanceof Error ? (error.cause as NodeJS.ErrnoException) : null;
+  const code = (error as NodeJS.ErrnoException).code || cause?.code || '';
+  return (
+    ['AbortError', 'TimeoutError'].includes(error.name) ||
+    ['EAI_AGAIN', 'ECONNREFUSED', 'ECONNRESET', 'ENETUNREACH', 'ENOTFOUND', 'ETIMEDOUT'].includes(
+      code,
+    ) ||
+    /fetch failed|network|socket|terminated|timed?\s*out/i.test(error.message)
+  );
+}
 
 async function mapWithConcurrency<T, R>(
   items: T[],
@@ -117,7 +141,27 @@ export async function runMonitor(mode: string, recordId?: string) {
       await readFile(path.join(root, 'configuration', 'providers.yml'), 'utf8'),
     ) as ProviderConfiguration;
     const discovered: DiscoveryCandidate[] = [];
+    const candidateSourceCheckpoints = new Map<
+      string,
+      Array<{ stateKey: string; previous?: MonitorSourceState }>
+    >();
     let skippedDetailSources = 0;
+
+    const registerCandidateSource = (
+      candidate: DiscoveryCandidate,
+      stateKey: string,
+      previous?: MonitorSourceState,
+    ) => {
+      const checkpoints = candidateSourceCheckpoints.get(candidate.url) || [];
+      if (!checkpoints.some((checkpoint) => checkpoint.stateKey === stateKey))
+        checkpoints.push({ stateKey, ...(previous ? { previous } : {}) });
+      candidateSourceCheckpoints.set(candidate.url, checkpoints);
+    };
+    const retryCandidateSource = (candidate: DiscoveryCandidate, previous?: MonitorSourceState) => {
+      if ((previous?.failure_count ?? 0) >= MAX_TRANSIENT_CANDIDATE_FAILURES) return;
+      for (const checkpoint of candidateSourceCheckpoints.get(candidate.url) || [])
+        restoreStateForRetry(state, checkpoint.stateKey, checkpoint.previous);
+    };
 
     for (const provider of configuration.providers.filter((entry) => entry.enabled))
       for (const source of providerSources(provider)) {
@@ -156,17 +200,18 @@ export async function runMonitor(mode: string, recordId?: string) {
             skippedDetailSources += 1;
             continue;
           }
-          discovered.push(
-            ...discoverFromSource(
-              result.body,
-              result.finalUrl,
-              provider.name,
-              approvedDomains,
-              source.kind,
-            )
-              .sort((a, b) => discoveryCandidateScore(b) - discoveryCandidateScore(a))
-              .slice(0, 50),
-          );
+          const sourceCandidates = discoverFromSource(
+            result.body,
+            result.finalUrl,
+            provider.name,
+            approvedDomains,
+            source.kind,
+          )
+            .sort((a, b) => discoveryCandidateScore(b) - discoveryCandidateScore(a))
+            .slice(0, 50);
+          for (const candidate of sourceCandidates)
+            registerCandidateSource(candidate, stateKey, previous);
+          discovered.push(...sourceCandidates);
         } catch (error) {
           state[stateKey] = stateFromFailure(stateKey, summary.checkedAt, previous);
           summary.failed += 1;
@@ -201,8 +246,10 @@ export async function runMonitor(mode: string, recordId?: string) {
           timeoutMs: 10_000,
           ...(process.env.CATALOG_USER_AGENT ? { userAgent: process.env.CATALOG_USER_AGENT } : {}),
           ...(process.env.CATALOG_CONTACT ? { contact: process.env.CATALOG_CONTACT } : {}),
-          ...(previous?.etag ? { etag: previous.etag } : {}),
-          ...(previous?.last_modified ? { lastModified: previous.last_modified } : {}),
+          ...(previous?.failure_count === 0 && previous.etag ? { etag: previous.etag } : {}),
+          ...(previous?.failure_count === 0 && previous.last_modified
+            ? { lastModified: previous.last_modified }
+            : {}),
         });
         const currentHash = result.status === 304 ? null : contentHash(result.body);
         const nextState = stateFromResult(
@@ -214,6 +261,7 @@ export async function runMonitor(mode: string, recordId?: string) {
         );
         state[stateKey] = nextState;
         if (result.status >= 400) {
+          if (isRetryableDetailStatus(result.status)) retryCandidateSource(candidate, previous);
           summary.validationFailures += 1;
           validationFailureMessages.push(
             `${candidate.provider}: candidate verification HTTP ${result.status} for ${candidate.url}.`,
@@ -244,6 +292,7 @@ export async function runMonitor(mode: string, recordId?: string) {
         return proposal;
       } catch (error) {
         state[stateKey] = stateFromFailure(stateKey, summary.checkedAt, previous);
+        if (isRetryableDetailError(error)) retryCandidateSource(candidate, previous);
         summary.validationFailures += 1;
         validationFailureMessages.push(
           `${candidate.provider}: candidate verification ${error instanceof Error ? error.message : 'fetch failed'} for ${candidate.url}.`,
