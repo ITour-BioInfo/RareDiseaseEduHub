@@ -6,6 +6,7 @@ import {
   loadMonitorState,
   stateFromFailure,
   stateFromResult,
+  restoreStateForRetry,
   type MonitorSourceState,
 } from '../../automation/state';
 
@@ -76,5 +77,28 @@ describe('monitor state persistence', () => {
     expect(stateFromFailure('course-a', '2026-08-25T11:00:00.000Z', previous).failure_count).toBe(
       3,
     );
+  });
+
+  it('restores or removes a collection checkpoint so failed candidates are rediscovered', () => {
+    const state = {
+      listing: stateFromResult(
+        'listing',
+        '2026-08-25T10:00:00.000Z',
+        {
+          status: 200,
+          body: '<a href="/new-course">New course</a>',
+          finalUrl: 'https://official.example/courses',
+          redirects: [],
+          etag: 'new-etag',
+          lastModified: null,
+        },
+        'new-hash',
+      ),
+    };
+
+    restoreStateForRetry(state, 'listing', previous);
+    expect(state.listing.etag).toBe('old-etag');
+    restoreStateForRetry(state, 'listing');
+    expect(state).not.toHaveProperty('listing');
   });
 });

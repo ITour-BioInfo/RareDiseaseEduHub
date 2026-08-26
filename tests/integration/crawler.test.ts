@@ -57,11 +57,26 @@ describe('crawler fixtures', () => {
   });
   it('distinguishes collection pages from detail pages and archives', () => {
     expect(isCollectionListingUrl('https://official.example/courses/')).toBe(true);
+    expect(isCollectionListingUrl('https://openacademy.eurordis.org/all-courses/')).toBe(true);
+    expect(isCollectionListingUrl('https://openacademy.eurordis.org/open-academy-schools/')).toBe(
+      true,
+    );
     expect(isCollectionListingUrl('https://official.example/rare-disease-education-hub/')).toBe(
       true,
     );
     expect(isCollectionListingUrl('https://official.example/courses/specific-course/')).toBe(false);
     expect(isCollectionListingUrl('https://official.example/previous-events/')).toBe(false);
+  });
+  it('leaves invalid numeric entities inert instead of aborting discovery', () => {
+    const candidates = discoverFromHtml(
+      `<main><a href="/courses/rare-disease-course">&#999999999; &#xD800; Rare disease course</a></main>`,
+      'https://official.example/courses/',
+      'Official rare-disease provider',
+      ['official.example'],
+    );
+    expect(candidates).toHaveLength(1);
+    expect(candidates[0]?.title).toContain('&#999999999;');
+    expect(candidates[0]?.title).toContain('&#xD800;');
   });
   it('requires official-page learning and rare-disease evidence', () => {
     const candidate: DiscoveryCandidate = {

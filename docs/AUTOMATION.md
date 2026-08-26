@@ -4,6 +4,8 @@ GitHub Actions scans configured official provider listings every morning for new
 
 Every remaining candidate is fetched from its exact approved official URL. A proposal requires a meaningful detail-page title, course or learning evidence, rare-disease or clinical-genetics relevance, and either current structured dates or credible evergreen availability. Login pages, missing pages, unrelated subject indexes, and events more than 180 days old are rejected. Unchanged accepted or rejected candidates are remembered in the compact operational state so they do not return on every run.
 
+If a candidate detail request fails transiently, the scanner rolls back the parent collection checkpoint. The next morning run therefore downloads and mines that collection again instead of losing the candidate behind a `304 Not Modified` response.
+
 The evening priority run revisits known resources with a confirmed date in the next 60 days. It compares each normalized official page with the previous successful snapshot and creates a human-review proposal when structured titles or dates—or the page content itself—change. A manual run can check one known record. Scheduled checks never add, merge, publish, or remove a factual record automatically.
 
 The fetcher allows only HTTP(S), resolves destinations before each request, blocks private and metadata addresses, revalidates redirects, limits response size and redirects, applies timeouts and bounded retry, identifies itself, and supports conditional request metadata. Source HTML remains untrusted plain input.

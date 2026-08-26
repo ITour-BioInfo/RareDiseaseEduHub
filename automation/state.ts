@@ -32,6 +32,15 @@ export interface MonitorSourceState {
 
 export type MonitorState = Record<string, MonitorSourceState>;
 
+export function restoreStateForRetry(
+  state: MonitorState,
+  key: string,
+  previous?: MonitorSourceState,
+) {
+  if (previous) state[key] = previous;
+  else delete state[key];
+}
+
 function normalizedState(key: string, value: unknown): MonitorSourceState | null {
   if (!value || typeof value !== 'object') return null;
   const entry = value as Record<string, unknown>;
