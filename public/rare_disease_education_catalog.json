@@ -314,8 +314,8 @@
     "source_language": "en",
     "provider": "BBMRI-ERIC",
     "resource_type": "webinar",
-    "event_start": "2026-10-13",
-    "event_end": null,
+    "event_start": "2026-10-13T10:00:00+02:00",
+    "event_end": "2026-10-13T11:15:00+02:00",
     "event_timezone": "Europe/Sofia",
     "application_open": null,
     "application_close": null,
@@ -333,7 +333,7 @@
       "online"
     ],
     "topics": [],
-    "next_action_at": "2026-10-12T21:00:00.000Z"
+    "next_action_at": "2026-10-13T08:00:00.000Z"
   },
   {
     "id": "bbmri-eric-workshop-series-on-biobanking",
@@ -4678,8 +4678,8 @@
     "source_language": "en",
     "provider": "REMEDi4ALL",
     "resource_type": "workshop",
-    "event_start": "2026-09-06",
-    "event_end": null,
+    "event_start": "2026-09-06T14:00:00+02:00",
+    "event_end": "2026-09-11T17:00:00+02:00",
     "event_timezone": "Europe/Sofia",
     "application_open": null,
     "application_close": null,
@@ -4697,7 +4697,7 @@
       "in-person"
     ],
     "topics": [],
-    "next_action_at": "2026-09-05T21:00:00.000Z"
+    "next_action_at": "2026-09-06T12:00:00.000Z"
   },
   {
     "id": "st-georges-university-of-london-futurelearn-the-genomics-era-the-future-of-genet",
