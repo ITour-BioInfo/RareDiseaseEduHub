@@ -70,8 +70,8 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://www.eshg.org/courses",
-    "official_url": "https://www.eshg.org/courses",
+    "canonical_url": "https://www.surrey.ac.uk/cpd-and-short-courses/introduction-statistical-analysis-genome-wide-association-studies-online",
+    "official_url": "https://www.surrey.ac.uk/cpd-and-short-courses/introduction-statistical-analysis-genome-wide-association-studies-online",
     "registration_url": null,
     "application_url": null,
     "programme_url": null,
@@ -80,12 +80,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Ongoing / no fixed date | Recurring — check next edition | Recurring statistical genetics course family; check the current programme for the next edition.",
+    "notes": "Legacy date text: Ongoing / no fixed date | Recurring — check next edition | Recurring statistical genetics course family; check the current programme for the next edition. | Official source review 2026-08-28: The current University of Surrey page is the official course-specific page for the online GWAS series. No newer individual detail page was available when reviewed; this is the latest official information page.",
     "legacy": {
       "type_group": "course",
       "type_label_bg": "Курс / MOOC",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.eshg.org/courses",
-      "url_type": "course collection",
+      "url_type": "latest official course page",
       "notes": "Recurring statistical genetics course family; check the current programme for the next edition.",
       "tags": [
         "ESHG",

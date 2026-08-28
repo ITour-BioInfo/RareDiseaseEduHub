@@ -82,12 +82,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Ongoing / no fixed date | Live programme; dates and registration change throughout the year | Authoritative landing page for the full ESHG course calendar. EBMG lists ESHG courses only as potentially suitable examples for ErCLG development, not as ErCLG-accredited courses.",
+    "notes": "Legacy date text: Ongoing / no fixed date | Live programme; dates and registration change throughout the year | Authoritative landing page for the full ESHG course calendar. EBMG lists ESHG courses only as potentially suitable examples for ErCLG development, not as ErCLG-accredited courses. | Official source review 2026-08-28: The current ESHG Courses page is the official page for the programme record itself. No newer individual detail page was available when reviewed; this is the latest official information page.",
     "legacy": {
       "type_group": "resource",
       "type_label_bg": "Ресурс / модул / колекция",
@@ -102,7 +102,7 @@
       "certificate_or_recognition": "Course-specific; CME/attendance certificate where stated by organizer",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.eshg.org/courses",
-      "url_type": "direct course page",
+      "url_type": "latest official information page",
       "notes": "Authoritative landing page for the full ESHG course calendar. EBMG lists ESHG courses only as potentially suitable examples for ErCLG development, not as ErCLG-accredited courses.",
       "tags": [
         "ESHG",

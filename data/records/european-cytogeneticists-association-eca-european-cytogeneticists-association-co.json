@@ -70,8 +70,8 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://www.ebmg.eu/669.0.html",
-    "official_url": "https://www.ebmg.eu/669.0.html",
+    "canonical_url": "https://e-c-a.eu/en/COURSES.html",
+    "official_url": "https://e-c-a.eu/en/COURSES.html",
     "registration_url": null,
     "application_url": null,
     "programme_url": null,
@@ -80,12 +80,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Recurring or edition-based; next date to be announced | Check ECA/EBMG listing for current editions | Named by EBMG as a family of courses potentially suited to ErCLG development. The EBMG list is explicitly incomplete and is not an accreditation list.",
+    "notes": "Legacy date text: Recurring or edition-based; next date to be announced | Check ECA/EBMG listing for current editions | Named by EBMG as a family of courses potentially suited to ErCLG development. The EBMG list is explicitly incomplete and is not an accreditation list. | Official source review 2026-08-28: The ECA’s own current courses page is the newest official page for this recurring course collection. No newer individual detail page was available when reviewed; this is the latest official information page.",
     "legacy": {
       "type_group": "resource",
       "type_label_bg": "Ресурс / модул / колекция",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.ebmg.eu/669.0.html",
-      "url_type": "EBMG examples page",
+      "url_type": "official course collection",
       "notes": "Named by EBMG as a family of courses potentially suited to ErCLG development. The EBMG list is explicitly incomplete and is not an accreditation list.",
       "tags": [
         "cytogenetics",

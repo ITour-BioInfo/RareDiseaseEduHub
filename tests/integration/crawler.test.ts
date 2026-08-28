@@ -5,6 +5,7 @@ import { extractJsonLd, relevantText } from '../../automation/html-extract';
 import { parseFeed, parseIcs } from '../../automation/feeds';
 import { eventsFromJsonLd } from '../../automation/structured-data';
 import {
+  consolidateDiscoveryCandidates,
   discoverFromHtml,
   discoveryProposal,
   filterNewDiscoveryCandidates,
@@ -168,6 +169,131 @@ describe('crawler fixtures', () => {
     );
     expect(result.candidates).toHaveLength(0);
     expect(result.duplicates).toBe(1);
+  });
+  it('consolidates verified cross-posts and keeps the direct course page', () => {
+    const title =
+      'Open Academy schools in Barcelona strengthen practical links between patient advocacy and rare disease research';
+    const result = consolidateDiscoveryCandidates(
+      [
+        {
+          provider: 'ERDERA',
+          title,
+          url: 'https://erdera.example/news/open-academy-schools-in-barcelona',
+          evidenceUrl: 'https://erdera.example/news',
+          sourceKind: 'official-listing',
+          confidence: 'high',
+        },
+        {
+          provider: 'EURORDIS Open Academy',
+          title,
+          url: 'https://academy.example/courses/open-academy-schools-in-barcelona',
+          evidenceUrl: 'https://academy.example/courses',
+          sourceKind: 'official-listing',
+          confidence: 'medium',
+        },
+      ],
+      [],
+    );
+    expect(result.candidates).toHaveLength(1);
+    expect(result.candidates[0]?.url).toContain('/courses/');
+    expect(result.duplicates).toBe(1);
+  });
+  it('consolidates same-host locale variants after detail-page validation', () => {
+    const result = consolidateDiscoveryCandidates(
+      [
+        {
+          provider: 'NORD',
+          title: 'From Records to Research: Making Sense of Health Data for Rare Diseases',
+          url: 'https://learn.example/courses/from-records-to-research',
+          evidenceUrl: 'https://learn.example/courses',
+          sourceKind: 'official-listing',
+          confidence: 'high',
+          language: 'en',
+        },
+        {
+          provider: 'NORD',
+          title:
+            'De los registros a la investigación: el sentido detrás de los datos sobre la salud para enfermedades raras',
+          url: 'https://learn.example/courses/de-los-registros-a-la-investigacion',
+          evidenceUrl: 'https://learn.example/courses',
+          sourceKind: 'official-listing',
+          confidence: 'high',
+          language: 'es',
+        },
+      ],
+      [],
+    );
+    expect(result.candidates).toHaveLength(1);
+    expect(result.candidates[0]?.url).toContain('/from-records-to-research');
+    expect(result.duplicates).toBe(1);
+  });
+  it('does not consolidate different annual editions', () => {
+    const base: DiscoveryCandidate = {
+      provider: 'Official provider',
+      title: 'Rare disease summer school',
+      url: 'https://official.example/courses/summer-school-2026',
+      evidenceUrl: 'https://official.example/courses',
+      sourceKind: 'official-listing',
+      confidence: 'high',
+    };
+    const result = consolidateDiscoveryCandidates(
+      [
+        base,
+        {
+          ...base,
+          url: 'https://official.example/courses/summer-school-2027',
+        },
+      ],
+      [],
+    );
+    expect(result.candidates).toHaveLength(2);
+    expect(result.duplicates).toBe(0);
+  });
+  it('rejects homepages, editorial announcements and archive indexes as findings', () => {
+    const base: DiscoveryCandidate = {
+      provider: 'Official rare-disease provider',
+      title: 'Rare disease education programme',
+      url: 'https://official.example/',
+      evidenceUrl: 'https://official.example/courses',
+      sourceKind: 'official-listing',
+      confidence: 'medium',
+    };
+    const html = `<html><head><title>Rare disease education programme</title></head>
+      <body><main><h1>Rare disease education programme</h1><p>Courses, webinars and training for rare diseases.</p></main></body></html>`;
+
+    const homepage = validateDiscoveryCandidate(base, html, base.url);
+    expect(homepage.reasons).toContain('provider homepage rather than a course page');
+
+    const announcement = validateDiscoveryCandidate(
+      { ...base, title: 'Applications launch for rare disease school 2026' },
+      html.replaceAll(
+        'Rare disease education programme',
+        'Applications launch for rare disease school 2026',
+      ),
+      'https://official.example/news/applications-launch-for-school-2026',
+    );
+    expect(announcement.reasons).toContain(
+      'announcement or supporting page rather than a course page',
+    );
+
+    const archive = validateDiscoveryCandidate(
+      { ...base, title: 'Rare disease webinar series archive' },
+      html.replaceAll('Rare disease education programme', 'Rare disease webinar series archive'),
+      'https://official.example/education/webinar-series-archive',
+    );
+    expect(archive.reasons).toContain('archive or collection page rather than a course page');
+
+    const structuredCourse = validateDiscoveryCandidate(
+      { ...base, title: 'Rare disease data course launched' },
+      `<html lang="en"><script type="application/ld+json">${JSON.stringify({
+        '@type': 'Course',
+        name: 'Rare disease data course',
+        url: 'https://official.example/news/rare-disease-data-course',
+      })}</script><main><h1>Rare disease data course</h1><p>Online learning for rare diseases.</p></main></html>`,
+      'https://official.example/news/rare-disease-data-course',
+    );
+    expect(structuredCourse.accepted).toBe(true);
+    expect(structuredCourse.candidate.language).toBe('en');
   });
   it('turns a known course page change into a field-level review proposal', async () => {
     const record = (await loadRecords())[0]!;

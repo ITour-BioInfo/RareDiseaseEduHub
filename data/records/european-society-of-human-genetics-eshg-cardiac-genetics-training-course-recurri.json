@@ -70,9 +70,9 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://www.eshg.org/courses",
-    "official_url": "https://www.eshg.org/courses",
-    "registration_url": null,
+    "canonical_url": "https://ngs.uantwerpen.be/cargen2026/index.php?page=register",
+    "official_url": "https://ngs.uantwerpen.be/cargen2026/index.php?page=register",
+    "registration_url": "https://ngs.uantwerpen.be/cargen2026/index.php?page=register",
     "application_url": null,
     "programme_url": null,
     "recording_url": null,
@@ -80,12 +80,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Ongoing / no fixed date | Recurring — check next edition | The 10th edition was held 9–12 May 2026; retain as a recurring series and update when a new edition is posted.",
+    "notes": "Legacy date text: Ongoing / no fixed date | Recurring — check next edition | The 10th edition was held 9–12 May 2026; retain as a recurring series and update when a new edition is posted. | Official source review 2026-08-28: The University of Antwerp page identifies the tenth ESHG Cardiogenetics course held in May 2026. No newer individual detail page was available when reviewed; this is the latest official information page.",
     "legacy": {
       "type_group": "course",
       "type_label_bg": "Курс / MOOC",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.eshg.org/courses",
-      "url_type": "course collection",
+      "url_type": "latest official course page",
       "notes": "The 10th edition was held 9–12 May 2026; retain as a recurring series and update when a new edition is posted.",
       "tags": [
         "ESHG",

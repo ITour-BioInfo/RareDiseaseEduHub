@@ -1,7 +1,10 @@
 {
   "schema_version": "1.0.0",
   "id": "remedi4all-2026-remedi4all-hackathon",
-  "aliases": [],
+  "aliases": [
+    "erdera-learning-portal-remedi4all-hackathon-training-resources-for-drug-repurpos",
+    "REMEDi4ALL Hackathon — Training Resources for Drug Repurposing"
+  ],
   "lifecycle": "active",
   "provider": {
     "name": "REMEDi4ALL",
@@ -81,12 +84,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: 6–11 September 2026 | Applications page open at verification | Project-based training for up to 15 early-career researchers, including postdoctoral researchers up to two years after the PhD. Participants work on drug-repurposing challenges with expert mentors.",
+    "notes": "Legacy date text: 6–11 September 2026 | Applications page open at verification | Project-based training for up to 15 early-career researchers, including postdoctoral researchers up to two years after the PhD. Participants work on drug-repurposing challenges with expert mentors. | Official source review 2026-08-28: the ERDERA Learning Portal record and this dated REMEDi4ALL record describe the same 6–11 September 2026 hackathon. The dated provider record is retained; the portal record ID and title are preserved as aliases.",
     "legacy": {
       "type_group": "workshop",
       "type_label_bg": "Практическо обучение / работилница",

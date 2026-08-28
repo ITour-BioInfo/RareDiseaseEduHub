@@ -71,8 +71,8 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://erdera.org/course/preclinical-development/",
-    "official_url": "https://erdera.org/course/preclinical-development/",
+    "canonical_url": "https://academy.remedi4all.org/module/clinical-development/",
+    "official_url": "https://academy.remedi4all.org/module/clinical-development/",
     "registration_url": null,
     "application_url": null,
     "programme_url": null,
@@ -81,12 +81,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Ongoing / no fixed date | Listed in ERDERA Learning Portal; check current access and dates | Direct course or provider page independently resolved from the ERDERA catalogue record.",
+    "notes": "Legacy date text: Ongoing / no fixed date | Listed in ERDERA Learning Portal; check current access and dates | Official source review 2026-08-28: ERDERA’s Preclinical Development page links Module 5 to the REMEDi4ALL Digital Academy’s specific Clinical Development module. This corrects the prior source collision with Preclinical Development.",
     "legacy": {
       "type_group": "resource",
       "type_label_bg": "Ресурс / модул / колекция",
@@ -101,7 +101,7 @@
       "certificate_or_recognition": "Course-specific; see provider",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://erdera.org/erdera-learning-portal/",
-      "url_type": "direct course/provider page",
+      "url_type": "direct official module page",
       "notes": "Direct course or provider page independently resolved from the ERDERA catalogue record.",
       "tags": [
         "ERDERA",

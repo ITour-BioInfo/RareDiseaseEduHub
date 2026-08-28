@@ -1,5 +1,7 @@
 node_modules/
+.pnpm-store/
 dist/
+.codex-publish/
 .astro/
 .env
 playwright-report/

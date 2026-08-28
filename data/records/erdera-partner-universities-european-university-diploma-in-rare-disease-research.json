@@ -80,12 +80,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Planned pilot; admissions date to be announced | Pilot/planned; monitor ERDERA for admissions | Programme-level initiative, not yet treated as an open course intake in this catalogue.",
+    "notes": "Legacy date text: Planned pilot; admissions date to be announced | Pilot/planned; monitor ERDERA for admissions | Programme-level initiative, not yet treated as an open course intake in this catalogue. | Official source review 2026-08-28: ERDERA’s current Training & Education page is the newest official page describing the university-diploma pilot. No newer individual detail page was available when reviewed; this is the latest official information page.",
     "legacy": {
       "type_group": "programme",
       "type_label_bg": "Училище / обучителна програма",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "Stackable ECTS / university diploma model described by ERDERA",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://erdera.org/training-and-education/",
-      "url_type": "direct course page",
+      "url_type": "latest official information page",
       "notes": "Programme-level initiative, not yet treated as an open course intake in this catalogue.",
       "tags": [
         "university diploma",
