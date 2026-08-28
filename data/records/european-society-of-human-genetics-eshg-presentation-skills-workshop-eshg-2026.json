@@ -80,12 +80,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: 19 May 2026 | Past edition; archive/materials may be available | Included from the official ESHG course archive. Check the archive and webinar pages for materials or a future edition.",
+    "notes": "Legacy date text: 19 May 2026 | Past edition; archive/materials may be available | Included from the official ESHG course archive. Check the archive and webinar pages for materials or a future edition. | Official source review 2026-08-28: The current ESHG archive is the newest official page naming the May 2026 Presentation Skills Workshop. No newer individual detail page was available when reviewed; this is the latest official information page.",
     "legacy": {
       "type_group": "workshop",
       "type_label_bg": "Практическо обучение / работилница",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.eshg.org/courses-archive",
-      "url_type": "archive collection",
+      "url_type": "latest official archive page",
       "notes": "Included from the official ESHG course archive. Check the archive and webinar pages for materials or a future edition.",
       "tags": [
         "presentation skills"

@@ -4,6 +4,7 @@ import YAML from 'yaml';
 import { loadRecords } from '../src/lib/catalog/load';
 import { contentHash } from './compare';
 import {
+  consolidateDiscoveryCandidates,
   discoveryCandidateScore,
   discoverFromSource,
   discoveryProposal,
@@ -282,14 +283,7 @@ export async function runMonitor(mode: string, recordId?: string) {
             rejectionReasons.set(reason, (rejectionReasons.get(reason) || 0) + 1);
           return null;
         }
-        const finalDeduplication = filterNewDiscoveryCandidates([validation.candidate], records);
-        if (!finalDeduplication.candidates.length) {
-          summary.duplicateCandidates += 1;
-          return null;
-        }
-        const proposal = discoveryProposal(validation.candidate, summary.checkedAt);
-        nextState.last_proposal_id = proposal.proposal_id;
-        return proposal;
+        return { candidate: validation.candidate, nextState };
       } catch (error) {
         state[stateKey] = stateFromFailure(stateKey, summary.checkedAt, previous);
         if (isRetryableDetailError(error)) retryCandidateSource(candidate, previous);
@@ -300,11 +294,24 @@ export async function runMonitor(mode: string, recordId?: string) {
         return null;
       }
     });
-    proposals = validated.filter(
-      (proposal): proposal is NonNullable<typeof proposal> => !!proposal,
+    const verified = validated.filter((result): result is NonNullable<typeof result> => !!result);
+    const consolidated = consolidateDiscoveryCandidates(
+      verified.map((result) => result.candidate),
+      records,
     );
-    summary.validatedCandidates = proposals.length;
+    summary.duplicateCandidates += consolidated.duplicates;
+    proposals = consolidated.candidates.map((candidate) => {
+      const proposal = discoveryProposal(candidate, summary.checkedAt);
+      const verifiedResult = verified.find((result) => result.candidate.url === candidate.url);
+      if (verifiedResult) verifiedResult.nextState.last_proposal_id = proposal.proposal_id;
+      return proposal;
+    });
+    summary.validatedCandidates = verified.length;
     summary.changed = proposals.length;
+    if (verified.length > proposals.length)
+      summary.warnings.push(
+        `Consolidated ${verified.length - proposals.length} overlapping verified pages into canonical review candidates.`,
+      );
     for (const [reason, count] of [...rejectionReasons.entries()].sort((a, b) => b[1] - a[1]))
       summary.warnings.push(`Candidate filter: ${count} rejected for ${reason}.`);
     summary.warnings.push(...validationFailureMessages.slice(0, 10));

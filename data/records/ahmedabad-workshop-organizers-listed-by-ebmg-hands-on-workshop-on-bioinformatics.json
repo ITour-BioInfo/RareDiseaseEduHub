@@ -72,7 +72,7 @@
   "sources": {
     "canonical_url": "https://www.ebmg.eu/669.0.html",
     "official_url": "https://www.ebmg.eu/669.0.html",
-    "registration_url": null,
+    "registration_url": "https://forms.gle/kaD7VFhKeshjHXyF6",
     "application_url": null,
     "programme_url": null,
     "recording_url": null,
@@ -80,12 +80,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: 13–17 April 2026 | Past 2026 edition; check for repetition | EBMG explicitly noted that this five-day workshop was not suitable as the required “basic course” by itself. It may still support specialist bioinformatics development.",
+    "notes": "Legacy date text: 13–17 April 2026 | Past 2026 edition; check for repetition | EBMG explicitly noted that this five-day workshop was not suitable as the required “basic course” by itself. It may still support specialist bioinformatics development. | Official source review 2026-08-28: EBMG’s current course page names the workshop and links its course-specific application form. No newer individual detail page was available when reviewed; this is the latest official information page.",
     "legacy": {
       "type_group": "workshop",
       "type_label_bg": "Практическо обучение / работилница",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.ebmg.eu/669.0.html",
-      "url_type": "direct course page",
+      "url_type": "latest official information page",
       "notes": "EBMG explicitly noted that this five-day workshop was not suitable as the required “basic course” by itself. It may still support specialist bioinformatics development.",
       "tags": [
         "germline sequencing",

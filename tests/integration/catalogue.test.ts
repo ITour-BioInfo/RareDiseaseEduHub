@@ -2,12 +2,12 @@ import { describe, expect, it } from 'vitest';
 import { loadRecords, loadTranslations } from '../../src/lib/catalog/load';
 import { duplicateCandidates } from '../../automation/deduplicate';
 
-describe('migrated catalogue', () => {
-  it('contains every migrated record and locale record', async () => {
+describe('canonical catalogue', () => {
+  it('contains every approved canonical and locale record', async () => {
     const records = await loadRecords();
-    expect(records).toHaveLength(180);
-    expect((await loadTranslations('bg')).size).toBe(180);
-    expect((await loadTranslations('en')).size).toBe(180);
+    expect(records).toHaveLength(177);
+    expect((await loadTranslations('bg')).size).toBe(177);
+    expect((await loadTranslations('en')).size).toBe(177);
   });
   it('retains official source URLs and reports duplicate candidates', async () => {
     const records = await loadRecords();

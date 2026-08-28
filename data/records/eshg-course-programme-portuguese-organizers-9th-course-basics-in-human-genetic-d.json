@@ -70,22 +70,22 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://www.ebmg.eu/669.0.html",
-    "official_url": "https://www.ebmg.eu/669.0.html",
+    "canonical_url": "https://www.uniklinikum-jena.de/humangenetik_media/Dokumente/Arbeitsbereiche/fish/Kurse/Announcement%2B2026.pdf",
+    "official_url": "https://www.uniklinikum-jena.de/humangenetik_media/Dokumente/Arbeitsbereiche/fish/Kurse/Announcement%2B2026.pdf",
     "registration_url": null,
     "application_url": null,
-    "programme_url": null,
+    "programme_url": "https://www.uniklinikum-jena.de/humangenetik_media/Dokumente/Arbeitsbereiche/fish/Kurse/Announcement%2B2026.pdf",
     "recording_url": null,
     "collection_url": "https://www.ebmg.eu/669.0.html",
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: 7–11 September 2026 | Upcoming | This course is specifically named on the EBMG examples page for ErCLG candidates. The source button opens the HTML course listing rather than the linked announcement PDF.",
+    "notes": "Legacy date text: 7–11 September 2026 | Upcoming | This course is specifically named on the EBMG examples page for ErCLG candidates. | Official source review 2026-08-28: The official University Hospital Jena announcement names the ninth course and its September 2026 dates. The user approved replacing the shared listing with this record-specific official source.",
     "legacy": {
       "type_group": "course",
       "type_label_bg": "Курс / MOOC",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "Potentially relevant to ErCLG portfolio requirements; not described by EBMG as accredited",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.ebmg.eu/669.0.html",
-      "url_type": "EBMG course listing page",
+      "url_type": "direct official PDF",
       "notes": "This course is specifically named on the EBMG examples page for ErCLG candidates. The source button opens the HTML course listing rather than the linked announcement PDF.",
       "tags": [
         "diagnostic genetics",

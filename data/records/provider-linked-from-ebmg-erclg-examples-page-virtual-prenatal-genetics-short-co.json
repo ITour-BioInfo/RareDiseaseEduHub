@@ -70,8 +70,8 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://www.ebmg.eu/669.0.html",
-    "official_url": "https://www.ebmg.eu/669.0.html",
+    "canonical_url": "https://www.guysandstthomasevents.co.uk/courses/virtual-prenatal-genetics-short-course-2025/",
+    "official_url": "https://www.guysandstthomasevents.co.uk/courses/virtual-prenatal-genetics-short-course-2025/",
     "registration_url": null,
     "application_url": null,
     "programme_url": null,
@@ -80,12 +80,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Historical or inactive; no current date announced | Historic 2025 example; check for a future edition | Included because EBMG lists the 2025 course as a potentially suitable example. Current availability was not independently confirmed.",
+    "notes": "Legacy date text: Historical or inactive; no current date announced | Historic 2025 example; check for a future edition | Included because EBMG lists the 2025 course as a potentially suitable example. Current availability was not independently confirmed. | Official source review 2026-08-28: The official Guy’s and St Thomas’ course page identifies the 2025 virtual prenatal-genetics course. The user approved replacing the shared listing with this record-specific official source.",
     "legacy": {
       "type_group": "resource",
       "type_label_bg": "Ресурс / модул / колекция",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.ebmg.eu/669.0.html",
-      "url_type": "EBMG examples page",
+      "url_type": "direct official source",
       "notes": "Included because EBMG lists the 2025 course as a potentially suitable example. Current availability was not independently confirmed.",
       "tags": [
         "prenatal genetics",

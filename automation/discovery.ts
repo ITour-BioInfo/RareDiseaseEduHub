@@ -12,6 +12,7 @@ export interface DiscoveryCandidate {
   evidenceUrl: string;
   sourceKind: 'official-listing' | 'official-feed' | 'official-calendar' | 'official-sitemap';
   confidence: 'medium' | 'high';
+  language?: string;
 }
 
 export interface DiscoveryValidation {
@@ -38,6 +39,10 @@ const excludedTerms =
 const excludedPath =
   /\/(?:tag|tags|category|categories|search|subjects|about|contact|privacy|terms|login|sign-in|register|registration|booking|product|expertcentres)(?:\/|$)|\/(?:quiz|quizzes)(?:\/|$)|\/wp-content\/|\.(?:pdf|docx?|pptx?|xlsx?|zip)(?:$|\?)/i;
 const archivePath = /(?:archive|archives|previous-events|past-events)/i;
+const secondaryContentPath =
+  /\/(?:blog|news|press|stories|updates)(?:\/|$)|\/(?:highlights?|interviews?|announcements?)(?:\/|$)/i;
+const secondaryContentTitle =
+  /\b(applications? (?:are )?(?:open|launch(?:ed)?)|call for (?:applications?|mentors?)|highlights?|interviews?|join our talk|language offerings?|news|press release|(?:course|curriculum|programme|program|school|series) (?:is )?launch(?:ed|es)|returns? to)\b/i;
 const templateText = /\{\{|\}\}|data\.|_highlightResult|_snippetResult|permalink/i;
 const genericTitles = new Set(
   [
@@ -57,6 +62,8 @@ const genericTitles = new Set(
     'course overview',
     'courses',
     'events',
+    'e learning',
+    'learning portal',
     'news events overview',
     'training',
     'webinars',
@@ -92,6 +99,7 @@ function normalizedWords(value: string) {
   return decode(value)
     .toLowerCase()
     .normalize('NFKD')
+    .replace(/\p{M}/gu, '')
     .replace(/[^a-z0-9]+/g, ' ')
     .trim();
 }
@@ -120,6 +128,67 @@ const comparisonWords = (value: string) =>
       ),
   );
 
+const identityTranslations: Record<string, string> = {
+  datos: 'data',
+  diseases: 'disease',
+  enfermedad: 'disease',
+  enfermedades: 'disease',
+  investigacion: 'research',
+  raras: 'rare',
+  raros: 'rare',
+  registros: 'records',
+  salud: 'health',
+  sentido: 'sense',
+};
+const nonEnglishIdentityWords = new Set([
+  'datos',
+  'enfermedad',
+  'enfermedades',
+  'investigacion',
+  'raras',
+  'raros',
+  'registros',
+  'salud',
+  'sentido',
+]);
+
+function identityWords(value: string) {
+  return new Set(
+    normalizedWords(value)
+      .split(' ')
+      .map((word) => identityTranslations[word] || word)
+      .filter(
+        (word) =>
+          word.length > 2 &&
+          ![
+            'and',
+            'course',
+            'courses',
+            'del',
+            'desde',
+            'disease',
+            'education',
+            'enfermedades',
+            'for',
+            'from',
+            'las',
+            'los',
+            'making',
+            'online',
+            'para',
+            'programme',
+            'program',
+            'rare',
+            'sobre',
+            'the',
+            'training',
+            'webinar',
+            'workshop',
+          ].includes(word),
+      ),
+  );
+}
+
 function wordSimilarity(left: string, right: string) {
   const a = comparisonWords(left);
   const b = comparisonWords(right);
@@ -131,6 +200,54 @@ function wordSimilarity(left: string, right: string) {
 function yearFrom(value: string) {
   const match = value.match(/\b(20\d{2})\b/);
   return match ? Number(match[1]) : null;
+}
+
+function sameEdition(left: DiscoveryCandidate, right: DiscoveryCandidate) {
+  const leftYear = yearFrom(`${left.title} ${left.url}`);
+  const rightYear = yearFrom(`${right.title} ${right.url}`);
+  return !leftYear || !rightYear || leftYear === rightYear;
+}
+
+function candidateHost(candidate: DiscoveryCandidate) {
+  return new URL(candidate.url).hostname.toLowerCase().replace(/^www\./, '');
+}
+
+function overlapScore(left: DiscoveryCandidate, right: DiscoveryCandidate) {
+  const a = identityWords(left.title);
+  const b = identityWords(right.title);
+  if (!a.size || !b.size) return { overlap: 0, similarity: 0, containment: 0 };
+  const overlap = [...a].filter((word) => b.has(word)).length;
+  return {
+    overlap,
+    similarity: overlap / Math.max(a.size, b.size),
+    containment: overlap / Math.min(a.size, b.size),
+  };
+}
+
+function overlappingCourse(left: DiscoveryCandidate, right: DiscoveryCandidate) {
+  if (!sameEdition(left, right)) return false;
+  const normalizedLeft = normalizedWords(left.title);
+  const normalizedRight = normalizedWords(right.title);
+  const { overlap, similarity, containment } = overlapScore(left, right);
+  const sameHost = candidateHost(left) === candidateHost(right);
+
+  if (normalizedLeft === normalizedRight && overlap >= 4) return true;
+  if (sameHost && overlap >= 4 && similarity >= 0.78 && containment >= 0.8) return true;
+  return overlap >= 6 && similarity >= 0.86 && containment >= 0.9;
+}
+
+function candidatePageScore(candidate: DiscoveryCandidate) {
+  const path = new URL(candidate.url).pathname;
+  const titleWords = normalizedWords(candidate.title).split(' ');
+  let score = discoveryCandidateScore(candidate);
+  if (/\/(?:courses?|education|training|webinars?|events?)\/.+/i.test(path)) score += 5;
+  if (secondaryContentPath.test(path) || secondaryContentTitle.test(candidate.title)) score -= 8;
+  if (archivePath.test(path)) score -= 10;
+  if (path.replace(/\/+$/, '') === '') score -= 12;
+  if (candidate.language?.toLowerCase().startsWith('en')) score += 3;
+  else if (candidate.language) score -= 3;
+  if (titleWords.some((word) => nonEnglishIdentityWords.has(word))) score -= 2;
+  return score;
 }
 
 export function normalizeDiscoveryUrl(value: string, base?: string) {
@@ -200,6 +317,10 @@ function pageTitle(html: string) {
   const heading = html.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1];
   const title = html.match(/<title\b[^>]*>([\s\S]*?)<\/title>/i)?.[1];
   return decode(stripHtml(heading || title || ''));
+}
+
+function pageLanguage(html: string) {
+  return html.match(/<html\b[^>]*\blang=["']([^"']+)["']/i)?.[1]?.trim() || null;
 }
 
 function canonicalUrl(html: string, base: string) {
@@ -361,7 +482,8 @@ export function filterNewDiscoveryCandidates(
   let duplicates = 0;
   for (const candidate of candidates) {
     const normalized = normalizeDiscoveryUrl(candidate.url);
-    const signature = `${normalizedWords(candidate.title)}|${normalizedWords(candidate.provider)}`;
+    const edition = yearFrom(`${candidate.title} ${candidate.url}`) || 'undated';
+    const signature = `${normalizedWords(candidate.title)}|${normalizedWords(candidate.provider)}|${edition}`;
     if (
       !normalized ||
       known.has(normalized) ||
@@ -377,6 +499,52 @@ export function filterNewDiscoveryCandidates(
   }
   return {
     candidates: [...uniqueUrls.values()].sort(
+      (a, b) =>
+        discoveryCandidateScore(b) - discoveryCandidateScore(a) || a.title.localeCompare(b.title),
+    ),
+    duplicates,
+  };
+}
+
+/**
+ * Runs after official detail pages have been validated. At that point titles and
+ * canonical URLs are reliable enough to collapse cross-posts, locale variants and
+ * alternate provider pages without merging short, generic course names.
+ */
+export function consolidateDiscoveryCandidates(
+  candidates: DiscoveryCandidate[],
+  records: CatalogRecord[],
+): DiscoveryFilterResult {
+  const preliminary = filterNewDiscoveryCandidates(candidates, records);
+  const existing = records.map((record): DiscoveryCandidate => ({
+    provider: record.provider.name,
+    title: record.content.title_original,
+    url: record.sources.official_url,
+    evidenceUrl: record.sources.official_url,
+    sourceKind: 'official-listing',
+    confidence: 'high',
+  }));
+  const selected: DiscoveryCandidate[] = [];
+  let duplicates = preliminary.duplicates;
+
+  for (const candidate of [...preliminary.candidates].sort(
+    (a, b) =>
+      candidatePageScore(b) - candidatePageScore(a) ||
+      a.url.localeCompare(b.url) ||
+      a.title.localeCompare(b.title),
+  )) {
+    if (
+      existing.some((record) => overlappingCourse(candidate, record)) ||
+      selected.some((other) => overlappingCourse(candidate, other))
+    ) {
+      duplicates += 1;
+      continue;
+    }
+    selected.push(candidate);
+  }
+
+  return {
+    candidates: selected.sort(
       (a, b) =>
         discoveryCandidateScore(b) - discoveryCandidateScore(a) || a.title.localeCompare(b.title),
     ),
@@ -415,6 +583,7 @@ export function validateDiscoveryCandidate(
   const structured = events.find((event) => event.name || event.url);
   const resolvedTitle = decode(structured?.name || pageTitle(html) || candidate.title);
   const resolvedUrl = canonicalUrl(html, finalUrl);
+  const language = pageLanguage(html);
   const text = relevantText(contentHtml(html));
   const educationEvidence =
     strongEducationTerms.test(`${resolvedTitle} ${text}`) ||
@@ -428,12 +597,33 @@ export function validateDiscoveryCandidate(
   const startDate = structured?.start || null;
   const startTime = startDate ? Date.parse(startDate) : Number.NaN;
   const staleEvent = Number.isFinite(startTime) && startTime < now - 180 * 86_400_000;
+  const resolvedPath = new URL(resolvedUrl).pathname;
+  const structuredCourse = ['Course', 'CourseInstance'].includes(structured?.type || '');
+  const currentStructuredEvent = structured?.type === 'Event' && !!startDate && !staleEvent;
+  const secondaryPage =
+    secondaryContentPath.test(resolvedPath) || secondaryContentTitle.test(resolvedTitle);
+  const resolvedYear = yearFrom(`${resolvedTitle} ${resolvedUrl}`);
+  const currentYear = new Date(now).getUTCFullYear();
   let score = 0;
 
   if (!meaningfulTitle(resolvedTitle)) reasons.push('generic or templated title');
   else score += 1;
   if (excludedPath.test(new URL(resolvedUrl).pathname))
     reasons.push('navigation, quiz or download URL');
+  if (resolvedPath.replace(/\/+$/, '') === '' && !structuredCourse && !currentStructuredEvent)
+    reasons.push('provider homepage rather than a course page');
+  if (archivePath.test(resolvedPath) && !structuredCourse && !currentStructuredEvent)
+    reasons.push('archive or collection page rather than a course page');
+  if (secondaryPage && !structuredCourse && !currentStructuredEvent)
+    reasons.push('announcement or supporting page rather than a course page');
+  if (
+    resolvedYear &&
+    resolvedYear < currentYear - 2 &&
+    !structuredCourse &&
+    !currentStructuredEvent &&
+    !evergreen
+  )
+    reasons.push('historical page without current or on-demand learning evidence');
   if (/\b(log in to the site|page not found|404)\b/i.test(`${resolvedTitle} ${text.slice(0, 500)}`))
     reasons.push('login or missing page');
   if (!educationEvidence) reasons.push('no course or learning evidence');
@@ -448,7 +638,12 @@ export function validateDiscoveryCandidate(
 
   return {
     accepted: reasons.length === 0 && score >= 5,
-    candidate: { ...candidate, title: resolvedTitle, url: resolvedUrl },
+    candidate: {
+      ...candidate,
+      title: resolvedTitle,
+      url: resolvedUrl,
+      ...(language ? { language } : {}),
+    },
     score,
     reasons,
     startDate,

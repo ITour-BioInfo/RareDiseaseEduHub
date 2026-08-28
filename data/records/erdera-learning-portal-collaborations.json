@@ -71,8 +71,8 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://erdera.org/erdera-learning-portal/",
-    "official_url": "https://erdera.org/erdera-learning-portal/",
+    "canonical_url": "https://erdera.org/course/collaborations/",
+    "official_url": "https://erdera.org/course/collaborations/",
     "registration_url": null,
     "application_url": null,
     "programme_url": null,
@@ -81,12 +81,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Ongoing / no fixed date | Listed in ERDERA Learning Portal; check current access and dates | A direct detail-page URL was not independently resolved; the button opens the ERDERA Learning Portal, where the exact title should be searched.",
+    "notes": "Legacy date text: Ongoing / no fixed date | Listed in ERDERA Learning Portal; check current access and dates | Official source review 2026-08-28: The official ERDERA course page displays Collaborations. The user approved replacing the shared listing with this record-specific official source.",
     "legacy": {
       "type_group": "resource",
       "type_label_bg": "Ресурс / модул / колекция",
@@ -101,7 +101,7 @@
       "certificate_or_recognition": "Course-specific; see provider",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://erdera.org/erdera-learning-portal/",
-      "url_type": "ERDERA catalogue landing page",
+      "url_type": "direct official source",
       "notes": "A direct detail-page URL was not independently resolved; the button opens the ERDERA Learning Portal, where the exact title should be searched.",
       "tags": [
         "ERDERA",

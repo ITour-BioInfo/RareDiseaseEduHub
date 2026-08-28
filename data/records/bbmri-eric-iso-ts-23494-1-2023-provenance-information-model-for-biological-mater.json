@@ -70,8 +70,8 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://www.bbmri-eric.eu/services/e-learning/",
-    "official_url": "https://www.bbmri-eric.eu/services/e-learning/",
+    "canonical_url": "https://www.bbmri-eric.eu/services/bbmriqm-iso-23494-1-2023/",
+    "official_url": "https://www.bbmri-eric.eu/services/bbmriqm-iso-23494-1-2023/",
     "registration_url": null,
     "application_url": null,
     "programme_url": null,
@@ -80,12 +80,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Ongoing / no fixed date | Listed in BBMRI-ERIC training series; check current access",
+    "notes": "Legacy date text: Ongoing / no fixed date | Listed in BBMRI-ERIC training series; check current access | Official source review 2026-08-28: The official BBMRI-ERIC detail page displays the ISO/TS 23494-1:2023 course. The user approved replacing the shared listing with this record-specific official source.",
     "legacy": {
       "type_group": "resource",
       "type_label_bg": "Ресурс / модул / колекция",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.bbmri-eric.eu/services/e-learning/",
-      "url_type": "BBMRI e-learning collection",
+      "url_type": "direct official source",
       "notes": "",
       "tags": [
         "provenance",

@@ -71,8 +71,8 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://learn.m4rd.org/",
-    "official_url": "https://learn.m4rd.org/",
+    "canonical_url": "https://learn.m4rd.org/course/view.php?id=12",
+    "official_url": "https://learn.m4rd.org/course/view.php?id=12",
     "registration_url": null,
     "application_url": null,
     "programme_url": null,
@@ -81,12 +81,12 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: On demand | Active self-paced course | Nursing-focused foundation in rare-disease care, including early recognition, patient and clinician challenges and coordinated, compassionate care.",
+    "notes": "Legacy date text: On demand | Active self-paced course | Nursing-focused foundation in rare-disease care, including early recognition, patient and clinician challenges and coordinated, compassionate care. | Official source review 2026-08-28: The official M4RD learning site links this unique course ID to Rare Disease 101 — Nursing. The user approved replacing the shared listing with this record-specific official source.",
     "legacy": {
       "type_group": "course",
       "type_label_bg": "Курс / MOOC",
@@ -101,7 +101,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://learn.m4rd.org/",
-      "url_type": "direct official HTML page",
+      "url_type": "direct official source",
       "notes": "Nursing-focused foundation in rare-disease care, including early recognition, patient and clinician challenges and coordinated, compassionate care.",
       "tags": [
         "nursing",

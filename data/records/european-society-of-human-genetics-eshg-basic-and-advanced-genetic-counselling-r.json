@@ -70,22 +70,22 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://www.eshg.org/courses",
-    "official_url": "https://www.eshg.org/courses",
+    "canonical_url": "https://www.ceub.it/app/uploads/2025/03/GC-COURSE-Bertinoro-2025-program.pdf",
+    "official_url": "https://www.ceub.it/app/uploads/2025/03/GC-COURSE-Bertinoro-2025-program.pdf",
     "registration_url": null,
     "application_url": null,
-    "programme_url": null,
+    "programme_url": "https://www.ceub.it/app/uploads/2025/03/GC-COURSE-Bertinoro-2025-program.pdf",
     "recording_url": null,
     "collection_url": "https://www.eshg.org/courses",
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
+    "verified_on": "2026-08-28",
     "verification_confidence": "unverified",
     "source_conflict": false,
     "source_conflict_note": null,
     "review_status": "needs-review",
-    "notes": "Legacy date text: Ongoing / no fixed date | Recurring — check next edition | Recurring course family; check the ESHG programme for the next announced edition.",
+    "notes": "Legacy date text: Ongoing / no fixed date | Recurring — check next edition | Recurring course family; check the ESHG programme for the next announced edition. | Official source review 2026-08-28: The official CEUB programme is the newest course-specific source found for the recurring Genetic Counselling series. No newer individual detail page was available when reviewed; this is the latest official information page.",
     "legacy": {
       "type_group": "course",
       "type_label_bg": "Курс / MOOC",
@@ -100,7 +100,7 @@
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://www.eshg.org/courses",
-      "url_type": "course collection",
+      "url_type": "latest official programme PDF",
       "notes": "Recurring course family; check the ESHG programme for the next announced edition.",
       "tags": [
         "ESHG",
