@@ -1,1 +1,138 @@
-[]
+[
+  {
+    "proposal_id": "record-change-american-society-of-human-genetics-ashg-navigating-data-sharing-in-research-d055d07649c98fc1",
+    "record_id": "american-society-of-human-genetics-ashg-navigating-data-sharing-in-research",
+    "checked_at": "2026-08-30T18:38:14.913Z",
+    "source_url": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "source_kind": "official-record-page",
+    "changes": [
+      {
+        "field": "sources.official_url.content_hash",
+        "old_value": "87bd186150767218f1c499c180a3e5d52fd69519bf29447029607e28f1932e93",
+        "proposed_value": "1a1b4af6c0a2dea7c593206890fd61b4dfcfce0e6bada95e5ca8d1998e75df7e",
+        "evidence": "The normalized official page content changed; review dates, registration, availability and title.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "record-change-bbmri-eric-monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategi-e1a751268cfeb80b",
+    "record_id": "bbmri-eric-monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategi",
+    "checked_at": "2026-08-30T18:38:14.913Z",
+    "source_url": "https://www.bbmri-eric.eu/events/monitoring-the-preanalytical-phase-in-biobanking-key-variables-and-qc-strategies/",
+    "source_kind": "official-record-page",
+    "changes": [
+      {
+        "field": "sources.official_url.content_hash",
+        "old_value": "1e08f73b54c874a979a94e41b46defcc2a36f2a75a147da4b44d7d13cee2814d",
+        "proposed_value": "cebd2797af344d717e27892b5dde9241a55c7c572ba4cb0951d13a0d3e22d63b",
+        "evidence": "The normalized official page content changed; review dates, registration, availability and title.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "record-change-ceub-eshg-course-programme-9th-eye-genetics-course-a43b54d442312c8d",
+    "record_id": "ceub-eshg-course-programme-9th-eye-genetics-course",
+    "checked_at": "2026-08-30T18:38:14.913Z",
+    "source_url": "https://www.ceub.it/events/event/9th-eye-genetics-course/",
+    "source_kind": "official-record-page",
+    "changes": [
+      {
+        "field": "sources.official_url.content_hash",
+        "old_value": "0d3403b10e4b31478cd0d07987ef8a73cabcd9dc737ee636f3d042393e3bfd9f",
+        "proposed_value": "80d01f8ff222113067e2832853a0c7fd7ee14897e5ec0d5b660a308ba2209571",
+        "evidence": "The normalized official page content changed; review dates, registration, availability and title.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "record-change-ern-cranio-international-cleft-palate-foundation-icpf-2026-pre-congress-hands-on-training-for-surgeons-and-anesthesiologists-4e71b62edac35bbc",
+    "record_id": "ern-cranio-international-cleft-palate-foundation-icpf-2026-pre-congress-hands-on-training-for-surgeons-and-anesthesiologists",
+    "checked_at": "2026-08-30T18:38:14.913Z",
+    "source_url": "https://www.ern-cranio.eu/news",
+    "source_kind": "official-record-page",
+    "changes": [
+      {
+        "field": "sources.official_url.content_hash",
+        "old_value": "8df4d75966f3f5bc11340d821caae69850b12f0b49c418ea5249bcbc8ec6808c",
+        "proposed_value": "f0554b48a14882814da143c4b8de860422f326e94ef507e248c81cc83d7dadd4",
+        "evidence": "The normalized official page content changed; review dates, registration, availability and title.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "record-change-eurordis-open-academy-erdera-open-academy-erdera-training-on-data-ethics-and-ai-eae4b9ffd592860d",
+    "record_id": "eurordis-open-academy-erdera-open-academy-erdera-training-on-data-ethics-and-ai",
+    "checked_at": "2026-08-30T18:38:14.913Z",
+    "source_url": "https://openacademy.eurordis.org/navigating-rare-disease-research-data-ethics/",
+    "source_kind": "official-record-page",
+    "changes": [
+      {
+        "field": "sources.official_url.content_hash",
+        "old_value": "674ebe33a0da97763af9cd25c055e5d1e0588e04f646c6650905228c75802220",
+        "proposed_value": "7f97908094554865585c526c2a978453771f57bbc45202e094ad16eeb19b3278",
+        "evidence": "The normalized official page content changed; review dates, registration, availability and title.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "record-change-manchester-centre-for-genomic-medicine-eshg-eshg-syndromology-and-dysmorphology--567077fc50b28508",
+    "record_id": "manchester-centre-for-genomic-medicine-eshg-eshg-syndromology-and-dysmorphology-",
+    "checked_at": "2026-08-30T18:38:14.913Z",
+    "source_url": "https://www.mrcc.org.uk/events/manchester-eshg-syndromology-and-dysmorphology-course-2026/",
+    "source_kind": "official-record-page",
+    "changes": [
+      {
+        "field": "sources.official_url.content_hash",
+        "old_value": "98fec01dbac532b0146b3e82149eddc59dfae8fe46703987f204bee835702c4c",
+        "proposed_value": "7d98561674f3042b8e8362a90fce60856953a820c426fd5c7e8524f977cf3723",
+        "evidence": "The normalized official page content changed; review dates, registration, availability and title.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "record-change-nhs-england-genomics-education-programme-uwe-bristol-genomics-and-counselling-skills-4c4be1ba44781501",
+    "record_id": "nhs-england-genomics-education-programme-uwe-bristol-genomics-and-counselling-skills",
+    "checked_at": "2026-08-30T18:38:14.913Z",
+    "source_url": "https://www.genomicseducation.hee.nhs.uk/education/taught-courses/genomics-and-counselling-skills/",
+    "source_kind": "official-record-page",
+    "changes": [
+      {
+        "field": "sources.official_url.content_hash",
+        "old_value": "c6c82aa6339c3c62a45920dd7ca72abfe099af82a9d2c4ec3db03c282a4e6e14",
+        "proposed_value": "bef49003e2e2d4c0f3efd7427890e178a60228b8375587eb83235baecac9f0f7",
+        "evidence": "The normalized official page content changed; review dates, registration, availability and title.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "record-change-remedi4all-2026-remedi4all-hackathon-672eb90b8facc4f0",
+    "record_id": "remedi4all-2026-remedi4all-hackathon",
+    "checked_at": "2026-08-30T18:38:14.913Z",
+    "source_url": "https://remedi4all.org/event/2026-remedi4all-hackathon/",
+    "source_kind": "official-record-page",
+    "changes": [
+      {
+        "field": "sources.official_url.content_hash",
+        "old_value": "30b138575dcc4e0ef480a4acfcfaa23891c1c8bdd338bb0ed0ccc7b90c879260",
+        "proposed_value": "748a1c33d9395fae46c7ba3a42f212327e6108f1b5306491f108666464f03eea",
+        "evidence": "The normalized official page content changed; review dates, registration, availability and title.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  }
+]
