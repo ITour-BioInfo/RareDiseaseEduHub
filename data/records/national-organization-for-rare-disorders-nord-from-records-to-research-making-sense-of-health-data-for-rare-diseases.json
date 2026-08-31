@@ -1,0 +1,128 @@
+{
+  "schema_version": "1.0.0",
+  "id": "national-organization-for-rare-disorders-nord-from-records-to-research-making-sense-of-health-data-for-rare-diseases",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "National Organization for Rare Disorders (NORD)",
+    "abbreviation": "NORD",
+    "country": "United States",
+    "official_url": "https://rarediseases.org/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "From Records to Research: Making Sense of Health Data for Rare Diseases",
+    "summary_original": "Rare-disease specific",
+    "description_original": "A free, self-paced course that helps patients, families and patient advocates understand health data, data collection, privacy, consent, registries and the use of data in rare-disease research."
+  },
+  "classification": {
+    "resource_type": "course",
+    "delivery_modes": [
+      "online",
+      "self-paced"
+    ],
+    "audiences": [
+      "Patients",
+      "Families",
+      "Patient advocates"
+    ],
+    "topics": [
+      "Health data",
+      "Data literacy",
+      "Privacy and consent",
+      "Patient registries",
+      "Rare-disease research"
+    ],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "certificate",
+    "cost_kind": "free"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": "open"
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": null,
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "free",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://learn.rarediseases.org/courses/from-records-to-research-making-sense-of-health-data-for-rare-diseases/",
+    "official_url": "https://learn.rarediseases.org/courses/from-records-to-research-making-sense-of-health-data-for-rare-diseases/",
+    "registration_url": "https://learn.rarediseases.org/courses/from-records-to-research-making-sense-of-health-data-for-rare-diseases/",
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://learn.rarediseases.org/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-31",
+    "verification_confidence": "high",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "approved",
+    "notes": "The official NORD Learning Center page labels the course free, invites users to enrol, identifies patients, families and patient advocates as the audience, and states that a certificate is available on completion. The page was updated 24 August 2026.",
+    "legacy": {
+      "type_group": "course",
+      "type_label_bg": "Онлайн курс",
+      "type_label_en": "Online course",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Self-paced; enrolment open",
+      "delivery": "Online, self-paced",
+      "duration": "",
+      "cost": "Free",
+      "certificate_or_recognition": "Certificate on completion",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://learn.rarediseases.org/",
+      "url_type": "direct course page",
+      "notes": "Health-data literacy for patients, families and patient advocates.",
+      "tags": [
+        "health data",
+        "patient registries",
+        "privacy",
+        "consent"
+      ],
+      "source_status_note": "Free and open for enrolment",
+      "original_record_type": "Self-paced online course",
+      "catalogue_index": "",
+      "verified_on": "2026-08-31"
+    }
+  }
+}

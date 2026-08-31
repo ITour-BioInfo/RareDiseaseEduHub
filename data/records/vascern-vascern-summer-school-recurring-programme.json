@@ -1,7 +1,9 @@
 {
   "schema_version": "1.0.0",
   "id": "vascern-vascern-summer-school-recurring-programme",
-  "aliases": [],
+  "aliases": [
+    "VASCERN Summer School — recurring programme"
+  ],
   "lifecycle": "active",
   "provider": {
     "name": "VASCERN",
@@ -11,9 +13,9 @@
   },
   "content": {
     "original_language": "en",
-    "title_original": "VASCERN Summer School — recurring programme",
+    "title_original": "VASCERN Summer School 2026 Edition",
     "summary_original": "Rare-disease specific",
-    "description_original": "Rare vascular disease training for medical students, residents and early-career researchers. The 2026 edition’s online module ran February–May 2026; this record tracks the recurring programme rather than presenting that completed edition as future."
+    "description_original": "Rare vascular disease education for medical students, residents and postdoctoral researchers, combining an online module with an in-person week in Paris."
   },
   "classification": {
     "resource_type": "programme",
@@ -22,23 +24,29 @@
       "in-person",
       "hybrid"
     ],
-    "audiences": [],
-    "topics": [],
+    "audiences": [
+      "Medical students",
+      "Residents",
+      "Postdoctoral researchers"
+    ],
+    "topics": [
+      "Rare vascular diseases"
+    ],
     "rare_disease_scope": [
       "Rare-disease specific"
     ],
     "languages": [
       "en"
     ],
-    "certificate_kind": "none",
+    "certificate_kind": "certificate",
     "cost_kind": "unknown"
   },
   "dates": {
     "event": {
-      "start": null,
-      "end": null,
-      "timezone": null,
-      "precision": "unknown"
+      "start": "2026-09-14",
+      "end": "2026-09-19",
+      "timezone": "Europe/Paris",
+      "precision": "date"
     },
     "arrival": {
       "start": null,
@@ -48,7 +56,7 @@
     "application": {
       "opens": null,
       "closes": null,
-      "status_override": null
+      "status_override": "closed"
     },
     "registration": {
       "opens": null,
@@ -72,8 +80,8 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://vascern.eu/training-and-education/",
-    "official_url": "https://vascern.eu/training-and-education/",
+    "canonical_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-2026-edition/",
+    "official_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-2026-edition/",
     "registration_url": null,
     "application_url": null,
     "programme_url": null,
@@ -82,37 +90,37 @@
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
-    "verification_confidence": "unverified",
+    "verified_on": "2026-08-31",
+    "verification_confidence": "high",
     "source_conflict": false,
     "source_conflict_note": null,
-    "review_status": "needs-review",
-    "notes": "Legacy date text: Recurring Erasmus+ programme; next edition/date to be announced | Recurring programme; next intake TBA | Rare vascular disease training for medical students, residents and early-career researchers. The 2026 edition’s online module ran February–May 2026; this record tracks the recurring programme rather than presenting that completed edition as future.",
+    "review_status": "approved",
+    "notes": "The official VASCERN edition page states that applications are closed, the online module ran from February through May 2026, the in-person week runs 14–19 September 2026 in Paris, and successful completion of both modules provides a certificate and 3 ECTS.",
     "legacy": {
       "type_group": "programme",
       "type_label_bg": "Училище / обучителна програма",
       "type_label_en": "School / training programme",
       "date_status": "upcoming",
       "date_status_bg": "Предстоящ",
-      "sort_date": "",
-      "dates": "Recurring Erasmus+ programme; next edition/date to be announced",
+      "sort_date": "2026-09-14",
+      "dates": "Online module February–May 2026; in-person 14–19 September 2026",
       "delivery": "Blended online and in-person programme",
-      "duration": "Edition-specific",
+      "duration": "Online module plus six-day in-person week",
       "cost": "",
-      "certificate_or_recognition": "",
+      "certificate_or_recognition": "Certificate and 3 ECTS after completion of both modules",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://vascern.eu/training-and-education/",
       "url_type": "direct official HTML page",
-      "notes": "Rare vascular disease training for medical students, residents and early-career researchers. The 2026 edition’s online module ran February–May 2026; this record tracks the recurring programme rather than presenting that completed edition as future.",
+      "notes": "Rare vascular disease education for medical students, residents and postdoctoral researchers, combining an online module with an in-person week in Paris.",
       "tags": [
         "rare vascular diseases",
         "Erasmus+",
         "summer school"
       ],
-      "source_status_note": "Recurring programme; next intake TBA",
-      "original_record_type": "Recurring summer school",
+      "source_status_note": "Applications closed; in-person sessions run 14–19 September 2026",
+      "original_record_type": "Summer school edition",
       "catalogue_index": "",
-      "verified_on": "2026-08-24"
+      "verified_on": "2026-08-31"
     }
   }
 }

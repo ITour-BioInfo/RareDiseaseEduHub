@@ -5,9 +5,9 @@ import { duplicateCandidates } from '../../automation/deduplicate';
 describe('canonical catalogue', () => {
   it('contains every approved canonical and locale record', async () => {
     const records = await loadRecords();
-    expect(records).toHaveLength(177);
-    expect((await loadTranslations('bg')).size).toBe(177);
-    expect((await loadTranslations('en')).size).toBe(177);
+    expect(records).toHaveLength(179);
+    expect((await loadTranslations('bg')).size).toBe(179);
+    expect((await loadTranslations('en')).size).toBe(179);
   });
   it('retains official source URLs and reports duplicate candidates', async () => {
     const records = await loadRecords();

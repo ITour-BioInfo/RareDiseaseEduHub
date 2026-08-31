@@ -8,6 +8,8 @@ import {
   stateFromFailure,
   stateFromResult,
   restoreStateForRetry,
+  sourceBackoffDays,
+  sourceCheckIsDue,
   type MonitorSourceState,
 } from '../../automation/state';
 
@@ -113,5 +115,13 @@ describe('monitor state persistence', () => {
     expect(isRetryableDetailError(new Error('Response exceeds maximum configured size.'))).toBe(
       false,
     );
+  });
+
+  it('backs off persistent source failures', () => {
+    expect(sourceBackoffDays(1)).toBe(0);
+    expect(sourceBackoffDays(2)).toBe(2);
+    expect(sourceBackoffDays(8)).toBe(14);
+    expect(sourceCheckIsDue(previous, '2026-08-25T10:00:00.000Z')).toBe(false);
+    expect(sourceCheckIsDue(previous, '2026-08-26T10:00:00.000Z')).toBe(true);
   });
 });

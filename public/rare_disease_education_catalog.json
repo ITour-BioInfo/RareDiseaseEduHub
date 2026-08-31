@@ -3902,23 +3902,23 @@
   {
     "id": "eurordis-rare-diseases-europe-eurordis-open-academy-schools",
     "title_bg": "",
-    "title_original": "EURORDIS Open Academy Schools",
+    "title_original": "Open Academy x ERDERA Schools",
     "source_language": "en",
-    "provider": "EURORDIS Rare Diseases Europe",
+    "provider": "EURORDIS Open Academy / ERDERA",
     "resource_type": "programme",
-    "event_start": null,
-    "event_end": null,
-    "event_timezone": null,
-    "application_open": null,
+    "event_start": "2027-06-07",
+    "event_end": "2027-06-10",
+    "event_timezone": "Europe/Madrid",
+    "application_open": "2026-09-01",
     "application_close": null,
     "registration_open": null,
     "registration_close": null,
     "availability_open": null,
     "availability_close": null,
-    "primary_status_bg": "Следваща дата предстои да бъде обявена",
-    "primary_status_code": "next-date-tba",
-    "official_url": "https://openacademy.eurordis.org/open-academy-schools/",
-    "verified_on": "2026-08-24",
+    "primary_status_bg": "Предстоящо събитие",
+    "primary_status_code": "upcoming-event",
+    "official_url": "https://erdera.org/event/two-open-academy-schools-one-week-of-face-to-face-training-bringing-researchers-and-patient-representatives-together-for-parallel-and-joint-sessions/",
+    "verified_on": "2026-08-31",
     "translation_status_bg": "missing",
     "source_collection_url": "https://openacademy.eurordis.org/open-academy-schools/",
     "delivery": [
@@ -3926,8 +3926,13 @@
       "in-person",
       "hybrid"
     ],
-    "topics": [],
-    "next_action_at": null
+    "topics": [
+      "Medicines research and development",
+      "Scientific innovation",
+      "Translational research",
+      "Patient engagement"
+    ],
+    "next_action_at": "2026-08-31T22:00:00.000Z"
   },
   {
     "id": "foundation-for-rare-diseases-futurelearn-from-dna-to-cure-gene-and-gene-modified",
@@ -4386,6 +4391,41 @@
     "next_action_at": null
   },
   {
+    "id": "national-organization-for-rare-disorders-nord-from-records-to-research-making-sense-of-health-data-for-rare-diseases",
+    "title_bg": "",
+    "title_original": "From Records to Research: Making Sense of Health Data for Rare Diseases",
+    "source_language": "en",
+    "provider": "National Organization for Rare Disorders (NORD)",
+    "resource_type": "course",
+    "event_start": null,
+    "event_end": null,
+    "event_timezone": null,
+    "application_open": null,
+    "application_close": null,
+    "registration_open": null,
+    "registration_close": null,
+    "availability_open": null,
+    "availability_close": null,
+    "primary_status_bg": "Отворена регистрация",
+    "primary_status_code": "registration-open",
+    "official_url": "https://learn.rarediseases.org/courses/from-records-to-research-making-sense-of-health-data-for-rare-diseases/",
+    "verified_on": "2026-08-31",
+    "translation_status_bg": "missing",
+    "source_collection_url": "https://learn.rarediseases.org/",
+    "delivery": [
+      "online",
+      "self-paced"
+    ],
+    "topics": [
+      "Health data",
+      "Data literacy",
+      "Privacy and consent",
+      "Patient registries",
+      "Rare-disease research"
+    ],
+    "next_action_at": null
+  },
+  {
     "id": "national-organization-for-rare-disorders-nord-rarelaunch",
     "title_bg": "",
     "title_original": "RareLaunch®",
@@ -4809,9 +4849,9 @@
     "next_action_at": null
   },
   {
-    "id": "vascern-vascern-summer-school-recurring-programme",
+    "id": "vascern-vascern-exchange-program",
     "title_bg": "",
-    "title_original": "VASCERN Summer School — recurring programme",
+    "title_original": "VASCERN Exchange Program",
     "source_language": "en",
     "provider": "VASCERN",
     "resource_type": "programme",
@@ -4824,10 +4864,43 @@
     "registration_close": null,
     "availability_open": null,
     "availability_close": null,
-    "primary_status_bg": "Следваща дата предстои да бъде обявена",
-    "primary_status_code": "next-date-tba",
-    "official_url": "https://vascern.eu/training-and-education/",
-    "verified_on": "2026-08-24",
+    "primary_status_bg": "Отворена регистрация",
+    "primary_status_code": "registration-open",
+    "official_url": "https://vascern.eu/training-and-education/exchange-program/about-the-vascern-exchange-program/",
+    "verified_on": "2026-08-31",
+    "translation_status_bg": "missing",
+    "source_collection_url": "https://vascern.eu/training-and-education/",
+    "delivery": [
+      "in-person"
+    ],
+    "topics": [
+      "Rare vascular diseases",
+      "Clinical knowledge",
+      "Best-practice exchange",
+      "Multidisciplinary care"
+    ],
+    "next_action_at": null
+  },
+  {
+    "id": "vascern-vascern-summer-school-recurring-programme",
+    "title_bg": "",
+    "title_original": "VASCERN Summer School 2026 Edition",
+    "source_language": "en",
+    "provider": "VASCERN",
+    "resource_type": "programme",
+    "event_start": "2026-09-14",
+    "event_end": "2026-09-19",
+    "event_timezone": "Europe/Paris",
+    "application_open": null,
+    "application_close": null,
+    "registration_open": null,
+    "registration_close": null,
+    "availability_open": null,
+    "availability_close": null,
+    "primary_status_bg": "Кандидатстването е приключило; събитието предстои",
+    "primary_status_code": "applications-closed-event-upcoming",
+    "official_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-2026-edition/",
+    "verified_on": "2026-08-31",
     "translation_status_bg": "missing",
     "source_collection_url": "https://vascern.eu/training-and-education/",
     "delivery": [
@@ -4835,8 +4908,10 @@
       "in-person",
       "hybrid"
     ],
-    "topics": [],
-    "next_action_at": null
+    "topics": [
+      "Rare vascular diseases"
+    ],
+    "next_action_at": "2026-09-13T22:00:00.000Z"
   },
   {
     "id": "vascern-vascern-webinars",

@@ -294,6 +294,26 @@ describe('crawler fixtures', () => {
     );
     expect(structuredCourse.accepted).toBe(true);
     expect(structuredCourse.candidate.language).toBe('en');
+
+    const aboutUs = validateDiscoveryCandidate(
+      { ...base, provider: 'NHS rare disease education', title: 'About us' },
+      `<main><h1>About us</h1><p>Our rare disease education and training team.</p></main>`,
+      'https://official.example/about-us',
+    );
+    expect(aboutUs.reasons).toContain('navigation, quiz or download URL');
+
+    const retrospective = validateDiscoveryCandidate(
+      {
+        ...base,
+        title:
+          'Open Academy x ERDERA Schools in Barcelona strengthen practical links between patient advocacy and rare disease research',
+      },
+      `<main><h1>EURORDIS - Rare Diseases Europe</h1><p>Rare disease school training and education news.</p></main>`,
+      'https://official.example/open-academy-schools-barcelona',
+    );
+    expect(retrospective.reasons).toContain(
+      'announcement or supporting page rather than a course page',
+    );
   });
   it('turns a known course page change into a field-level review proposal', async () => {
     const record = (await loadRecords())[0]!;
@@ -306,12 +326,22 @@ describe('crawler fixtures', () => {
         endDate: '2027-01-15T12:00:00Z',
       })}</script>`,
       '2026-08-25T10:00:00.000Z',
-      'old-hash',
       'new-hash',
     );
-    expect(proposal.record_id).toBe(record.id);
-    expect(proposal.changes.map((change) => change.field)).toContain('content.title_original');
-    expect(proposal.changes.every((change) => change.review_required)).toBe(true);
+    expect(proposal).not.toBeNull();
+    expect(proposal!.record_id).toBe(record.id);
+    expect(proposal!.changes.map((change) => change.field)).toContain('content.title_original');
+    expect(proposal!.changes.every((change) => change.review_required)).toBe(true);
+  });
+  it('suppresses volatile content-hash-only changes on known pages', async () => {
+    const record = (await loadRecords())[0]!;
+    const proposal = knownRecordChangeProposal(
+      record,
+      `<main><h1>${record.content.title_original}</h1><p>Navigation changed.</p></main>`,
+      '2026-08-31T10:00:00.000Z',
+      'new-hash',
+    );
+    expect(proposal).toBeNull();
   });
   it('parses ICS, RSS and Atom without live network access', async () => {
     expect(parseIcs(await fixture('calendar.ics'))[0]?.title).toBe('Rare disease workshop');

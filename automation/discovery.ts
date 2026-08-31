@@ -37,16 +37,17 @@ const rareProviderTerms =
 const excludedTerms =
   /\b(privacy|cookie|contact|about us|newsletter|login|sign in|terms|accessibility|donate|sponsor|vacanc|career|job)\b/i;
 const excludedPath =
-  /\/(?:tag|tags|category|categories|search|subjects|about|contact|privacy|terms|login|sign-in|register|registration|booking|product|expertcentres)(?:\/|$)|\/(?:quiz|quizzes)(?:\/|$)|\/wp-content\/|\.(?:pdf|docx?|pptx?|xlsx?|zip)(?:$|\?)/i;
+  /\/(?:tag|tags|category|categories|search|subjects|about(?:-us)?|contact|privacy|terms|login|sign-in|register|registration|booking|product|expertcentres)(?:\/|$)|\/(?:quiz|quizzes)(?:\/|$)|\/wp-content\/|\.(?:pdf|docx?|pptx?|xlsx?|zip)(?:$|\?)/i;
 const archivePath = /(?:archive|archives|previous-events|past-events)/i;
 const secondaryContentPath =
   /\/(?:blog|news|press|stories|updates)(?:\/|$)|\/(?:highlights?|interviews?|announcements?)(?:\/|$)/i;
 const secondaryContentTitle =
-  /\b(applications? (?:are )?(?:open|launch(?:ed)?)|call for (?:applications?|mentors?)|highlights?|interviews?|join our talk|language offerings?|news|press release|(?:course|curriculum|programme|program|school|series) (?:is )?launch(?:ed|es)|returns? to)\b/i;
+  /\b(applications? (?:are )?(?:open|launch(?:ed)?)|call for (?:applications?|mentors?)|highlights?|interviews?|join our talk|language offerings?|news|press release|(?:course|curriculum|programme|program|school|series) (?:is )?launch(?:ed|es)|returns? to|strengthen(?:ed|s|ing)? (?:practical )?links|looking back|recap|retrospective|reflections? on)\b/i;
 const templateText = /\{\{|\}\}|data\.|_highlightResult|_snippetResult|permalink/i;
 const genericTitles = new Set(
   [
     'about',
+    'about us',
     'application advice',
     'back to course',
     'board',
@@ -601,7 +602,9 @@ export function validateDiscoveryCandidate(
   const structuredCourse = ['Course', 'CourseInstance'].includes(structured?.type || '');
   const currentStructuredEvent = structured?.type === 'Event' && !!startDate && !staleEvent;
   const secondaryPage =
-    secondaryContentPath.test(resolvedPath) || secondaryContentTitle.test(resolvedTitle);
+    secondaryContentPath.test(resolvedPath) ||
+    secondaryContentTitle.test(resolvedTitle) ||
+    secondaryContentTitle.test(candidate.title);
   const resolvedYear = yearFrom(`${resolvedTitle} ${resolvedUrl}`);
   const currentYear = new Date(now).getUTCFullYear();
   let score = 0;

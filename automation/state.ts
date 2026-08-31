@@ -32,6 +32,19 @@ export interface MonitorSourceState {
 
 export type MonitorState = Record<string, MonitorSourceState>;
 
+export function sourceBackoffDays(failureCount: number) {
+  if (failureCount < 2) return 0;
+  return Math.min(14, 2 ** (failureCount - 1));
+}
+
+export function sourceCheckIsDue(previous: MonitorSourceState | undefined, checkedAt: string) {
+  if (!previous || previous.failure_count < 2) return true;
+  const lastChecked = Date.parse(previous.checked_at);
+  const now = Date.parse(checkedAt);
+  if (!Number.isFinite(lastChecked) || !Number.isFinite(now)) return true;
+  return now - lastChecked >= sourceBackoffDays(previous.failure_count) * 86_400_000;
+}
+
 export function restoreStateForRetry(
   state: MonitorState,
   key: string,

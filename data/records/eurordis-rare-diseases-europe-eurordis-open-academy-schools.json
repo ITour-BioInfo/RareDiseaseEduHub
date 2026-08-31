@@ -1,19 +1,21 @@
 {
   "schema_version": "1.0.0",
   "id": "eurordis-rare-diseases-europe-eurordis-open-academy-schools",
-  "aliases": [],
+  "aliases": [
+    "EURORDIS Open Academy Schools"
+  ],
   "lifecycle": "active",
   "provider": {
-    "name": "EURORDIS Rare Diseases Europe",
+    "name": "EURORDIS Open Academy / ERDERA",
     "abbreviation": null,
     "country": null,
     "official_url": "https://openacademy.eurordis.org/"
   },
   "content": {
     "original_language": "en",
-    "title_original": "EURORDIS Open Academy Schools",
+    "title_original": "Open Academy x ERDERA Schools",
     "summary_original": "Rare-disease specific",
-    "description_original": "Includes the Medicines Research & Development School and the Scientific Innovation & Translational Research School, with joint sessions."
+    "description_original": "A blended training programme for patient advocates and researchers, with parallel and joint sessions at the Open Academy Schools in Barcelona."
   },
   "classification": {
     "resource_type": "programme",
@@ -22,8 +24,16 @@
       "in-person",
       "hybrid"
     ],
-    "audiences": [],
-    "topics": [],
+    "audiences": [
+      "Patient advocates",
+      "Researchers"
+    ],
+    "topics": [
+      "Medicines research and development",
+      "Scientific innovation",
+      "Translational research",
+      "Patient engagement"
+    ],
     "rare_disease_scope": [
       "Rare-disease specific"
     ],
@@ -35,10 +45,10 @@
   },
   "dates": {
     "event": {
-      "start": null,
-      "end": null,
-      "timezone": null,
-      "precision": "unknown"
+      "start": "2027-06-07",
+      "end": "2027-06-10",
+      "timezone": "Europe/Madrid",
+      "precision": "date"
     },
     "arrival": {
       "start": null,
@@ -46,7 +56,7 @@
       "timezone": null
     },
     "application": {
-      "opens": null,
+      "opens": "2026-09-01",
       "closes": null,
       "status_override": null
     },
@@ -72,47 +82,47 @@
     "currency": null
   },
   "sources": {
-    "canonical_url": "https://openacademy.eurordis.org/open-academy-schools/",
-    "official_url": "https://openacademy.eurordis.org/open-academy-schools/",
+    "canonical_url": "https://erdera.org/event/two-open-academy-schools-one-week-of-face-to-face-training-bringing-researchers-and-patient-representatives-together-for-parallel-and-joint-sessions/",
+    "official_url": "https://erdera.org/event/two-open-academy-schools-one-week-of-face-to-face-training-bringing-researchers-and-patient-representatives-together-for-parallel-and-joint-sessions/",
     "registration_url": null,
-    "application_url": null,
+    "application_url": "https://openacademy.eurordis.org/open-academy-schools/",
     "programme_url": null,
     "recording_url": null,
     "collection_url": "https://openacademy.eurordis.org/open-academy-schools/",
     "source_language": "en"
   },
   "editorial": {
-    "verified_on": "2026-08-24",
-    "verification_confidence": "unverified",
+    "verified_on": "2026-08-31",
+    "verification_confidence": "high",
     "source_conflict": false,
     "source_conflict_note": null,
-    "review_status": "needs-review",
-    "notes": "Legacy date text: Ongoing / no fixed date | Recurring application-based schools; 2027 applications announced to open 1 September 2026 | Includes the Medicines Research & Development School and the Scientific Innovation & Translational Research School, with joint sessions.",
+    "review_status": "approved",
+    "notes": "The official ERDERA event page identifies the programme as Open Academy x ERDERA Schools, gives the on-site dates as 7–10 June 2027, and states that applications open on 1 September 2026.",
     "legacy": {
       "type_group": "programme",
       "type_label_bg": "Училище / обучителна програма",
       "type_label_en": "School / training programme",
-      "date_status": "ongoing",
-      "date_status_bg": "Постоянен / текущ",
-      "sort_date": "",
-      "dates": "Ongoing / no fixed date",
-      "delivery": "Blended/online and in-person depending on school",
+      "date_status": "upcoming",
+      "date_status_bg": "Предстоящ",
+      "sort_date": "2027-06-07",
+      "dates": "7–10 June 2027; applications open 1 September 2026",
+      "delivery": "Blended online and in-person programme",
       "duration": "",
       "cost": "",
       "certificate_or_recognition": "",
       "rare_disease_scope": "Rare-disease specific",
       "source_collection_url": "https://openacademy.eurordis.org/open-academy-schools/",
       "url_type": "direct course page",
-      "notes": "Includes the Medicines Research & Development School and the Scientific Innovation & Translational Research School, with joint sessions.",
+      "notes": "A blended training programme for patient advocates and researchers, with parallel and joint sessions at the Open Academy Schools in Barcelona.",
       "tags": [
         "patient advocacy",
         "medicines R&D",
         "translational research"
       ],
-      "source_status_note": "Recurring application-based schools; 2027 applications announced to open 1 September 2026",
+      "source_status_note": "Applications open 1 September 2026; on-site sessions run 7–10 June 2027",
       "original_record_type": "School programme collection",
       "catalogue_index": "",
-      "verified_on": "2026-08-24"
+      "verified_on": "2026-08-31"
     }
   }
 }

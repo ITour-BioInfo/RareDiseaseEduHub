@@ -2,7 +2,7 @@ name: Catalogue monitor
 
 on:
   schedule:
-    - cron: '17 6 * * *'
+    - cron: '17 6 * * 1'
       timezone: 'Europe/Sofia'
     - cron: '17 18 * * *'
       timezone: 'Europe/Sofia'
@@ -57,7 +57,7 @@ jobs:
         shell: bash
         run: |
           if [[ "${{ github.event_name }}" == "schedule" ]]; then
-            [[ "${{ github.event.schedule }}" == "17 6 * * *" ]] && MODE=morning || MODE=priority
+            [[ "${{ github.event.schedule }}" == "17 6 * * 1" ]] && MODE=morning || MODE=priority
             LIVE=true
           else
             MODE="${{ inputs.mode }}"
@@ -72,8 +72,10 @@ jobs:
           if git ls-remote --exit-code --heads origin automation-state >/dev/null 2>&1; then
             git fetch origin automation-state:refs/remotes/origin/automation-state
             git show origin/automation-state:state.json > work/automation-state/state.json
+            git show origin/automation-state:pending-candidates.json > work/automation-state/pending-candidates.json || printf '[]\n' > work/automation-state/pending-candidates.json
           else
             printf '{}\n' > work/automation-state/state.json
+            printf '[]\n' > work/automation-state/pending-candidates.json
           fi
       - name: Run responsible source monitor
         env:
@@ -92,7 +94,8 @@ jobs:
             git -C "$STATE_WORKTREE" switch --orphan automation-state
           fi
           cp work/automation-state/state.json "$STATE_WORKTREE/state.json"
-          git -C "$STATE_WORKTREE" add state.json
+          cp work/automation-state/pending-candidates.json "$STATE_WORKTREE/pending-candidates.json"
+          git -C "$STATE_WORKTREE" add state.json pending-candidates.json
           if ! git -C "$STATE_WORKTREE" diff --cached --quiet; then
             git -C "$STATE_WORKTREE" -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "chore: update compact monitor state"
             git -C "$STATE_WORKTREE" push origin HEAD:automation-state
@@ -102,9 +105,11 @@ jobs:
       - name: Detect reviewable proposals
         id: proposals
         shell: bash
+        env:
+          REPORT_MODE: ${{ steps.mode.outputs.mode }}
         run: |
           node - <<'NODE'
-          const proposals = require('./reports/proposals.json')
+          const proposals = require(`./reports/proposals-${process.env.REPORT_MODE}.json`)
           const limit = 20
           const changed = proposals.length > 0 && proposals.length <= limit
           const blocked = proposals.length > limit
@@ -121,25 +126,28 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          git fetch origin automation/catalog-updates:refs/remotes/origin/automation/catalog-updates || true
-          git switch -C automation/catalog-updates
-          git add reports/latest-monitor.md reports/proposals.json data public CHANGELOG.md
-          git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "chore: propose evidence-backed catalogue updates"
-          git push --force-with-lease origin automation/catalog-updates
+          MODE="${{ steps.mode.outputs.mode }}"
+          BRANCH="automation/catalog-updates-${MODE}"
+          git fetch origin "$BRANCH:refs/remotes/origin/$BRANCH" || true
+          git switch -C "$BRANCH"
+          git add "reports/latest-${MODE}.md" "reports/proposals-${MODE}.json" reports/monitor
+          git -c user.name=github-actions -c user.email=41898282+github-actions[bot]@users.noreply.github.com commit -m "chore: propose ${MODE} catalogue evidence"
+          git push --force-with-lease origin "$BRANCH"
           BODY="Pre-PR validation passed. Review every proposed field and its official-source evidence. This pull request is intentionally a draft and will never be auto-approved, auto-merged, or deployed."
           gh label create automated-catalog-update --color 0e8a16 --description "Evidence-backed catalogue proposal" --force
           gh label create editorial-review-required --color b60205 --description "Human editorial decision required" --force
-          if gh pr view automation/catalog-updates >/dev/null 2>&1; then
-            gh pr edit automation/catalog-updates --body "$BODY" --add-label automated-catalog-update --add-label editorial-review-required
+          if gh pr view "$BRANCH" >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" --body "$BODY" --add-label automated-catalog-update --add-label editorial-review-required
           else
-            gh pr create --draft --base main --head automation/catalog-updates --title "Catalogue source-change proposals" --body "$BODY" --label automated-catalog-update --label editorial-review-required
+            gh pr create --draft --base main --head "$BRANCH" --title "Catalogue ${MODE} source-change proposals" --body "$BODY" --label automated-catalog-update --label editorial-review-required
           fi
       - name: Upload monitor evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: catalogue-monitor-report
+          name: catalogue-monitor-${{ steps.mode.outputs.mode }}-${{ github.run_id }}
           path: |
-            reports/latest-monitor.md
-            reports/proposals.json
-          retention-days: 5
+            reports/latest-${{ steps.mode.outputs.mode }}.md
+            reports/proposals-${{ steps.mode.outputs.mode }}.json
+            reports/monitor
+          retention-days: 30

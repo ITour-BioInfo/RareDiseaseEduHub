@@ -1,0 +1,125 @@
+{
+  "schema_version": "1.0.0",
+  "id": "vascern-vascern-exchange-program",
+  "aliases": [],
+  "lifecycle": "active",
+  "provider": {
+    "name": "VASCERN",
+    "abbreviation": null,
+    "country": null,
+    "official_url": "https://vascern.eu/"
+  },
+  "content": {
+    "original_language": "en",
+    "title_original": "VASCERN Exchange Program",
+    "summary_original": "Rare-disease specific",
+    "description_original": "Short-term mobility and exchange for healthcare professionals in European Reference Networks, focused on clinical knowledge, practice and sharing best practices in rare vascular diseases."
+  },
+  "classification": {
+    "resource_type": "programme",
+    "delivery_modes": [
+      "in-person"
+    ],
+    "audiences": [
+      "Healthcare professionals",
+      "European Reference Network members"
+    ],
+    "topics": [
+      "Rare vascular diseases",
+      "Clinical knowledge",
+      "Best-practice exchange",
+      "Multidisciplinary care"
+    ],
+    "rare_disease_scope": [
+      "Rare-disease specific"
+    ],
+    "languages": [
+      "en"
+    ],
+    "certificate_kind": "none",
+    "cost_kind": "unknown"
+  },
+  "dates": {
+    "event": {
+      "start": null,
+      "end": null,
+      "timezone": null,
+      "precision": "unknown"
+    },
+    "arrival": {
+      "start": null,
+      "end": null,
+      "timezone": null
+    },
+    "application": {
+      "opens": null,
+      "closes": null,
+      "status_override": null
+    },
+    "registration": {
+      "opens": null,
+      "closes": null,
+      "status_override": "open"
+    },
+    "availability": {
+      "opens": null,
+      "closes": null
+    },
+    "recurrence": {
+      "rule": "Exchange placements are available through September 2027.",
+      "occurrences": []
+    },
+    "retired_on": null,
+    "archived_on": null
+  },
+  "commercial": {
+    "cost_kind": "unknown",
+    "amount": null,
+    "currency": null
+  },
+  "sources": {
+    "canonical_url": "https://vascern.eu/training-and-education/exchange-program/about-the-vascern-exchange-program/",
+    "official_url": "https://vascern.eu/training-and-education/exchange-program/about-the-vascern-exchange-program/",
+    "registration_url": "https://vascern.eu/training-and-education/exchange-program/about-the-vascern-exchange-program/",
+    "application_url": null,
+    "programme_url": null,
+    "recording_url": null,
+    "collection_url": "https://vascern.eu/training-and-education/",
+    "source_language": "en"
+  },
+  "editorial": {
+    "verified_on": "2026-08-31",
+    "verification_confidence": "high",
+    "source_conflict": false,
+    "source_conflict_note": null,
+    "review_status": "approved",
+    "notes": "The official VASCERN page describes short-term mobility for healthcare professionals in ERNs, lists clinical-knowledge and best-practice objectives, and states that 42 exchange packages are available and the programme runs until September 2027.",
+    "legacy": {
+      "type_group": "programme",
+      "type_label_bg": "Обменна програма",
+      "type_label_en": "Exchange programme",
+      "date_status": "ongoing",
+      "date_status_bg": "Постоянен / текущ",
+      "sort_date": "",
+      "dates": "Available through September 2027",
+      "delivery": "Short-term in-person mobility and exchange",
+      "duration": "Placement-specific",
+      "cost": "",
+      "certificate_or_recognition": "",
+      "rare_disease_scope": "Rare-disease specific",
+      "source_collection_url": "https://vascern.eu/training-and-education/",
+      "url_type": "direct programme page",
+      "notes": "Clinical training and best-practice exchange for healthcare professionals in European Reference Networks.",
+      "tags": [
+        "rare vascular diseases",
+        "healthcare professionals",
+        "mobility",
+        "best practices"
+      ],
+      "source_status_note": "42 exchange packages available; programme runs until September 2027",
+      "original_record_type": "Exchange programme",
+      "catalogue_index": "",
+      "verified_on": "2026-08-31"
+    }
+  }
+}

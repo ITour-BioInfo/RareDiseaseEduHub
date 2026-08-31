@@ -22,7 +22,6 @@ export function knownRecordChangeProposal(
   record: CatalogRecord,
   body: string,
   checkedAt: string,
-  previousHash: string,
   currentHash: string,
 ) {
   const event = eventsFromJsonLd(extractJsonLd(body))[0];
@@ -66,16 +65,7 @@ export function knownRecordChangeProposal(
         review_required: true,
       });
 
-  if (!changes.length)
-    changes.push({
-      field: 'sources.official_url.content_hash',
-      old_value: previousHash,
-      proposed_value: currentHash,
-      evidence:
-        'The normalized official page content changed; review dates, registration, availability and title.',
-      confidence: 'medium',
-      review_required: true,
-    });
+  if (!changes.length) return null;
 
   const suffix = createHash('sha256').update(currentHash).digest('hex').slice(0, 16);
   return proposalSchema.parse({

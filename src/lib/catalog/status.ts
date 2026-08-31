@@ -96,6 +96,7 @@ const active = (opens: Date | null, closes: Date | null, now: Date) =>
 const future = (value: Date | null, now: Date) => Boolean(value && value > now);
 const soon = (value: Date | null, now: Date, days = 30) =>
   Boolean(value && value > now && value.getTime() - now.getTime() <= days * 86_400_000);
+const override = (value: string | null) => value?.trim().toLowerCase() || null;
 
 export function calculateStatus(
   record: CatalogRecord,
@@ -116,6 +117,8 @@ export function calculateStatus(
   const applicationClose = instant(record.dates.application.closes, zone, true);
   const registrationOpen = instant(record.dates.registration.opens, zone);
   const registrationClose = instant(record.dates.registration.closes, zone, true);
+  const applicationOverride = override(record.dates.application.status_override);
+  const registrationOverride = override(record.dates.registration.status_override);
   const availabilityOpen = instant(record.dates.availability.opens, zone);
   const availabilityClose = instant(record.dates.availability.closes, zone, true);
   const occurrences = record.dates.recurrence.occurrences
@@ -143,13 +146,32 @@ export function calculateStatus(
       return { primary: 'access-closes-soon', secondary, next_action_at };
     secondary.push('on-demand-access-open');
   }
-  if (active(applicationOpen, applicationClose, now) && (applicationOpen || applicationClose))
-    secondary.push('applications-open');
-  else if (applicationClose && eventStart && applicationClose < now && eventStart > now)
+  const applicationIsOpen =
+    applicationOverride === 'open' ||
+    (applicationOverride !== 'closed' &&
+      active(applicationOpen, applicationClose, now) &&
+      (applicationOpen || applicationClose) &&
+      (!eventStart || Boolean(applicationClose) || now < eventStart));
+  const registrationIsOpen =
+    registrationOverride === 'open' ||
+    (registrationOverride !== 'closed' &&
+      active(registrationOpen, registrationClose, now) &&
+      (registrationOpen || registrationClose) &&
+      (!eventStart || Boolean(registrationClose) || now < eventStart));
+
+  if (applicationIsOpen) secondary.push('applications-open');
+  else if (
+    eventStart &&
+    eventStart > now &&
+    (applicationOverride === 'closed' || Boolean(applicationClose && applicationClose < now))
+  )
     secondary.push('applications-closed-event-upcoming');
-  if (active(registrationOpen, registrationClose, now) && (registrationOpen || registrationClose))
-    secondary.push('registration-open');
-  else if (registrationClose && eventStart && registrationClose < now && eventStart > now)
+  if (registrationIsOpen) secondary.push('registration-open');
+  else if (
+    eventStart &&
+    eventStart > now &&
+    (registrationOverride === 'closed' || Boolean(registrationClose && registrationClose < now))
+  )
     secondary.push('registration-closed-event-upcoming');
 
   if (eventStart && eventEnd && now >= eventStart && now <= eventEnd) {
@@ -166,10 +188,10 @@ export function calculateStatus(
     };
   if (eventEnd && eventEnd < now)
     return { primary: secondary[0] || 'past-event', secondary: secondary.slice(1), next_action_at };
-  if (record.dates.recurrence.rule || nextOccurrence)
-    return { primary: 'recurring-series', secondary, next_action_at };
   if (secondary.length)
     return { primary: secondary[0]!, secondary: secondary.slice(1), next_action_at };
+  if (record.dates.recurrence.rule || nextOccurrence)
+    return { primary: 'recurring-series', secondary, next_action_at };
   if (
     record.classification.resource_type === 'programme' ||
     record.classification.resource_type === 'series'

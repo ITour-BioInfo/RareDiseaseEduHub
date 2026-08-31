@@ -4,17 +4,17 @@ test('English default and compatibility routes render records', async ({ page, b
   await page.goto('/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
   await expect(page.getByRole('heading', { level: 1 })).toBeVisible();
-  await expect(page.locator('[data-record-card]')).toHaveCount(175);
+  await expect(page.locator('[data-record-card]')).toHaveCount(174);
   await page.goto('/en/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await expect(page.locator('[data-record-card]')).toHaveCount(175);
+  await expect(page.locator('[data-record-card]')).toHaveCount(174);
   await page.goto('/rare_disease_education_hub/');
   await expect(page.locator('html')).toHaveAttribute('lang', 'en');
-  await expect(page.locator('[data-record-card]')).toHaveCount(175);
+  await expect(page.locator('[data-record-card]')).toHaveCount(174);
   const noJs = await browser.newContext({ javaScriptEnabled: false });
   const noJsPage = await noJs.newPage();
   await noJsPage.goto('/');
-  await expect(noJsPage.locator('[data-record-card]')).toHaveCount(175);
+  await expect(noJsPage.locator('[data-record-card]')).toHaveCount(174);
   await noJs.close();
 });
 
@@ -53,7 +53,7 @@ test('detail pages, downloads and 404 work', async ({ page }) => {
   );
   const response = await page.request.get('/rare_disease_education_catalog.json');
   expect(response.ok()).toBe(true);
-  expect((await response.json()).length).toBe(180);
+  expect((await response.json()).length).toBe(179);
   await page.goto('/missing-page/');
   await expect(page.getByText('404')).toBeVisible();
 });

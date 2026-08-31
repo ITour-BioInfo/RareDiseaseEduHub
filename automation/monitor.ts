@@ -8,17 +8,22 @@ import {
   discoveryCandidateScore,
   discoverFromSource,
   discoveryProposal,
-  filterNewDiscoveryCandidates,
   isCollectionListingUrl,
   validateDiscoveryCandidate,
   type DiscoveryCandidate,
 } from './discovery';
 import { fetchSource } from './fetch';
 import { knownRecordChangeProposal } from './known-records';
+import {
+  candidateValidationBatch,
+  loadPendingCandidates,
+  savePendingCandidates,
+} from './pending-candidates';
 import { markdownReport, type MonitorSummary } from './report';
 import {
   loadMonitorState,
   restoreStateForRetry,
+  sourceCheckIsDue,
   stateFromFailure,
   stateFromResult,
   type MonitorSourceState,
@@ -103,6 +108,8 @@ function providerSources(provider: ProviderConfiguration['providers'][number]) {
 export async function runMonitor(mode: string, recordId?: string) {
   const root = process.cwd();
   const statePath = path.join(root, 'work', 'automation-state', 'state.json');
+  const pendingPath = path.join(root, 'work', 'automation-state', 'pending-candidates.json');
+  await mkdir(path.dirname(statePath), { recursive: true });
   const state = await loadMonitorState(statePath);
   const records = await loadRecords();
   const selected = recordId
@@ -132,6 +139,9 @@ export async function runMonitor(mode: string, recordId?: string) {
     duplicateCandidates: 0,
     suppressedCandidates: 0,
     validationFailures: 0,
+    pendingCandidates: 0,
+    deferredSources: 0,
+    contentOnlyChangesSuppressed: 0,
     safetyGateTripped: false,
     warnings: [],
   };
@@ -142,6 +152,8 @@ export async function runMonitor(mode: string, recordId?: string) {
       await readFile(path.join(root, 'configuration', 'providers.yml'), 'utf8'),
     ) as ProviderConfiguration;
     const discovered: DiscoveryCandidate[] = [];
+    const pendingAtStart = await loadPendingCandidates(pendingPath);
+    const retryQueue: DiscoveryCandidate[] = [];
     const candidateSourceCheckpoints = new Map<
       string,
       Array<{ stateKey: string; previous?: MonitorSourceState }>
@@ -166,9 +178,13 @@ export async function runMonitor(mode: string, recordId?: string) {
 
     for (const provider of configuration.providers.filter((entry) => entry.enabled))
       for (const source of providerSources(provider)) {
-        summary.sourcesChecked += 1;
         const stateKey = `discovery:${provider.name}:${source.url}`;
         const previous = state[stateKey];
+        if (!sourceCheckIsDue(previous, summary.checkedAt)) {
+          summary.deferredSources += 1;
+          continue;
+        }
+        summary.sourcesChecked += 1;
         try {
           const sourceHost = new URL(source.url).hostname;
           const approvedDomains = [...new Set([...provider.approved_domains, sourceHost])];
@@ -223,17 +239,22 @@ export async function runMonitor(mode: string, recordId?: string) {
       }
 
     summary.rawCandidates = discovered.length;
-    const filtered = filterNewDiscoveryCandidates(discovered, records);
-    summary.filteredCandidates = filtered.candidates.length;
-    summary.duplicateCandidates = filtered.duplicates;
-    const candidates = filtered.candidates.slice(0, MAX_CANDIDATE_VALIDATIONS);
+    const validationBatch = candidateValidationBatch(
+      pendingAtStart,
+      discovered,
+      records,
+      MAX_CANDIDATE_VALIDATIONS,
+    );
+    summary.filteredCandidates = validationBatch.total;
+    summary.duplicateCandidates = validationBatch.duplicates;
+    const candidates = validationBatch.batch;
     if (skippedDetailSources)
       summary.warnings.push(
         `Skipped link mining on ${skippedDetailSources} individual course or archive pages.`,
       );
-    if (filtered.candidates.length > MAX_CANDIDATE_VALIDATIONS)
+    if (validationBatch.remaining.length)
       summary.warnings.push(
-        `Discovery found ${filtered.candidates.length} deduplicated links; official detail-page validation was capped at ${MAX_CANDIDATE_VALIDATIONS}.`,
+        `Queued ${validationBatch.remaining.length} deduplicated links beyond this run's ${MAX_CANDIDATE_VALIDATIONS}-page validation batch.`,
       );
     const rejectionReasons = new Map<string, number>();
     const validationFailureMessages: string[] = [];
@@ -262,7 +283,13 @@ export async function runMonitor(mode: string, recordId?: string) {
         );
         state[stateKey] = nextState;
         if (result.status >= 400) {
-          if (isRetryableDetailStatus(result.status)) retryCandidateSource(candidate, previous);
+          if (
+            isRetryableDetailStatus(result.status) &&
+            nextState.failure_count <= MAX_TRANSIENT_CANDIDATE_FAILURES
+          ) {
+            retryCandidateSource(candidate, previous);
+            retryQueue.push(candidate);
+          }
           summary.validationFailures += 1;
           validationFailureMessages.push(
             `${candidate.provider}: candidate verification HTTP ${result.status} for ${candidate.url}.`,
@@ -286,7 +313,13 @@ export async function runMonitor(mode: string, recordId?: string) {
         return { candidate: validation.candidate, nextState };
       } catch (error) {
         state[stateKey] = stateFromFailure(stateKey, summary.checkedAt, previous);
-        if (isRetryableDetailError(error)) retryCandidateSource(candidate, previous);
+        if (
+          isRetryableDetailError(error) &&
+          state[stateKey]!.failure_count <= MAX_TRANSIENT_CANDIDATE_FAILURES
+        ) {
+          retryCandidateSource(candidate, previous);
+          retryQueue.push(candidate);
+        }
         summary.validationFailures += 1;
         validationFailureMessages.push(
           `${candidate.provider}: candidate verification ${error instanceof Error ? error.message : 'fetch failed'} for ${candidate.url}.`,
@@ -319,15 +352,23 @@ export async function runMonitor(mode: string, recordId?: string) {
       summary.warnings.push(
         `${validationFailureMessages.length - 10} additional candidate verification failures were omitted from this summary.`,
       );
+    const pendingAfterRun = [...validationBatch.remaining, ...retryQueue];
+    await savePendingCandidates(pendingPath, pendingAfterRun);
+    summary.pendingCandidates = pendingAfterRun.length;
     summary.safetyGateTripped = proposals.length > MAX_REVIEW_PROPOSALS;
     if (summary.safetyGateTripped)
       summary.warnings.push(
         `Safety gate blocked pull-request creation because ${proposals.length} proposals exceeded the limit of ${MAX_REVIEW_PROPOSALS}.`,
       );
   } else if (live) {
-    summary.sourcesChecked = selected.length;
+    summary.sourcesChecked = 0;
     for (const record of selected) {
       const previous = state[record.id];
+      if (mode !== 'record' && !sourceCheckIsDue(previous, summary.checkedAt)) {
+        summary.deferredSources += 1;
+        continue;
+      }
+      summary.sourcesChecked += 1;
       try {
         const domain = new URL(record.sources.official_url).hostname;
         const result = await fetchSource(record.sources.official_url, {
@@ -358,12 +399,13 @@ export async function runMonitor(mode: string, recordId?: string) {
               record,
               result.body,
               summary.checkedAt,
-              previous.content_hash,
               currentHash,
             );
-            proposals.push(proposal);
-            summary.changed += 1;
-            nextState.last_proposal_id = proposal.proposal_id;
+            if (proposal) {
+              proposals.push(proposal);
+              summary.changed += 1;
+              nextState.last_proposal_id = proposal.proposal_id;
+            } else summary.contentOnlyChangesSuppressed += 1;
           }
         } else {
           summary.failed += 1;
@@ -395,11 +437,26 @@ export async function runMonitor(mode: string, recordId?: string) {
 
   await mkdir(path.join(root, 'work', 'automation-state'), { recursive: true });
   await mkdir(path.join(root, 'reports'), { recursive: true });
-  await writeFile(statePath, `${JSON.stringify(state, null, 2)}\n`);
-  await writeFile(path.join(root, 'reports', 'latest-monitor.md'), markdownReport(summary));
-  await writeFile(
-    path.join(root, 'reports', 'proposals.json'),
-    `${JSON.stringify(proposals, null, 2)}\n`,
+  const reportMode = mode.replace(/[^a-z0-9-]/gi, '-').toLowerCase();
+  const runTimestamp = summary.checkedAt.replace(/[:.]/g, '-');
+  const runDirectory = path.join(
+    root,
+    'reports',
+    'monitor',
+    summary.checkedAt.slice(0, 10),
+    `${runTimestamp}-${reportMode}`,
   );
+  const report = markdownReport(summary);
+  const proposalJson = `${JSON.stringify(proposals, null, 2)}\n`;
+  await mkdir(runDirectory, { recursive: true });
+  await writeFile(statePath, `${JSON.stringify(state, null, 2)}\n`);
+  await Promise.all([
+    writeFile(path.join(root, 'reports', 'latest-monitor.md'), report),
+    writeFile(path.join(root, 'reports', `latest-${reportMode}.md`), report),
+    writeFile(path.join(root, 'reports', 'proposals.json'), proposalJson),
+    writeFile(path.join(root, 'reports', `proposals-${reportMode}.json`), proposalJson),
+    writeFile(path.join(runDirectory, 'report.md'), report),
+    writeFile(path.join(runDirectory, 'proposals.json'), proposalJson),
+  ]);
   return summary;
 }
