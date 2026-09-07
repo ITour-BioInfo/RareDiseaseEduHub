@@ -1,0 +1,152 @@
+[
+  {
+    "proposal_id": "discovery-17095d71b24a13a6",
+    "record_id": "new-eurordis-rare-disease-europe-17095d71",
+    "checked_at": "2026-09-07T08:26:16.284Z",
+    "source_url": "https://openacademy.eurordis.org/courses/pre-training-school-on-medicines-research-and-development",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Eurordis - Rare Disease Europe",
+        "evidence": "Title verified on the official EURORDIS Rare Diseases Europe page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://openacademy.eurordis.org/courses/pre-training-school-on-medicines-research-and-development",
+        "evidence": "Education link found at https://openacademy.eurordis.org/all-courses/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-04a7c2f240ac6303",
+    "record_id": "new-ern-rnd-spring-school-next-generation-sequencing-diagnos-04a7c2f2",
+    "checked_at": "2026-09-07T08:26:16.284Z",
+    "source_url": "https://www.ern-rnd.eu/ern-rnd-spring-school-next-generation-sequencing-diagnostics-for-rare-neurological-diseases",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "ERN-RND Spring School: Next Generation Sequencing Diagnostics for Rare Neurological Diseases",
+        "evidence": "Title verified on the official ERN-RND / EURO-NMD page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/ern-rnd-spring-school-next-generation-sequencing-diagnostics-for-rare-neurological-diseases",
+        "evidence": "Education link found at https://www.ern-rnd.eu/events/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-c35c9940753dff2a",
+    "record_id": "new-module-ataxia-hsps-c35c9940",
+    "checked_at": "2026-09-07T08:26:16.284Z",
+    "source_url": "https://www.ern-rnd.eu/module-ataxia-hsp",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Module: Ataxia/HSPs",
+        "evidence": "Title verified on the official ERN-RND / eanCampus page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/module-ataxia-hsp",
+        "evidence": "Education link found at https://www.ern-rnd.eu/education-training/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-885d4658da8c6c6e",
+    "record_id": "new-scientific-symposium-registries-for-rnd-885d4658",
+    "checked_at": "2026-09-07T08:26:16.284Z",
+    "source_url": "https://www.ern-rnd.eu/scientific-symposium-resgistries-for-rnd",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Scientific Symposium “Registries for RND”",
+        "evidence": "Title verified on the official ERN-RND / EURO-NMD page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/scientific-symposium-resgistries-for-rnd",
+        "evidence": "Education link found at https://www.ern-rnd.eu/events/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-a29c8aab93a07555",
+    "record_id": "new-alumni-programme-a29c8aab",
+    "checked_at": "2026-09-07T08:26:16.284Z",
+    "source_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-alumni-community",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Alumni Programme",
+        "evidence": "Title verified on the official VASCERN page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-alumni-community",
+        "evidence": "Education link found at https://vascern.eu/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-07819ee5bf2e0e66",
+    "record_id": "new-the-european-society-of-human-genetics-07819ee5",
+    "checked_at": "2026-09-07T08:26:16.284Z",
+    "source_url": "https://www.eshg.org/webinarseries",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "The European Society of Human Genetics",
+        "evidence": "Title verified on the official European Society of Human Genetics (ESHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.eshg.org/webinarseries",
+        "evidence": "Education link found at https://www.eshg.org/courses and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  }
+]
