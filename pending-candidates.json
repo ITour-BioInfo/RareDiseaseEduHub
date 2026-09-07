@@ -1,1 +1,234 @@
-[]
+[
+  {
+    "provider": "NHS England Genomics Education Programme",
+    "title": "Rare Disease Timeline",
+    "url": "http://www.genomicseducation.hee.nhs.uk/rare-disease-education-hub/rare-disease-timeline",
+    "evidenceUrl": "https://www.genomicseducation.hee.nhs.uk/rare-disease-education-hub/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "EURORDIS Rare Diseases Europe",
+    "title": "Registries How Can You Work With Existing Registries Or Set Up A Registry",
+    "url": "https://openacademy.eurordis.org/courses/registries-how-can-you-work-with-existing-registries-or-set-up-a-registry",
+    "evidenceUrl": "https://openacademy.eurordis.org/all-courses/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "EURORDIS Rare Diseases Europe",
+    "title": "Statistics Clinical Trials",
+    "url": "https://openacademy.eurordis.org/courses/statistics-clinical-trials",
+    "evidenceUrl": "https://openacademy.eurordis.org/all-courses/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "EATRIS",
+    "title": "Successful Eatris Nordic Atmp Webinar Series",
+    "url": "https://eatris.eu/news/successful-eatris-nordic-atmp-webinar-series",
+    "evidenceUrl": "https://eatris.eu/training/education-training-news/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "VASCERN",
+    "title": "VASCERN Summer School - ERASMUS+",
+    "url": "https://vascern.eu/training-and-education/vascern-summer-school-2/what-is-the-vascern-summer-school",
+    "evidenceUrl": "https://vascern.eu/training-and-education/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "Medics for Rare Disease (M4RD)",
+    "title": "View.Php",
+    "url": "https://learn.m4rd.org/course/view.php?id=5",
+    "evidenceUrl": "https://learn.m4rd.org/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "VASCERN",
+    "title": "2027 Edition",
+    "url": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-2027",
+    "evidenceUrl": "https://vascern.eu/training-and-education/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "ERN-RND / eanCampus",
+    "title": "Winter / Spring Schools",
+    "url": "https://www.ern-rnd.eu/education-training/winter-schools-and-spring-schools",
+    "evidenceUrl": "https://www.ern-rnd.eu/education-training/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "American Society of Human Genetics (ASHG)",
+    "title": "AI-Powered Genetic Research Through MARRVEL-MCP",
+    "url": "https://learning.ashg.org/products/ai-powered-genetic-research-through-marrvel-mcp",
+    "evidenceUrl": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "Wellcome Connecting Science / FutureLearn",
+    "title": "Antimicrobial Databases and Genotype Prediction: Data Sharing and Analysis",
+    "url": "https://coursesandconferences.wellcomeconnectingscience.org/event/antimicrobial-databases-and-genotype-prediction-data-sharing-and-analysis-20260202",
+    "evidenceUrl": "https://coursesandconferences.wellcomeconnectingscience.org/our-events/online-courses/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "ERDERA",
+    "title": "Diagnostic Research Workstream Session 2 Data Sharing Data Management Ethics",
+    "url": "https://erdera.org/event/diagnostic-research-workstream-session-2-data-sharing-data-management-ethics",
+    "evidenceUrl": "https://erdera.org/training-and-education/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "European Society of Human Genetics (ESHG)",
+    "title": "Educational Resources",
+    "url": "https://www.eshg.org/education/educational-resources",
+    "evidenceUrl": "https://www.eshg.org/courses",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "American Society of Human Genetics (ASHG)",
+    "title": "Evaluating The Impacts of MPRA Design on Regulatory Activity",
+    "url": "https://learning.ashg.org/products/evaluating-the-impacts-of-mpra-design-on-regulatory-activity",
+    "evidenceUrl": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "NHS England Genomics Education Programme",
+    "title": "Facilitating Genomic Testing Introduction To Offering Genomic Tests",
+    "url": "https://www.genomicseducation.hee.nhs.uk/education/online-courses/facilitating-genomic-testing-introduction-to-offering-genomic-tests",
+    "evidenceUrl": "https://www.genomicseducation.hee.nhs.uk/rare-disease-education-hub/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "NHS England Genomics Education Programme",
+    "title": "Genomics 101 Dominant Recessive And Beyond How Genetic Conditions Are Inherited",
+    "url": "https://www.genomicseducation.hee.nhs.uk/education/online-courses/genomics-101-dominant-recessive-and-beyond-how-genetic-conditions-are-inherited",
+    "evidenceUrl": "https://www.genomicseducation.hee.nhs.uk/rare-disease-education-hub/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "Wellcome Connecting Science / FutureLearn",
+    "title": "Genomics for Educators",
+    "url": "https://coursesandconferences.wellcomeconnectingscience.org/event/genomics-for-educators-20260330",
+    "evidenceUrl": "https://coursesandconferences.wellcomeconnectingscience.org/our-events/online-courses/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "European Society of Human Genetics (ESHG)",
+    "title": "ICHG Initiative",
+    "url": "https://www.eshg.org/education/ichg-initiative",
+    "evidenceUrl": "https://www.eshg.org/courses",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "American Society of Human Genetics (ASHG)",
+    "title": "Incorporating Polygenic Risk Scores and Social Determinants of Health Across Populations",
+    "url": "https://learning.ashg.org/products/incorporating-polygenic-risk-scores-and-social-determinants-of-health-across-populations",
+    "evidenceUrl": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "American Society of Human Genetics (ASHG)",
+    "title": "Industry Pathways in Genetics and Genomic Science",
+    "url": "https://learning.ashg.org/products/industry-pathways-in-genetics-and-genomic-science",
+    "evidenceUrl": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "American Society of Human Genetics (ASHG)",
+    "title": "More Information",
+    "url": "https://learning.ashg.org/products/navigating-data-sharing-in-research",
+    "evidenceUrl": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "American Society of Human Genetics (ASHG)",
+    "title": "Omics, Regulation & AI for Precision Cardiovascular Medicine",
+    "url": "https://learning.ashg.org/products/omics-regulation-ai-for-precision-cardiovascular-medicine",
+    "evidenceUrl": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "European Society of Human Genetics (ESHG)",
+    "title": "Other Courses",
+    "url": "https://www.eshg.org/education/other-courses",
+    "evidenceUrl": "https://www.eshg.org/courses",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "ERDERA",
+    "title": "Private Public Collaboration Accelerator How To Pitch To Investors",
+    "url": "https://erdera.org/event/private-public-collaboration-accelerator-how-to-pitch-to-investors",
+    "evidenceUrl": "https://erdera.org/training-and-education/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "ERDERA",
+    "title": "Regulatory Insights Of Advanced Therapies Research Development",
+    "url": "https://erdera.org/event/regulatory-insights-of-advanced-therapies-research-development",
+    "evidenceUrl": "https://erdera.org/training-and-education/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "American Society of Human Genetics (ASHG)",
+    "title": "RNUopathies: A New Frontier in Genetics",
+    "url": "https://learning.ashg.org/products/rnuopathies-a-new-frontier-in-genetics",
+    "evidenceUrl": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "American Society of Human Genetics (ASHG)",
+    "title": "The Intelligent Genome Powered By Ai",
+    "url": "https://learning.ashg.org/products/the-intelligent-genome-powered-by-ai",
+    "evidenceUrl": "https://learning.ashg.org/catalog?page=62&widget_products_id=23109",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "VASCERN",
+    "title": "EU Trainings",
+    "url": "https://vascern.eu/training-and-education/eu-trainings",
+    "evidenceUrl": "https://vascern.eu/training-and-education/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "VASCERN",
+    "title": "Past Editions",
+    "url": "https://vascern.eu/training-and-education/vascern-summer-school-2/past-editions",
+    "evidenceUrl": "https://vascern.eu/training-and-education/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  },
+  {
+    "provider": "VASCERN",
+    "title": "Pills of Knowledge",
+    "url": "https://vascern.eu/training-and-education/pills-of-knowledge",
+    "evidenceUrl": "https://vascern.eu/training-and-education/",
+    "sourceKind": "official-listing",
+    "confidence": "medium"
+  }
+]
