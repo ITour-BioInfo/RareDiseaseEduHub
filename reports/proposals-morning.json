@@ -1,0 +1,427 @@
+[
+  {
+    "proposal_id": "discovery-069f7fc16d82c9c3",
+    "record_id": "new-eurordis-rare-disease-europe-069f7fc1",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://openacademy.eurordis.org/courses/registries-how-can-you-work-with-existing-registries-or-set-up-a-registry",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Eurordis - Rare Disease Europe",
+        "evidence": "Title verified on the official EURORDIS Rare Diseases Europe page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://openacademy.eurordis.org/courses/registries-how-can-you-work-with-existing-registries-or-set-up-a-registry",
+        "evidence": "Education link found at https://openacademy.eurordis.org/all-courses/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-04a7c2f240ac6303",
+    "record_id": "new-ern-rnd-spring-school-next-generation-sequencing-diagnos-04a7c2f2",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://www.ern-rnd.eu/ern-rnd-spring-school-next-generation-sequencing-diagnostics-for-rare-neurological-diseases",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "ERN-RND Spring School: Next Generation Sequencing Diagnostics for Rare Neurological Diseases",
+        "evidence": "Title verified on the official ERN-RND / EURO-NMD page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/ern-rnd-spring-school-next-generation-sequencing-diagnostics-for-rare-neurological-diseases",
+        "evidence": "Education link found at https://www.ern-rnd.eu/events/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-c35c9940753dff2a",
+    "record_id": "new-module-ataxia-hsps-c35c9940",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://www.ern-rnd.eu/module-ataxia-hsp",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Module: Ataxia/HSPs",
+        "evidence": "Title verified on the official ERN-RND / eanCampus page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/module-ataxia-hsp",
+        "evidence": "Education link found at https://www.ern-rnd.eu/education-training/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-885d4658da8c6c6e",
+    "record_id": "new-scientific-symposium-registries-for-rnd-885d4658",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://www.ern-rnd.eu/scientific-symposium-resgistries-for-rnd",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Scientific Symposium “Registries for RND”",
+        "evidence": "Title verified on the official ERN-RND / EURO-NMD page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/scientific-symposium-resgistries-for-rnd",
+        "evidence": "Education link found at https://www.ern-rnd.eu/events/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-2347dd23461852bd",
+    "record_id": "new-what-is-the-vascern-summer-school-2347dd23",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/what-is-the-vascern-summer-school",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "What is the VASCERN Summer School?",
+        "evidence": "Title verified on the official VASCERN page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://vascern.eu/training-and-education/vascern-summer-school-2/what-is-the-vascern-summer-school",
+        "evidence": "Education link found at https://vascern.eu/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-53824d3728a6959c",
+    "record_id": "new-2027-edition-53824d37",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-2027",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "2027 Edition",
+        "evidence": "Title verified on the official VASCERN page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-2027",
+        "evidence": "Education link found at https://vascern.eu/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-722ee729c1d75704",
+    "record_id": "new-winter-schools-and-spring-schools-722ee729",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://www.ern-rnd.eu/education-training/winter-schools-and-spring-schools",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Winter Schools and Spring Schools",
+        "evidence": "Title verified on the official ERN-RND / eanCampus page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/education-training/winter-schools-and-spring-schools",
+        "evidence": "Education link found at https://www.ern-rnd.eu/education-training/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-56d817659da67394",
+    "record_id": "new-ai-powered-genetic-research-through-marrvel-mcp-56d81765",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://learning.ashg.org/products/ai-powered-genetic-research-through-marrvel-mcp",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "AI-Powered Genetic Research Through MARRVEL-MCP",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/ai-powered-genetic-research-through-marrvel-mcp",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-46aef30a8da17e2d",
+    "record_id": "new-diagnostic-research-workstream-session-2-data-sharing-da-46aef30a",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://erdera.org/event/diagnostic-research-workstream-session-2-data-sharing-data-management-ethics",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Diagnostic Research Workstream – Session 2: Data Sharing, Data Management & Ethics",
+        "evidence": "Title verified on the official ERDERA page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://erdera.org/event/diagnostic-research-workstream-session-2-data-sharing-data-management-ethics",
+        "evidence": "Education link found at https://erdera.org/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-432d2af955ce23bd",
+    "record_id": "new-omics-regulation-ai-for-precision-cardiovascular-medicin-432d2af9",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://learning.ashg.org/products/omics-regulation-ai-for-precision-cardiovascular-medicine",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Omics, Regulation & AI for Precision Cardiovascular Medicine",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/omics-regulation-ai-for-precision-cardiovascular-medicine",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-c726284e8553e652",
+    "record_id": "new-public-private-collaboration-accelerator-how-to-pitch-to-c726284e",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://erdera.org/event/private-public-collaboration-accelerator-how-to-pitch-to-investors",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Public-Private Collaboration Accelerator – How to Pitch to Investors",
+        "evidence": "Title verified on the official ERDERA page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://erdera.org/event/private-public-collaboration-accelerator-how-to-pitch-to-investors",
+        "evidence": "Education link found at https://erdera.org/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-04ded2c0bf85699b",
+    "record_id": "new-regulatory-insights-of-advanced-therapies-research-devel-04ded2c0",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://erdera.org/event/regulatory-insights-of-advanced-therapies-research-development",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Regulatory Insights of Advanced Therapies Research & Development",
+        "evidence": "Title verified on the official ERDERA page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://erdera.org/event/regulatory-insights-of-advanced-therapies-research-development",
+        "evidence": "Education link found at https://erdera.org/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-520b16eb64ce9946",
+    "record_id": "new-the-european-society-of-human-genetics-520b16eb",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://www.eshg.org/education/ichg-initiative",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "The European Society of Human Genetics",
+        "evidence": "Title verified on the official European Society of Human Genetics (ESHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.eshg.org/education/ichg-initiative",
+        "evidence": "Education link found at https://www.eshg.org/courses and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-0d40c6cf11a46d7d",
+    "record_id": "new-the-intelligent-genome-powered-by-ai-0d40c6cf",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://learning.ashg.org/products/the-intelligent-genome-powered-by-ai",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "The Intelligent Genome: Powered by AI",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/the-intelligent-genome-powered-by-ai",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-6a1a2cddab993800",
+    "record_id": "new-eu-trainings-6a1a2cdd",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://vascern.eu/training-and-education/eu-trainings",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "EU Trainings",
+        "evidence": "Title verified on the official VASCERN page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://vascern.eu/training-and-education/eu-trainings",
+        "evidence": "Education link found at https://vascern.eu/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-ef6a86bf00ff1ece",
+    "record_id": "new-past-editions-ef6a86bf",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/past-editions",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Past Editions",
+        "evidence": "Title verified on the official VASCERN page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://vascern.eu/training-and-education/vascern-summer-school-2/past-editions",
+        "evidence": "Education link found at https://vascern.eu/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-abd5ee12371edcfc",
+    "record_id": "new-pills-of-knowledge-abd5ee12",
+    "checked_at": "2026-09-14T09:02:57.978Z",
+    "source_url": "https://vascern.eu/training-and-education/pills-of-knowledge",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Pills of Knowledge",
+        "evidence": "Title verified on the official VASCERN page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://vascern.eu/training-and-education/pills-of-knowledge",
+        "evidence": "Education link found at https://vascern.eu/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  }
+]
