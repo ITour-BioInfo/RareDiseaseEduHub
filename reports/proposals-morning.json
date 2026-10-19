@@ -1,0 +1,152 @@
+[
+  {
+    "proposal_id": "discovery-253b71313ca2f94b",
+    "record_id": "new-building-better-evidence-how-high-quality-data-advances--253b7131",
+    "checked_at": "2026-10-19T09:02:29.962Z",
+    "source_url": "https://learn.rarediseases.org/courses/building-better-evidence",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Building Better Evidence: How High-Quality Data Advances Rare Disease Research",
+        "evidence": "Title verified on the official NORD / FDA CDER / Critical Path Institute page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learn.rarediseases.org/courses/building-better-evidence",
+        "evidence": "Education link found at https://learn.rarediseases.org/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-81648edccb1794e9",
+    "record_id": "new-eurordis-rare-disease-europe-81648edc",
+    "checked_at": "2026-10-19T09:02:29.962Z",
+    "source_url": "https://openacademy.eurordis.org/courses/benefit-risk-assessment-pharmacovigilance",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Eurordis - Rare Disease Europe",
+        "evidence": "Title verified on the official EURORDIS Rare Diseases Europe page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://openacademy.eurordis.org/courses/benefit-risk-assessment-pharmacovigilance",
+        "evidence": "Education link found at https://openacademy.eurordis.org/all-courses/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-04a7c2f240ac6303",
+    "record_id": "new-ern-rnd-spring-school-next-generation-sequencing-diagnos-04a7c2f2",
+    "checked_at": "2026-10-19T09:02:29.962Z",
+    "source_url": "https://www.ern-rnd.eu/ern-rnd-spring-school-next-generation-sequencing-diagnostics-for-rare-neurological-diseases",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "ERN-RND Spring School: Next Generation Sequencing Diagnostics for Rare Neurological Diseases",
+        "evidence": "Title verified on the official ERN-RND / EURO-NMD page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/ern-rnd-spring-school-next-generation-sequencing-diagnostics-for-rare-neurological-diseases",
+        "evidence": "Education link found at https://www.ern-rnd.eu/events/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-c35c9940753dff2a",
+    "record_id": "new-module-ataxia-hsps-c35c9940",
+    "checked_at": "2026-10-19T09:02:29.962Z",
+    "source_url": "https://www.ern-rnd.eu/module-ataxia-hsp",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Module: Ataxia/HSPs",
+        "evidence": "Title verified on the official ERN-RND / eanCampus page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/module-ataxia-hsp",
+        "evidence": "Education link found at https://www.ern-rnd.eu/education-training/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-885d4658da8c6c6e",
+    "record_id": "new-scientific-symposium-registries-for-rnd-885d4658",
+    "checked_at": "2026-10-19T09:02:29.962Z",
+    "source_url": "https://www.ern-rnd.eu/scientific-symposium-resgistries-for-rnd",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Scientific Symposium “Registries for RND”",
+        "evidence": "Title verified on the official ERN-RND / EURO-NMD page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/scientific-symposium-resgistries-for-rnd",
+        "evidence": "Education link found at https://www.ern-rnd.eu/events/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-357e655d12e16a22",
+    "record_id": "new-the-role-of-ethics-in-atmp-research-and-development-357e655d",
+    "checked_at": "2026-10-19T09:02:29.962Z",
+    "source_url": "https://erdera.org/event/the-role-of-ethics-in-atmp-research-and-development",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "The Role of Ethics in ATMP Research and Development",
+        "evidence": "Title verified on the official ERDERA page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://erdera.org/event/the-role-of-ethics-in-atmp-research-and-development",
+        "evidence": "Education link found at https://erdera.org/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  }
+]
