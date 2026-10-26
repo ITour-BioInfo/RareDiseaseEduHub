@@ -1,0 +1,54 @@
+# Catalogue monitor report
+
+- Run time: 2026-10-26T10:14:24.891Z
+- Mode: morning
+- Official sources checked: 99
+- Successful checks: 90
+- Failed checks: 9
+- Raw links passing listing-page extraction: 267
+- New links after URL, title and provider deduplication: 76
+- Candidates verified on their official detail page: 20
+- Candidates rejected by page-level checks: 17
+- Duplicate links or records suppressed: 226
+- Unchanged previously seen candidates suppressed: 3
+- Candidate detail-page fetch failures: 10
+- Candidates queued for a later validation batch: 35
+- Sources deferred by failure backoff: 6
+- Volatile content-hash-only changes suppressed: 0
+- Detected source changes or verified new candidates: 15
+- Review proposals: 15
+- Pull-request safety gate: open
+- Source conflicts: 0
+- Tests required before pull request: validation, translations, unit, crawler fixtures, build, browser and accessibility
+
+## Warnings
+
+- American Society of Human Genetics (ASHG): This operation was aborted; no candidate created.
+- BBMRI-ERIC: HTTP 404 for https://www.bbmri-eric.eu/events/how-to-build-a-biobank-learning-by-doing/; no candidate created.
+- BBMRI-ERIC: HTTP 404 for https://www.bbmri-eric.eu/events/how-to-operate-a-biobank-advanced/; no candidate created.
+- BBMRI-ERIC: HTTP 404 for https://www.bbmri-eric.eu/services/bbmriqm-consultation-hours/; no candidate created.
+- BBMRI-ERIC: HTTP 404 for https://www.bbmri-eric.eu/services/bbmriqm-iso-20387-2018/; no candidate created.
+- BBMRI-ERIC: HTTP 404 for https://www.bbmri-eric.eu/services/bbmriqm-pre-examination-processes/; no candidate created.
+- BBMRI-ERIC: HTTP 404 for https://www.bbmri-eric.eu/services/e-learning/; no candidate created.
+- BBMRI-ERIC: HTTP 404 for https://www.bbmri-eric.eu/webinars-archive/; no candidate created.
+- Institut Pasteur / FUN-MOOC (listed by BBMRI-ERIC): HTTP 404 for https://www.bbmri-eric.eu/services/e-learning/; no candidate created.
+- Skipped link mining on 67 individual course or archive pages.
+- Queued 26 deduplicated links beyond this run's 50-page validation batch.
+- Consolidated 5 overlapping verified pages into canonical review candidates.
+- Candidate filter: 9 rejected for announcement or supporting page rather than a course page.
+- Candidate filter: 4 rejected for no rare-disease or clinical-genetics relevance.
+- Candidate filter: 3 rejected for no course or learning evidence.
+- Candidate filter: 2 rejected for navigation, quiz or download URL.
+- Candidate filter: 2 rejected for login or missing page.
+- Candidate filter: 2 rejected for provider homepage rather than a course page.
+- Candidate filter: 1 rejected for archive or collection page rather than a course page.
+- NHS England Genomics Education Programme: candidate verification HTTP 404 for http://www.genomicseducation.hee.nhs.uk/rare-disease-education-hub/rare-disease-timeline.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/ai-powered-genetic-research-through-marrvel-mcp.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/evaluating-the-impacts-of-mpra-design-on-regulatory-activity.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/incorporating-polygenic-risk-scores-and-social-determinants-of-health-across-populations.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/industry-pathways-in-genetics-and-genomic-science.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/navigating-data-sharing-in-research.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/omics-regulation-ai-for-precision-cardiovascular-medicine.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/rnuopathies-a-new-frontier-in-genetics.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/save-the-date-integrating-multi-omics-to-advance-genetics-and-genomic-medicine.
+- American Society of Human Genetics (ASHG): candidate verification This operation was aborted for https://learning.ashg.org/products/the-intelligent-genome-powered-by-ai.
