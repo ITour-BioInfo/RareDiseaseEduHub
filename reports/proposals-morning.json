@@ -1,0 +1,252 @@
+[
+  {
+    "proposal_id": "discovery-253b71313ca2f94b",
+    "record_id": "new-building-better-evidence-how-high-quality-data-advances--253b7131",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://learn.rarediseases.org/courses/building-better-evidence",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Building Better Evidence: How High-Quality Data Advances Rare Disease Research",
+        "evidence": "Title verified on the official NORD / FDA CDER / Critical Path Institute page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learn.rarediseases.org/courses/building-better-evidence",
+        "evidence": "Education link found at https://learn.rarediseases.org/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-04a7c2f240ac6303",
+    "record_id": "new-ern-rnd-spring-school-next-generation-sequencing-diagnos-04a7c2f2",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://www.ern-rnd.eu/ern-rnd-spring-school-next-generation-sequencing-diagnostics-for-rare-neurological-diseases",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "ERN-RND Spring School: Next Generation Sequencing Diagnostics for Rare Neurological Diseases",
+        "evidence": "Title verified on the official ERN-RND / EURO-NMD page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/ern-rnd-spring-school-next-generation-sequencing-diagnostics-for-rare-neurological-diseases",
+        "evidence": "Education link found at https://www.ern-rnd.eu/events/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-7f1e6266732a975e",
+    "record_id": "new-eurordis-rare-disease-europe-7f1e6266",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://openacademy.eurordis.org/winter-school",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Eurordis - Rare Disease Europe",
+        "evidence": "Title verified on the official EURORDIS Rare Diseases Europe page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://openacademy.eurordis.org/winter-school",
+        "evidence": "Education link found at https://openacademy.eurordis.org/open-academy-schools/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-c35c9940753dff2a",
+    "record_id": "new-module-ataxia-hsps-c35c9940",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://www.ern-rnd.eu/module-ataxia-hsp",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Module: Ataxia/HSPs",
+        "evidence": "Title verified on the official ERN-RND / eanCampus page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.ern-rnd.eu/module-ataxia-hsp",
+        "evidence": "Education link found at https://www.ern-rnd.eu/education-training/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-a29c8aab93a07555",
+    "record_id": "new-alumni-programme-a29c8aab",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-alumni-community",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Alumni Programme",
+        "evidence": "Title verified on the official VASCERN page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-alumni-community",
+        "evidence": "Education link found at https://vascern.eu/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-56d817659da67394",
+    "record_id": "new-ai-powered-genetic-research-through-marrvel-mcp-56d81765",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://learning.ashg.org/products/ai-powered-genetic-research-through-marrvel-mcp",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "AI-Powered Genetic Research Through MARRVEL-MCP",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/ai-powered-genetic-research-through-marrvel-mcp",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-432d2af955ce23bd",
+    "record_id": "new-omics-regulation-ai-for-precision-cardiovascular-medicin-432d2af9",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://learning.ashg.org/products/omics-regulation-ai-for-precision-cardiovascular-medicine",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Omics, Regulation & AI for Precision Cardiovascular Medicine",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/omics-regulation-ai-for-precision-cardiovascular-medicine",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-357e655d12e16a22",
+    "record_id": "new-postponed-the-role-of-ethics-in-atmp-research-and-develo-357e655d",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://erdera.org/event/the-role-of-ethics-in-atmp-research-and-development",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Postponed: The Role of Ethics in ATMP Research and Development",
+        "evidence": "Title verified on the official ERDERA page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://erdera.org/event/the-role-of-ethics-in-atmp-research-and-development",
+        "evidence": "Education link found at https://erdera.org/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-0d40c6cf11a46d7d",
+    "record_id": "new-the-intelligent-genome-powered-by-ai-0d40c6cf",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://learning.ashg.org/products/the-intelligent-genome-powered-by-ai",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "The Intelligent Genome: Powered by AI",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/the-intelligent-genome-powered-by-ai",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-07819ee5bf2e0e66",
+    "record_id": "new-the-european-society-of-human-genetics-07819ee5",
+    "checked_at": "2026-11-02T12:34:06.206Z",
+    "source_url": "https://www.eshg.org/webinarseries",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "The European Society of Human Genetics",
+        "evidence": "Title verified on the official European Society of Human Genetics (ESHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.eshg.org/webinarseries",
+        "evidence": "Education link found at https://www.eshg.org/courses and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  }
+]
