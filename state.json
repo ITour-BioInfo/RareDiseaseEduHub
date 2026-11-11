@@ -2493,8 +2493,8 @@
   },
   "editscd-ern-eurobloodnet-eatris-regulatory-path-to-the-clinic": {
     "record_id": "editscd-ern-eurobloodnet-eatris-regulatory-path-to-the-clinic",
-    "checked_at": "2026-11-10T21:48:02.344Z",
-    "last_successful_at": "2026-11-10T21:48:02.344Z",
+    "checked_at": "2026-11-11T22:41:14.877Z",
+    "last_successful_at": "2026-11-11T22:41:14.877Z",
     "http_status": 304,
     "final_url": "https://eurobloodnet.eu/education-2/patients/webinars/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/editscd-ern-eurobloodnet-focus-on-genetic-therapy-for-people-living-with-scd/7/session-7-the-road-to-patients-overcoming-regulatory-ip-and-market-access-barriers-in-sickle-cell-gene-therapies",
     "redirects": [
@@ -2921,14 +2921,14 @@
   },
   "ceub-eshg-course-programme-tools-for-communication-and-competency-skills-in-gene": {
     "record_id": "ceub-eshg-course-programme-tools-for-communication-and-competency-skills-in-gene",
-    "checked_at": "2026-11-10T21:48:02.344Z",
-    "last_successful_at": "2026-11-10T21:48:02.344Z",
+    "checked_at": "2026-11-11T22:41:14.877Z",
+    "last_successful_at": "2026-11-11T22:41:14.877Z",
     "http_status": 200,
     "final_url": "https://www.ceub.it/events/event/tools-for-communication-and-competency-skills-in-genetic-counselling/",
     "redirects": [],
     "etag": null,
-    "last_modified": "Tue, 10 Nov 2026 20:10:47 GMT",
-    "content_hash": "a89886f043409b483781c9919fd88adcb776c461cc757e9c0bbcdb8fc74e9c20",
+    "last_modified": "Wed, 11 Nov 2026 21:40:42 GMT",
+    "content_hash": "8fd5cf090c686edb7b5f1f1d8ec1de1356cf72347540cb881150545a8519c1ac",
     "failure_count": 0,
     "last_proposal_id": null
   },
@@ -2949,8 +2949,8 @@
   },
   "european-society-of-human-genetics-eshg-covering-the-gaps-2026": {
     "record_id": "european-society-of-human-genetics-eshg-covering-the-gaps-2026",
-    "checked_at": "2026-11-10T21:48:02.344Z",
-    "last_successful_at": "2026-11-10T21:48:02.344Z",
+    "checked_at": "2026-11-11T22:41:14.877Z",
+    "last_successful_at": "2026-11-11T22:41:14.877Z",
     "http_status": 200,
     "final_url": "https://www.eshg.org/covering-the-gaps",
     "redirects": [],
@@ -2962,8 +2962,8 @@
   },
   "erdera-learning-portal-translational-medicine-explained-tmex": {
     "record_id": "erdera-learning-portal-translational-medicine-explained-tmex",
-    "checked_at": "2026-11-10T21:48:02.344Z",
-    "last_successful_at": "2026-11-10T21:48:02.344Z",
+    "checked_at": "2026-11-11T22:41:14.877Z",
+    "last_successful_at": "2026-11-11T22:41:14.877Z",
     "http_status": 200,
     "final_url": "https://eatris.eu/training/education-training-news/",
     "redirects": [],
