@@ -1,0 +1,202 @@
+[
+  {
+    "proposal_id": "discovery-253b71313ca2f94b",
+    "record_id": "new-building-better-evidence-how-high-quality-data-advances--253b7131",
+    "checked_at": "2026-11-16T12:52:15.648Z",
+    "source_url": "https://learn.rarediseases.org/courses/building-better-evidence",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Building Better Evidence: How High-Quality Data Advances Rare Disease Research",
+        "evidence": "Title verified on the official NORD / FDA CDER / Critical Path Institute page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learn.rarediseases.org/courses/building-better-evidence",
+        "evidence": "Education link found at https://learn.rarediseases.org/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-81648edccb1794e9",
+    "record_id": "new-eurordis-rare-disease-europe-81648edc",
+    "checked_at": "2026-11-16T12:52:15.648Z",
+    "source_url": "https://openacademy.eurordis.org/courses/benefit-risk-assessment-pharmacovigilance",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Eurordis - Rare Disease Europe",
+        "evidence": "Title verified on the official EURORDIS Rare Diseases Europe page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://openacademy.eurordis.org/courses/benefit-risk-assessment-pharmacovigilance",
+        "evidence": "Education link found at https://openacademy.eurordis.org/all-courses/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-6fd0fb5df0a86e2b",
+    "record_id": "new-what-is-a-rare-disease-6fd0fb5d",
+    "checked_at": "2026-11-16T12:52:15.648Z",
+    "source_url": "https://www.genomicseducation.hee.nhs.uk/education/core-concepts/what-is-rare-disease",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "What is a rare disease?",
+        "evidence": "Title verified on the official NHS England Genomics Education Programme page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://www.genomicseducation.hee.nhs.uk/education/core-concepts/what-is-rare-disease",
+        "evidence": "Education link found at https://www.genomicseducation.hee.nhs.uk/rare-disease-education-hub/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-a29c8aab93a07555",
+    "record_id": "new-alumni-programme-a29c8aab",
+    "checked_at": "2026-11-16T12:52:15.648Z",
+    "source_url": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-alumni-community",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Alumni Programme",
+        "evidence": "Title verified on the official VASCERN page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://vascern.eu/training-and-education/vascern-summer-school-2/vascern-summer-school-alumni-community",
+        "evidence": "Education link found at https://vascern.eu/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-56d817659da67394",
+    "record_id": "new-ai-powered-genetic-research-through-marrvel-mcp-56d81765",
+    "checked_at": "2026-11-16T12:52:15.648Z",
+    "source_url": "https://learning.ashg.org/products/ai-powered-genetic-research-through-marrvel-mcp",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "AI-Powered Genetic Research Through MARRVEL-MCP",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/ai-powered-genetic-research-through-marrvel-mcp",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-4081c3bc997037f1",
+    "record_id": "new-integrating-multi-omics-to-advance-genetics-and-genomic--4081c3bc",
+    "checked_at": "2026-11-16T12:52:15.648Z",
+    "source_url": "https://learning.ashg.org/products/integrating-multi-omics-to-advance-genetics-and-genomic-medicine",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "Integrating Multi-Omics to Advance Genetics and Genomic Medicine",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/integrating-multi-omics-to-advance-genetics-and-genomic-medicine",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-0d40c6cf11a46d7d",
+    "record_id": "new-the-intelligent-genome-powered-by-ai-0d40c6cf",
+    "checked_at": "2026-11-16T12:52:15.648Z",
+    "source_url": "https://learning.ashg.org/products/the-intelligent-genome-powered-by-ai",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "The Intelligent Genome: Powered by AI",
+        "evidence": "Title verified on the official American Society of Human Genetics (ASHG) page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://learning.ashg.org/products/the-intelligent-genome-powered-by-ai",
+        "evidence": "Education link found at https://learning.ashg.org/catalog?page=62&widget_products_id=23109 and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  },
+  {
+    "proposal_id": "discovery-357e655d12e16a22",
+    "record_id": "new-the-role-of-ethics-in-atmp-research-and-development-357e655d",
+    "checked_at": "2026-11-16T12:52:15.648Z",
+    "source_url": "https://erdera.org/event/the-role-of-ethics-in-atmp-research-and-development",
+    "source_kind": "official-listing",
+    "changes": [
+      {
+        "field": "content.title_original",
+        "old_value": null,
+        "proposed_value": "The Role of Ethics in ATMP Research and Development",
+        "evidence": "Title verified on the official ERDERA page.",
+        "confidence": "medium",
+        "review_required": true
+      },
+      {
+        "field": "sources.official_url",
+        "old_value": null,
+        "proposed_value": "https://erdera.org/event/the-role-of-ethics-in-atmp-research-and-development",
+        "evidence": "Education link found at https://erdera.org/training-and-education/ and verified on its official page.",
+        "confidence": "medium",
+        "review_required": true
+      }
+    ]
+  }
+]
