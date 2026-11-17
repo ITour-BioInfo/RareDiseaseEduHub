@@ -2941,8 +2941,8 @@
   },
   "european-society-of-human-genetics-eshg-covering-the-gaps-2026": {
     "record_id": "european-society-of-human-genetics-eshg-covering-the-gaps-2026",
-    "checked_at": "2026-11-15T21:01:41.856Z",
-    "last_successful_at": "2026-11-15T21:01:41.856Z",
+    "checked_at": "2026-11-17T00:14:20.596Z",
+    "last_successful_at": "2026-11-17T00:14:20.596Z",
     "http_status": 200,
     "final_url": "https://www.eshg.org/covering-the-gaps",
     "redirects": [],
@@ -2954,14 +2954,14 @@
   },
   "erdera-learning-portal-translational-medicine-explained-tmex": {
     "record_id": "erdera-learning-portal-translational-medicine-explained-tmex",
-    "checked_at": "2026-11-15T21:01:41.856Z",
-    "last_successful_at": "2026-11-15T21:01:41.856Z",
+    "checked_at": "2026-11-17T00:14:20.596Z",
+    "last_successful_at": "2026-11-17T00:14:20.596Z",
     "http_status": 200,
     "final_url": "https://eatris.eu/training/education-training-news/",
     "redirects": [],
     "etag": null,
     "last_modified": null,
-    "content_hash": "e7416e85bf03d1dee9c37ae25d17e5fdc4a3a0bd97b756d99c18a7b9cc6582d3",
+    "content_hash": "683366ab50900e32c1c8555701dc4f41acac319ffe19be51b47d3ed121b49237",
     "failure_count": 0,
     "last_proposal_id": null
   },
